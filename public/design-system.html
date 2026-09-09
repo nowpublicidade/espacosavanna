@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#070504}
+a{color:#E3CB9A;text-decoration:none}
+a:hover{color:#F3E4C4}
+</style>
+</helmet>
+
+<div style="background:#0B0806;color:#F2EBE0;font-family:'Jost',system-ui,sans-serif;padding:48px 24px 90px">
+<div style="max-width:960px;margin:0 auto">
+
+  <header style="padding-bottom:34px;border-bottom:1px solid rgba(198,161,91,.18);margin-bottom:52px">
+    <div style="font-size:10.5px;letter-spacing:.3em;color:#C6A15B;margin-bottom:14px">DESIGN SYSTEM v1</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,6vw,54px);line-height:1.05;margin:0 0 14px">Espaço Savanna</h1>
+    <p style="margin:0;max-width:56ch;font-size:14.5px;line-height:1.7;color:rgba(242,235,224,.6);font-weight:300">Base visual da direção criativa: cor, tipografia, ícones, componentes e regras de espaçamento. Mobile-first — todos os valores são pensados para telas de 360–430px e escalam para desktop.</p>
+  </header>
+
+  <section style="margin-bottom:58px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;margin:0 0 6px">Cor</h2>
+    <p style="margin:0 0 22px;font-size:13px;color:rgba(242,235,224,.5);font-weight:300">Fundo escuro quente como base, dourado como único acento. Nada de segunda cor de marca.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px">
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#070504"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Void</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#070504</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Fundo do documento</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#0B0806"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Base</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#0B0806</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Fundo das seções</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#100C09"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Surface</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#100C09</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Alternância de seção</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#120E0A"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Card</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#120E0A</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Cartões e listas</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#C6A15B"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Gold</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#C6A15B</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Acento, ícones, eyebrow</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#E3CB9A"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Gold Soft</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#E3CB9A</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Títulos em destaque, links</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#F2EBE0"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Ink</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">#F2EBE0</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Texto principal</div></div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;overflow:hidden">
+        <div style="height:82px;background:#9A9086"></div>
+        <div style="padding:12px 13px"><div style="font-size:12px;margin-bottom:4px">Ink 60</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#C6A15B">rgba(242,235,224,.6)</div><div style="font-size:10.5px;color:rgba(242,235,224,.42);margin-top:5px">Texto de apoio</div></div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding:14px 16px;border:1px solid rgba(198,161,91,.18);border-radius:12px;font-size:12px;line-height:1.7;color:rgba(242,235,224,.55);font-weight:300">Regra de contraste: dourado sobre fundo escuro apenas em texto acima de 11px com letter-spacing; nunca dourado sobre dourado. Botão primário usa tinta escura <span style="font-family:ui-monospace,Menlo,monospace;color:#C6A15B">#150F08</span> sobre o gradiente dourado.</div>
+  </section>
+
+  <section style="margin-bottom:58px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;margin:0 0 6px">Tipografia</h2>
+    <p style="margin:0 0 22px;font-size:13px;color:rgba(242,235,224,.5);font-weight:300">Cormorant Garamond para tudo que é editorial. Jost para interface, rótulos e botões.</p>
+    <div style="display:grid;gap:1px;background:rgba(198,161,91,.16);border:1px solid rgba(198,161,91,.16);border-radius:12px;overflow:hidden">
+      <div style="background:#0B0806;padding:20px 18px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#C6A15B">H1 · 40/44</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1.06;font-weight:400">Uma experiência <em style="color:#E3CB9A">além do convencional.</em></div>
+      </div>
+      <div style="background:#0B0806;padding:20px 18px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#C6A15B">H2 · 30/34</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.14;font-weight:400">Um ambiente pensado para você se desconectar.</div>
+      </div>
+      <div style="background:#0B0806;padding:20px 18px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#C6A15B">Eyebrow · 10.5<br />ls .28em</div>
+        <div style="font-size:10.5px;letter-spacing:.28em;color:#C6A15B">NOSSAS TERAPEUTAS</div>
+      </div>
+      <div style="background:#0B0806;padding:20px 18px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#C6A15B">Body · 13.5/1.7<br />w300</div>
+        <div style="font-size:13.5px;line-height:1.7;font-weight:300;color:rgba(242,235,224,.72);max-width:52ch">Cada detalhe do Espaço Savanna foi planejado para proporcionar conforto, privacidade e uma atmosfera acolhedora.</div>
+      </div>
+      <div style="background:#0B0806;padding:20px 18px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#C6A15B">Botão · 12.5<br />ls .16em w600</div>
+        <div style="font-size:12.5px;letter-spacing:.16em;font-weight:600">AGENDAR PELO WHATSAPP</div>
+      </div>
+      <div style="background:#0B0806;padding:20px 18px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#C6A15B">Caption · 11/1.5</div>
+        <div style="font-size:11px;line-height:1.5;color:rgba(242,235,224,.5);font-weight:300">Discrição do primeiro contato ao atendimento.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:58px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;margin:0 0 6px">Marca</h2>
+    <p style="margin:0 0 22px;font-size:13px;color:rgba(242,235,224,.5);font-weight:300">Logo original em dourado metálico. Aplicar sempre sobre fundo escuro — o arquivo tem fundo transparente. Área de proteção equivalente à altura da palavra SAVANNA.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <div style="flex:1 1 240px;border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:34px;display:flex;justify-content:center;align-items:center;background:#100C09">
+        <img src="img/logo-sm.png" alt="Espaço Savanna" style="width:100%;max-width:230px;height:auto;display:block" />
+      </div>
+      <div style="flex:1 1 240px;border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:34px;display:flex;justify-content:center;align-items:center;background:#1E1813">
+        <img src="img/logo-sm.png" alt="Espaço Savanna" style="width:100%;max-width:230px;height:auto;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:58px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;margin:0 0 6px">Ícones</h2>
+    <p style="margin:0 0 22px;font-size:13px;color:rgba(242,235,224,.5);font-weight:300">Traço 1.3px, grade 24px, cantos vivos, sempre em Gold. Tamanho padrão 22px; 20px dentro de cards.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px">
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /><circle cx="12" cy="15" r="1.2" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">DISCRIÇÃO</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><path d="M12 5c2.2 2.2 2.2 5.6 0 7.8-2.2-2.2-2.2-5.6 0-7.8Z" /><path d="M12 12.8c-2.6 1-5.4.3-7-1.6 2.2-1.3 5-1 7 1.6Z" /><path d="M12 12.8c2.6 1 5.4.3 7-1.6-2.2-1.3-5-1-7 1.6Z" /><path d="M6.5 15.5c1.8 2.4 4.6 3.5 5.5 3.5s3.7-1.1 5.5-3.5" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">BEM-ESTAR</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><circle cx="12" cy="8.5" r="3.4" /><path d="M5.5 19.5a6.5 6.5 0 0 1 13 0" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">TERAPEUTA</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3" stroke-linecap="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5Z" /><path d="M8.6 9.2c0 3.3 2.7 6 6 6" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">WHATSAPP</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><rect x="3.5" y="5.5" width="17" height="15" rx="2" /><path d="M3.5 10h17M8 3.5v4M16 3.5v4" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">AGENDA</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3" stroke-linecap="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 1.8" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">HORÁRIO</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><circle cx="12" cy="12" r="3" /><path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke-linecap="round" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">SENSORIAL</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:11px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><path d="M3 12h16M15 7l5 5-5 5" /></svg>
+        <span style="font-size:10px;letter-spacing:.14em;color:rgba(242,235,224,.55)">AVANÇAR</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:58px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;margin:0 0 6px">Componentes</h2>
+    <p style="margin:0 0 22px;font-size:13px;color:rgba(242,235,224,.5);font-weight:300">Altura mínima de toque 52px. Raio 14px (ajustável para 2px na variante reta).</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px">
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.12em;color:#C6A15B;margin-bottom:16px">BOTÕES</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="#a" style="display:flex;align-items:center;justify-content:center;gap:10px;height:54px;border-radius:14px;background:linear-gradient(180deg,#E3CB9A,#C6A15B);color:#150F08;font-size:12.5px;font-weight:600;letter-spacing:.16em">PRIMÁRIO</a>
+          <a href="#a" style="display:flex;align-items:center;justify-content:center;height:52px;border-radius:14px;border:1px solid rgba(198,161,91,.45);color:#E3CB9A;font-size:12.5px;font-weight:500;letter-spacing:.16em">SECUNDÁRIO</a>
+          <a href="#a" style="display:inline-flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.14em;color:#E3CB9A;height:44px">TERCIÁRIO
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="#E3CB9A" stroke-width="1.2"><path d="M0 5h16M12 1l4 4-4 4" /></svg>
+          </a>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.12em;color:#C6A15B;margin-bottom:16px">CARD DE TERAPEUTA</div>
+        <article style="border:1px solid rgba(198,161,91,.2);border-radius:14px;overflow:hidden;background:#120E0A;max-width:245px">
+          <div style="height:180px;background:radial-gradient(90% 70% at 50% 30%,rgba(198,161,91,.2),rgba(0,0,0,0) 65%),repeating-linear-gradient(135deg,#191410 0 8px,#1E1813 8px 16px);display:flex;align-items:flex-end;padding:10px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;color:rgba(226,214,196,.42)">RETRATO 3:4</span></div>
+          <div style="padding:16px 15px">
+            <div style="font-size:12px;letter-spacing:.2em;color:#E3CB9A;margin-bottom:10px">NOME</div>
+            <div style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300;margin-bottom:14px">· Especialidade<br />· Especialidade</div>
+            <a href="#a" style="display:flex;align-items:center;justify-content:center;height:42px;border-radius:10px;border:1px solid rgba(198,161,91,.4);color:#E3CB9A;font-size:10.5px;letter-spacing:.16em">CONHECER PERFIL</a>
+          </div>
+        </article>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.12em;color:#C6A15B;margin-bottom:16px">PLACEHOLDER DE IMAGEM</div>
+        <div style="height:150px;border-radius:14px;background:radial-gradient(110% 80% at 60% 30%,rgba(198,161,91,.24),rgba(0,0,0,0) 62%),repeating-linear-gradient(135deg,#191410 0 8px,#1E1813 8px 16px);display:flex;align-items:center;justify-content:center">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:9.5px;letter-spacing:.14em;color:rgba(226,214,196,.5);border:1px dashed rgba(198,161,91,.32);padding:6px 9px;border-radius:3px">FOTO — DESCRIÇÃO</span>
+        </div>
+        <div style="margin-top:12px;font-size:11.5px;line-height:1.6;color:rgba(242,235,224,.5);font-weight:300">Toda foto recebe sobreposição escura de 40–90% na base para garantir leitura do texto.</div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.12em;color:#C6A15B;margin-bottom:16px">ESPAÇAMENTO</div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:12px"><span style="height:8px;width:6px;background:#C6A15B"></span><span style="font-size:11.5px;color:rgba(242,235,224,.6);font-weight:300">6 · entre ícone e rótulo</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="height:8px;width:12px;background:#C6A15B"></span><span style="font-size:11.5px;color:rgba(242,235,224,.6);font-weight:300">12 · entre cards</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="height:8px;width:22px;background:#C6A15B"></span><span style="font-size:11.5px;color:rgba(242,235,224,.6);font-weight:300">22 · margem lateral mobile</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="height:8px;width:38px;background:#C6A15B"></span><span style="font-size:11.5px;color:rgba(242,235,224,.6);font-weight:300">38 · topo de seção</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="height:8px;width:46px;background:#C6A15B"></span><span style="font-size:11.5px;color:rgba(242,235,224,.6);font-weight:300">46 · base de seção</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;margin:0 0 6px">Tom de voz</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:20px">
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px">
+        <div style="font-size:10px;letter-spacing:.18em;color:#C6A15B;margin-bottom:10px">SIM</div>
+        <div style="font-size:12.5px;line-height:1.7;color:rgba(242,235,224,.65);font-weight:300">Sugestivo e elegante. Fala de ambiente, conexão, discrição e cuidado. Frases curtas, sem exclamação.</div>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:12px;padding:18px">
+        <div style="font-size:10px;letter-spacing:.18em;color:#C6A15B;margin-bottom:10px">NÃO</div>
+        <div style="font-size:12.5px;line-height:1.7;color:rgba(242,235,224,.65);font-weight:300">Linguagem explícita, gíria, urgência comercial, promoções agressivas ou emojis.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+</body>
+</html>
