@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../styles/tokens.css";
+
+/*
+ * Expõe os tokens como utilitários Tailwind.
+ * Ex.: bg-surface-1, text-gold-soft, border-line-strong, text-h2, px-gutter, py-section.
+ */
+@theme inline {
+  /* Cores da marca */
+  --color-background: var(--brand-bg);
+  --color-foreground: var(--brand-fg);
+  --color-surface-1: var(--brand-surface-1);
+  --color-surface-2: var(--brand-surface-2);
+  --color-surface-3: var(--brand-surface-3);
+  --color-gold: var(--brand-gold);
+  --color-gold-soft: var(--brand-gold-soft);
+  --color-gold-hover: var(--brand-gold-hover);
+  --color-on-gold: var(--brand-on-gold);
+  --color-fg-nav: var(--fg-nav);
+  --color-fg-body: var(--fg-body);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-line-subtle: var(--line-subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-accent: var(--line-accent);
+
+  /* Shadcn */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Fontes (variáveis injetadas por next/font em app/layout.tsx) */
+  --font-sans: var(--font-jost), system-ui, sans-serif;
+  --font-heading: var(--font-cormorant), Georgia, serif;
+
+  /* Escala tipográfica */
+  --text-display: var(--text-display);
+  --text-display--line-height: var(--leading-display);
+  --text-h2: var(--text-h2);
+  --text-h2--line-height: var(--leading-heading);
+  --text-h3: var(--text-h3);
+  --text-h3--line-height: 1.3;
+  --text-lead: var(--text-lead);
+  --text-lead--line-height: var(--leading-body);
+  --text-body: var(--text-body);
+  --text-body--line-height: var(--leading-relaxed);
+  --text-small: var(--text-small);
+  --text-small--line-height: 1.6;
+  --text-caption: var(--text-caption);
+  --text-caption--line-height: 1.5;
+  --text-eyebrow: var(--text-eyebrow);
+  --text-eyebrow--line-height: 1;
+  --text-eyebrow--letter-spacing: var(--tracking-eyebrow);
+  --text-button: var(--text-button);
+  --text-button--line-height: 1;
+  --text-button--letter-spacing: var(--tracking-button);
+  --text-nav: var(--text-nav);
+  --text-nav--line-height: 1;
+  --text-nav--letter-spacing: var(--tracking-nav);
+
+  --tracking-eyebrow: var(--tracking-eyebrow);
+  --tracking-label: var(--tracking-label);
+  --tracking-button: var(--tracking-button);
+  --tracking-nav: var(--tracking-nav);
+
+  /* Raio */
+  --radius-sm: var(--radius-sm);
+  --radius-inner: var(--radius-inner);
+  --radius-md: var(--radius-inner);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.5);
+
+  /* Espaçamento */
+  --spacing-gutter: var(--gutter);
+  --spacing-section: var(--section-y);
+  --spacing-section-tight: var(--section-y-tight);
+  --spacing-stack-sm: var(--stack-sm);
+  --spacing-stack: var(--stack);
+  --spacing-stack-lg: var(--stack-lg);
+  --spacing-control-lg: var(--control-lg);
+  --spacing-control-md: var(--control-md);
+  --spacing-control: var(--control);
+  --spacing-control-sm: var(--control-sm);
+  --spacing-control-xs: var(--control-xs);
+  --spacing-header: var(--header-h);
+  --spacing-header-mobile: var(--header-h-mobile);
+  --spacing-logo: var(--logo-h);
+  --spacing-logo-mobile: var(--logo-h-mobile);
+  --container-site: var(--container);
+  --container-narrow: var(--container-narrow);
+
+  /* Movimento */
+  --ease-out: var(--ease-out);
+  --default-transition-duration: var(--duration-fast);
+  --default-transition-timing-function: var(--ease-out);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans antialiased;
+    background: var(--brand-bg);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-heading {
+    @apply font-heading;
+    font-weight: 400;
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--brand-gold-soft);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  a:hover {
+    color: var(--brand-gold-hover);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--brand-gold) 35%, transparent);
+    color: var(--brand-fg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility surface-gold {
+  background: var(--gold-gradient);
+  color: var(--brand-on-gold);
+}

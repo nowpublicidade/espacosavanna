@@ -1,0 +1,281 @@
+Documento 02 — Especificação de Desenvolvimento do Site Espaço Savanna
+
+1. Objetivo deste documento
+
+Este documento transforma a estrutura aprovada do site Espaço Savanna em uma especificação de desenvolvimento para utilização pelo Claude.
+
+A finalidade é orientar a criação do site mantendo:
+- Direção visual aprovada
+- Estrutura de páginas definida
+- Experiência premium e discreta
+- Foco em conversão via WhatsApp
+
+2. Direção Visual Obrigatória
+
+O desenvolvimento deve seguir o Design System aprovado.
+
+Conceito visual:
+Direção Clássica.
+
+Sensação desejada:
+- Luxo discreto
+- Privacidade
+- Elegância
+- Conforto
+- Exclusividade
+
+Evitar:
+- Visual sensual apelativo
+- Excesso de elementos
+- Cores vibrantes
+- Aparência de catálogo genérico
+
+3. Sistema Visual
+
+Cores principais:
+
+Background principal:
+#0B0806
+
+Texto principal:
+#F2EBE0
+
+Dourado principal:
+#C6A15B
+
+Dourado suave:
+#E3CB9A
+
+Tipografia:
+
+Títulos:
+Cormorant Garamond
+
+Textos, menus e botões:
+Jost
+
+O layout deve priorizar bastante espaço negativo e hierarquia editorial.
+
+4. Regras de Desenvolvimento
+
+Tecnologia recomendada:
+
+Frontend:
+Next.js
+
+Estilização:
+Tailwind CSS utilizando tokens do Design System.
+
+O desenvolvimento deve ser mobile-first.
+
+Prioridades:
+- Velocidade
+- Responsividade
+- SEO
+- Conversão para WhatsApp
+
+5. Componentes Globais
+
+Criar componentes reutilizáveis:
+
+Header:
+- Logo
+- Menu
+- Botão Agendar
+
+Botão WhatsApp:
+- Sempre disponível
+- Destaque visual
+
+Cards:
+- Terapeutas
+- Experiências
+- Diferenciais
+
+Galerias:
+- Imagens grandes
+- Layout elegante
+
+Accordion FAQ:
+- Perguntas expansíveis
+
+Footer:
+- Informações institucionais
+- Contato
+- Redes sociais
+- Aviso de maioridade
+
+6. Estrutura da Home
+
+A Home deve funcionar como página principal de conversão.
+
+Blocos:
+
+1. Hero
+- Imagem premium do ambiente
+- Título institucional
+- Texto curto
+- CTA WhatsApp
+
+2. Diferenciais
+- Privacidade
+- Conforto
+- Atendimento personalizado
+
+3. Terapeutas
+- Cards com apresentação
+
+4. Espaço
+- Fotos e apresentação da estrutura
+
+5. Como funciona
+- Passo a passo simples
+
+6. Localização
+- Endereço e mapa
+
+7. CTA final
+- Convite para agendamento
+
+7. Página O Espaço
+
+Objetivo:
+Gerar confiança.
+
+Estrutura:
+- Apresentação institucional
+- História/conceito
+- Estrutura física
+- Diferenciais
+- Galeria
+
+8. Página Terapeutas
+
+Criar uma experiência de escolha.
+
+Página geral:
+- Grid de terapeutas
+- Foto
+- Nome
+- Descrição curta
+- CTA
+
+Página individual:
+- Foto principal
+- Apresentação
+- Características do atendimento
+- Botão WhatsApp
+
+9. Página Experiências
+
+Apresentar os atendimentos como experiências premium.
+
+Utilizar cards com:
+- Título
+- Descrição curta
+- CTA de consulta de disponibilidade
+
+10. Página Como Funciona
+
+Objetivo:
+Reduzir dúvidas antes do contato.
+
+Estrutura:
+- Como agendar
+- Como escolher terapeuta
+- Como funciona o atendimento
+- Perguntas frequentes em accordion
+
+11. Página Galeria
+
+Página altamente visual.
+
+Diretrizes:
+- Fotos grandes
+- Pouco texto
+- Valorizar arquitetura, iluminação e detalhes do ambiente
+
+12. Página Trabalhe Conosco
+
+Página para profissionais interessados.
+
+Campos:
+- Nome
+- Telefone
+- Instagram
+- Experiência profissional
+- Mensagem
+
+13. Página Aluguel de Salas
+
+Página comercial para profissionais.
+
+Apresentar:
+- Estrutura disponível
+- Privacidade
+- Localização
+- Formas de utilização
+
+CTA:
+Consultar disponibilidade
+
+14. Página Contato
+
+Página final de conversão.
+
+Elementos:
+- WhatsApp
+- Endereço
+- Mapa
+- Instagram
+- Horários
+
+15. Regras de Conversão
+
+Todo o site deve incentivar contato.
+
+CTAs principais:
+- Agendar pelo WhatsApp
+- Consultar disponibilidade
+- Conhecer terapeutas
+
+Evitar caminhos longos até o contato.
+
+16. Regras de Imagem
+
+As imagens devem transmitir:
+
+- Ambiente premium
+- Luz quente
+- Sofisticação
+- Privacidade
+
+Evitar imagens genéricas ou com aparência artificial.
+
+Priorizar:
+- Ambientes
+- Detalhes
+- Texturas
+- Experiência
+
+17. SEO Inicial
+
+Criar estrutura preparada para SEO:
+
+- Titles personalizados
+- Meta descriptions
+- URLs amigáveis
+- Dados estruturados locais
+- Otimização de imagens
+
+18. Entrega esperada do Claude
+
+O Claude deve gerar um site completo seguindo:
+
+- Estrutura deste documento
+- Design System aprovado
+- Layout aprovado
+- Componentes reutilizáveis
+- Responsividade completa
+
+O resultado deve parecer um site premium real, não um template genérico.

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#EDE9E2;-webkit-font-smoothing:antialiased}
+a{color:#8A6A2E;text-decoration:none}
+a:hover{color:#5E4720}
+[data-frame]{display:block}
+[data-open]{display:none}
+@media (max-width:1120px){
+  [data-frame]{display:none}
+  [data-open]{display:flex}
+  section{padding-left:24px!important;padding-right:24px!important}
+  [data-cols]{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  [data-h1]{font-size:38px!important}
+  [data-h2]{font-size:28px!important}
+  [data-steps]{grid-template-columns:44px 1fr!important}
+  [data-steps]>span:last-child{grid-column:2;font-size:12px!important}
+}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#0B0806"/><text x="200" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#C6A15B">SAVANNA</text><text x="200" y="176" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="13" letter-spacing="5" fill="#8A7050">LAYOUT APROVADO</text></svg></template>
+
+<div style="background:#EDE9E2;color:#1A1614;font-family:'Jost',system-ui,sans-serif;padding:0 0 90px">
+
+  <section style="background:#0B0806;color:#F2EBE0;padding:96px 56px 88px">
+    <div style="max-width:1120px;margin:0 auto">
+      <img src="img/logo-sm.png" alt="Espaço Savanna" style="height:52px;width:auto;display:block;margin-bottom:64px" />
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px">
+        <span style="width:32px;height:1px;background:#C6A15B"></span>
+        <span style="font-size:10.5px;letter-spacing:.34em;color:#C6A15B">DIREÇÃO CRIATIVA APROVADA · SITE</span>
+      </div>
+      <h1 data-h1="1" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:64px;line-height:1.1;margin:0 0 26px;max-width:22ch">O layout do novo site do Espaço Savanna.</h1>
+      <p style="margin:0 0 48px;font-size:17px;line-height:1.75;color:rgba(242,235,224,.7);font-weight:300;max-width:56ch">Direção visual clássica e acolhedora, nas versões celular e computador. As telas são navegáveis: role, abra as perguntas, arraste os carrosséis.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:56px;padding-top:28px;border-top:1px solid rgba(198,161,91,.2);font-size:12.5px;color:rgba(242,235,224,.55);font-weight:300">
+        <span>Setembro de 2026</span>
+        <span>Versão aprovada</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:80px 56px 0">
+    <div data-cols="1" style="display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:64px;align-items:start">
+      <h2 data-h2="1" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:34px;line-height:1.2;margin:0">Como usar este documento</h2>
+      <div style="display:flex;flex-direction:column;gap:22px;font-size:15.5px;line-height:1.8;color:#3A322C;font-weight:300">
+        <p style="margin:0">O layout abaixo é a versão aprovada. As duas telas mostram a mesma página inicial: uma adaptada ao celular e outra ao computador.</p>
+        <p style="margin:0">As imagens que estão no layout são demonstrativas, no desenvolvimento iremos inserir as imagens finais</p>
+        <p style="margin:0">Os textos também são de referência. Antes do desenvolvimento, vamos revisar cada trecho junto com você.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:88px 56px 0">
+    <div style="font-size:10.5px;letter-spacing:.3em;color:#8A6A2E;margin-bottom:14px">A DIREÇÃO</div>
+    <h2 data-h2="1" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0">Clássica e acolhedora</h2>
+    <div data-cols="1" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:34px 0 44px;border-top:1px solid rgba(26,22,20,.14);margin-top:30px">
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">TIPOGRAFIA</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Serifa clássica de traço suave nos títulos. Leitura confortável, tom tradicional.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">FORMA</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Cantos arredondados, cartões com contorno e um ícone em cada informação.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">SENSAÇÃO</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Familiar e explicativa. Guia o visitante passo a passo, com o dourado presente.</p>
+      </div>
+    </div>
+
+    <div data-open="1" style="flex-direction:column;gap:12px;margin-bottom:8px">
+      <a href="Espaco Savanna - Layout Desktop v1.dc.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:#0B0806;color:#E3CB9A;font-size:13px;letter-spacing:.14em">ABRIR VERSÃO COMPUTADOR<span>→</span></a>
+      <a href="Espaco Savanna - Layout Mobile.dc.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:#0B0806;color:#E3CB9A;font-size:13px;letter-spacing:.14em">ABRIR VERSÃO CELULAR<span>→</span></a>
+    </div>
+    <div data-frame="1">
+      <div style="margin-bottom:16px;font-size:10.5px;letter-spacing:.26em;color:#8A6A2E">COMPUTADOR</div>
+      <div style="position:relative;width:1008px;height:660px;overflow:hidden;background:#0B0806;box-shadow:0 30px 70px rgba(26,22,20,.24)">
+        <iframe src="Espaco Savanna - Layout Desktop v1.dc.html" title="Layout aprovado — computador" style="position:absolute;top:0;left:0;width:1440px;height:943px;border:0;transform:scale(.7);transform-origin:0 0"></iframe>
+      </div>
+      <div style="margin:44px 0 16px;font-size:10.5px;letter-spacing:.26em;color:#8A6A2E">CELULAR</div>
+      <div style="position:relative;width:430px;height:820px;overflow:hidden;background:#0B0806;box-shadow:0 30px 70px rgba(26,22,20,.24)">
+        <iframe src="Espaco Savanna - Layout Mobile.dc.html" title="Layout aprovado — celular" style="width:100%;height:100%;border:0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:96px 56px 0">
+    <h2 data-h2="1" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0 0 12px">O sistema por trás</h2>
+    <p style="margin:0 0 44px;font-size:15.5px;line-height:1.8;color:#3A322C;font-weight:300;max-width:56ch">O site é montado sobre um conjunto fixo de cores, tamanhos de texto e espaçamentos. Isso mantém tudo coerente quando novas páginas forem criadas.</p>
+    <div data-cols="1" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px">
+      <div>
+        <div style="font-size:10.5px;letter-spacing:.26em;color:#8A6A2E;margin-bottom:20px">PALETA</div>
+        <div style="display:flex;gap:0;height:64px;margin-bottom:18px">
+          <span style="flex:1;background:#0B0806"></span>
+          <span style="flex:1;background:#100C09"></span>
+          <span style="flex:1;background:#120E0A"></span>
+          <span style="flex:1;background:#C6A15B"></span>
+          <span style="flex:1;background:#E3CB9A"></span>
+          <span style="flex:1;background:#F2EBE0"></span>
+        </div>
+        <div style="font-size:14px;line-height:1.75;color:#3A322C;font-weight:300">Fundo escuro quente como base e dourado como único acento.</div>
+      </div>
+      <div>
+        <div style="font-size:10.5px;letter-spacing:.26em;color:#8A6A2E;margin-bottom:20px">TIPOGRAFIA</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1.1;margin-bottom:10px">Uma experiência</div>
+        <div style="font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.16em;color:#3A322C;margin-bottom:18px">CORMORANT GARAMOND · JOST</div>
+        <div style="font-size:14px;line-height:1.75;color:#3A322C;font-weight:300">Serifa nos títulos, sem serifa na interface e nos botões.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:96px 56px 0">
+    <h2 data-h2="1" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0 0 40px">Próximos passos</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid rgba(26,22,20,.14)">
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.12);align-items:baseline">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#A8813C">01</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Direção visual aprovada</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">concluído</span>
+      </div>
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.12);align-items:baseline">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#A8813C">02</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Ensaio fotográfico do espaço e das terapeutas</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">recomendado</span>
+      </div>
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.12);align-items:baseline">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#A8813C">03</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Páginas internas: perfil da terapeuta, galeria e menu</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">próxima entrega</span>
+      </div>
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.14);align-items:baseline">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#A8813C">04</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Textos finais e desenvolvimento</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">em seguida</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:80px 56px 0">
+    <div style="background:#0B0806;color:#F2EBE0;padding:64px 56px">
+      <h2 data-h2="1" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:38px;line-height:1.15;margin:0 0 18px">Ajustes antes do desenvolvimento</h2>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:rgba(242,235,224,.7);font-weight:300;max-width:52ch">Se algum trecho de texto, foto ou seção precisar mudar, aponte agora — é o melhor momento para ajustar, antes de o site entrar em produção.</p>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+</body>
+</html>

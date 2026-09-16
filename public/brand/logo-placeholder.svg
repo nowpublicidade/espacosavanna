@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 225" width="900" height="225" role="img" aria-label="Espaço Savanna">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3CB9A"/>
+      <stop offset="1" stop-color="#C6A15B"/>
+    </linearGradient>
+  </defs>
+  <text x="450" y="52" text-anchor="middle" font-family="Jost, 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="40" letter-spacing="14" fill="url(#g)">ESPAÇO</text>
+  <text x="450" y="200" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-weight="400" font-size="168" letter-spacing="4" fill="url(#g)">SAVANNA</text>
+</svg>

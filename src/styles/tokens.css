@@ -1,0 +1,123 @@
+/*
+ * Design Tokens — Espaço Savanna
+ * Fonte: design/DESIGN_SYSTEM.md + medidas extraídas do layout aprovado
+ * (design/Espaco Savanna - Layout Aprovado.html).
+ *
+ * Regra: nenhuma cor, raio ou espaçamento fora deste arquivo.
+ * Os tokens semânticos do Shadcn (--primary, --border, ...) são mapeados
+ * a partir dos tokens da marca — nunca definidos com valores próprios.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------- Cor: base da marca ---------- */
+  --brand-bg: #0b0806;          /* background profundo */
+  --brand-surface-1: #100c09;   /* seções alternadas */
+  --brand-surface-2: #120e0a;   /* cards */
+  --brand-surface-3: #14100c;   /* fundo de imagens antes do carregamento */
+  --brand-fg: #f2ebe0;          /* texto principal */
+  --brand-gold: #c6a15b;        /* dourado principal — acento, nunca dominante */
+  --brand-gold-soft: #e3cb9a;   /* dourado suave — links, contornos, itálicos */
+  --brand-gold-hover: #f3e4c4;  /* estado hover de links dourados */
+  --brand-on-gold: #150f08;     /* texto sobre botão dourado */
+
+  /* ---------- Cor: texto secundário (opacidades do layout) ---------- */
+  --fg-strong: var(--brand-fg);
+  --fg-nav: color-mix(in srgb, var(--brand-fg) 78%, transparent);
+  --fg-body: color-mix(in srgb, var(--brand-fg) 72%, transparent);
+  --fg-muted: color-mix(in srgb, var(--brand-fg) 60%, transparent);
+  --fg-faint: color-mix(in srgb, var(--brand-fg) 45%, transparent);
+
+  /* ---------- Cor: linhas (dourado em opacidade) ---------- */
+  --line-subtle: color-mix(in srgb, var(--brand-gold) 12%, transparent);  /* divisor de seções */
+  --line: color-mix(in srgb, var(--brand-gold) 16%, transparent);         /* header / footer */
+  --line-strong: color-mix(in srgb, var(--brand-gold) 20%, transparent);  /* contorno de cards */
+  --line-accent: color-mix(in srgb, var(--brand-gold) 45%, transparent);  /* botão secundário */
+
+  /* ---------- Cor: overlays sobre fotografia ---------- */
+  --overlay-hero: linear-gradient(180deg, rgb(11 8 6 / 0.35) 0%, rgb(11 8 6 / 0.5) 40%, rgb(11 8 6 / 0.96) 100%);
+  --overlay-hero-mobile: linear-gradient(180deg, rgb(11 8 6 / 0.6) 0%, rgb(11 8 6 / 0.4) 26%, rgb(11 8 6 / 0.94) 76%, var(--brand-bg) 100%);
+  --overlay-card: linear-gradient(0deg, rgb(11 8 6 / 0.85), rgb(11 8 6 / 0) 70%);
+  --overlay-header: rgb(11 8 6 / 0.82);
+
+  /* ---------- Superfície do botão primário ---------- */
+  --gold-gradient: linear-gradient(180deg, var(--brand-gold-soft), var(--brand-gold));
+
+  /* ---------- Raio ---------- */
+  --radius: 14px;        /* cards, botões, imagens */
+  --radius-inner: 10px;  /* botões dentro de cards */
+  --radius-sm: 8px;      /* chips, ícones */
+
+  /* ---------- Tipografia: escala fluida (mobile → desktop do layout) ---------- */
+  --text-display: clamp(2.5rem, 1.55rem + 4.1vw, 4.75rem);      /* 40 → 76 */
+  --text-h2: clamp(1.875rem, 1.45rem + 1.8vw, 2.875rem);        /* 30 → 46 */
+  --text-h3: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);        /* 17 → 19 */
+  --text-lead: clamp(0.875rem, 0.8rem + 0.35vw, 1.0625rem);     /* 14 → 17 */
+  --text-body: clamp(0.84375rem, 0.79rem + 0.25vw, 0.96875rem); /* 13.5 → 15.5 */
+  --text-small: clamp(0.78125rem, 0.76rem + 0.1vw, 0.8125rem);  /* 12.5 → 13 */
+  --text-caption: clamp(0.71875rem, 0.69rem + 0.15vw, 0.78125rem); /* 11.5 → 12.5 */
+  --text-eyebrow: 0.65625rem;                                   /* 10.5 fixo */
+  --text-button: clamp(0.71875rem, 0.69rem + 0.15vw, 0.78125rem); /* 11.5 → 12.5 */
+  --text-nav: 0.8125rem;                                        /* 13 fixo */
+
+  --leading-display: 1.06;
+  --leading-heading: 1.15;
+  --leading-body: 1.65;
+  --leading-relaxed: 1.8;
+
+  --tracking-eyebrow: 0.28em;
+  --tracking-label: 0.2em;
+  --tracking-button: 0.16em;
+  --tracking-nav: 0.06em;
+
+  /* ---------- Espaçamento ---------- */
+  --gutter: clamp(1.375rem, 0.6rem + 3vw, 3.5rem);        /* 22 → 56 */
+  --section-y: clamp(2.5rem, 1.4rem + 4.2vw, 5.625rem);   /* 40 → 90 */
+  --section-y-tight: clamp(2.375rem, 1.6rem + 3vw, 5rem); /* 38 → 80 */
+  --container: 90rem;                                     /* 1440 */
+  --container-narrow: 70rem;                              /* 1120 */
+  --stack-sm: 0.75rem;
+  --stack: 1.375rem;
+  --stack-lg: 2.75rem;
+
+  /* ---------- Controles ---------- */
+  --control-lg: 3.625rem;   /* 58 — CTA hero / final (desktop) */
+  --control-md: 3.375rem;   /* 54 — CTA mobile */
+  --control: 3rem;          /* 48 — CTA header */
+  --control-sm: 2.875rem;   /* 46 — CTA em card */
+  --control-xs: 2.625rem;   /* 42 — CTA em card mobile */
+
+  --header-h: 5.3125rem;        /* 85 desktop */
+  --header-h-mobile: 4.125rem;  /* 66 mobile */
+
+  --logo-h: 2.125rem;        /* 34 desktop */
+  --logo-h-mobile: 2.375rem; /* 38 mobile */
+  --logo-ratio: 4 / 1;       /* 900×225 */
+
+  /* ---------- Movimento ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration: 400ms;
+  --duration-slow: 800ms;
+
+  /* ---------- Shadcn: mapeamento semântico ---------- */
+  --background: var(--brand-bg);
+  --foreground: var(--brand-fg);
+  --card: var(--brand-surface-2);
+  --card-foreground: var(--brand-fg);
+  --popover: var(--brand-surface-1);
+  --popover-foreground: var(--brand-fg);
+  --primary: var(--brand-gold);
+  --primary-foreground: var(--brand-on-gold);
+  --secondary: var(--brand-surface-2);
+  --secondary-foreground: var(--brand-gold-soft);
+  --muted: var(--brand-surface-1);
+  --muted-foreground: var(--fg-muted);
+  --accent: var(--brand-surface-2);
+  --accent-foreground: var(--brand-gold-soft);
+  --destructive: oklch(0.6 0.19 25);
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--brand-gold);
+}

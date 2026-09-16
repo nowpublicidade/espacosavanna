@@ -1,0 +1,154 @@
+Documento 01 — Estrutura do Novo Site Espaço Savanna
+
+1. Objetivo do Projeto
+
+Criar um novo site para o Espaço Savanna com uma experiência moderna, premium, discreta e de fácil navegação.
+
+O principal objetivo do site é transformar visitantes em contatos pelo WhatsApp, transmitindo segurança, privacidade, conforto e exclusividade.
+
+O site deve ser direto, considerando que o público possui pouco tempo de navegação e precisa encontrar rapidamente as informações principais.
+
+2. Direção Estratégica
+
+O novo site deve manter as páginas existentes do site atual, porém reorganizando a experiência.
+
+A comunicação deve evitar excesso de informação e trabalhar uma percepção premium:
+- Privacidade
+- Conforto
+- Exclusividade
+- Segurança
+- Atendimento personalizado
+
+3. Mapa do Site
+
+HOME
+
+├── O ESPAÇO
+├── TERAPEUTAS
+├── EXPERIÊNCIAS
+├── COMO FUNCIONA
+├── GALERIA
+├── TRABALHE CONOSCO
+├── ALUGUEL DE SALAS
+└── CONTATO
+
+4. Página Home
+
+Objetivo: principal página de conversão.
+
+Estrutura:
+
+Hero:
+- Imagem premium do ambiente
+- Título institucional
+- Texto de apresentação
+- CTA principal: Agendar pelo WhatsApp
+
+Blocos:
+- Uma experiência diferente
+- Conheça nossas terapeutas
+- Nosso espaço
+- Como funciona
+- Localização
+- CTA final de agendamento
+
+5. Página O Espaço
+
+Objetivo: gerar confiança e apresentar estrutura.
+
+Conteúdos:
+- Apresentação do espaço
+- Estrutura física
+- Diferenciais
+- Galeria de ambientes
+
+6. Página Terapeutas
+
+Objetivo: facilitar a escolha da terapeuta.
+
+Estrutura:
+- Cards com foto
+- Nome
+- Breve apresentação
+- Botão de contato
+
+Cada terapeuta poderá possuir uma página individual com apresentação e CTA para WhatsApp.
+
+7. Página Experiências
+
+Apresentar os tipos de experiências oferecidas de forma premium.
+
+A comunicação deve valorizar a experiência completa e não apenas descrever serviços.
+
+8. Página Como Funciona
+
+Página criada para reduzir dúvidas e inseguranças.
+
+Conteúdos:
+- Como realizar o agendamento
+- Primeiro contato
+- Escolha da terapeuta
+- Perguntas frequentes
+
+9. Página Galeria
+
+Página visual com foco em fotos do ambiente.
+
+Priorizar imagens grandes, elegantes e com pouca interferência de texto.
+
+10. Página Trabalhe Conosco
+
+Página destinada ao cadastro de profissionais.
+
+Informações:
+- Apresentação
+- Formulário de contato
+- Dados profissionais
+
+11. Página Aluguel de Salas
+
+Página voltada para profissionais interessados em utilizar o espaço.
+
+Comunicação:
+- Estrutura disponível
+- Privacidade
+- Localização
+- Disponibilidade
+
+12. Página Contato
+
+Página final de conversão.
+
+Informações:
+- WhatsApp
+- Endereço
+- Horários
+- Redes sociais
+- Mapa
+
+13. Estrutura do Menu
+
+Desktop:
+O Espaço | Terapeutas | Experiências | Como Funciona | Galeria | Contato | Agendar
+
+Mobile:
+Menu simplificado com destaque para WhatsApp.
+
+14. Elementos Fixos
+
+- Botão WhatsApp sempre disponível
+- Comunicação de maioridade no rodapé
+- Navegação simples e objetiva
+
+15. Direção para Desenvolvimento
+
+O documento serve como base inicial para criação do site no Claude.
+
+A próxima etapa será a documentação técnica de desenvolvimento, contendo:
+- Estrutura detalhada das páginas
+- Componentes
+- Textos finais
+- Regras visuais
+- Responsividade
+- SEO
+- Conversão.

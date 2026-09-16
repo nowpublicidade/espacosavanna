@@ -1,0 +1,227 @@
+Documento 04 — Prompt Mestre para Desenvolvimento no Claude
+
+CONTEXTO DO PROJETO
+
+Você será responsável pelo desenvolvimento do novo site do Espaço Savanna.
+
+O projeto consiste na criação de um site premium para uma casa de massagem tântrica, com foco em experiência, privacidade, conforto e conversão através do WhatsApp.
+
+O site atual será utilizado como referência de estrutura, porém a nova versão deve representar uma marca mais sofisticada, moderna e organizada.
+
+O público possui pouco tempo de navegação. Portanto, a experiência deve ser objetiva, intuitiva e direcionada para o agendamento.
+
+OBJETIVO PRINCIPAL
+
+Criar um site que:
+
+- Gere confiança antes do primeiro contato.
+- Apresente o Espaço Savanna como uma experiência premium.
+- Facilite a escolha de terapeutas.
+- Reduza dúvidas através de informações claras.
+- Converta visitantes em contatos pelo WhatsApp.
+
+DIREÇÃO VISUAL
+
+Siga obrigatoriamente o Design System aprovado.
+
+Conceito:
+Clássico premium.
+
+Sensações:
+- Luxo discreto
+- Elegância
+- Privacidade
+- Conforto
+- Exclusividade
+
+Evite:
+- Visual apelativo
+- Excesso de elementos
+- Aparência genérica de template
+- Cores vibrantes
+
+A estética deve se aproximar de marcas premium de hotelaria, wellness e experiências exclusivas.
+
+SISTEMA VISUAL
+
+Paleta:
+
+Background:
+#0B0806
+
+Texto:
+#F2EBE0
+
+Dourado:
+#C6A15B
+
+Dourado suave:
+#E3CB9A
+
+
+Tipografia:
+
+Títulos:
+Cormorant Garamond
+
+Textos:
+Jost
+
+
+Utilizar bastante espaço negativo, hierarquia editorial e imagens de grande impacto.
+
+TECNOLOGIA E DESENVOLVIMENTO
+
+Criar utilizando:
+
+Framework:
+Next.js
+
+Estilização:
+Tailwind CSS
+
+O código deve ser organizado, escalável e baseado em componentes reutilizáveis.
+
+Prioridades:
+- Responsividade
+- Performance
+- SEO
+- Conversão
+
+ESTRUTURA DO SITE
+
+Criar as seguintes páginas:
+
+1. Home
+
+2. O Espaço
+
+3. Terapeutas
+
+4. Experiências
+
+5. Como Funciona
+
+6. Galeria
+
+7. Trabalhe Conosco
+
+8. Aluguel de Salas
+
+9. Contato
+
+REQUISITOS DA HOME
+
+A Home deve conter:
+
+Hero:
+- Imagem premium
+- Título forte
+- Texto curto
+- CTA WhatsApp
+
+Diferenciais:
+- Privacidade
+- Conforto
+- Atendimento personalizado
+
+Terapeutas:
+- Cards com foto e apresentação
+
+Espaço:
+- Fotos e conceito
+
+Como funciona:
+- Processo simples em etapas
+
+Localização:
+- Endereço e mapa
+
+CTA final:
+- Agendamento
+
+COMPONENTES OBRIGATÓRIOS
+
+Criar componentes:
+
+- Header premium
+- Menu responsivo
+- Botão WhatsApp fixo
+- Cards de terapeutas
+- Cards de experiências
+- Galeria de imagens
+- Accordion FAQ
+- Footer completo
+
+Todos devem seguir o Design System.
+
+DIREÇÃO DE COPY
+
+A comunicação deve ser:
+
+Elegante.
+Discreta.
+Segura.
+Próxima.
+
+Transmitir:
+
+"Um ambiente onde cada detalhe foi pensado para proporcionar uma experiência única."
+
+Evitar linguagem vulgar ou exagerada.
+
+Os textos devem ser curtos e com foco em conversão.
+
+REGRAS DE IMAGENS
+
+Utilizar imagens com:
+
+- Luz quente
+- Ambientes sofisticados
+- Texturas elegantes
+- Sensação de privacidade
+
+Priorizar:
+- Arquitetura
+- Detalhes do ambiente
+- Experiência
+
+Evitar imagens genéricas ou artificiais.
+
+REGRAS DE CONVERSÃO
+
+O WhatsApp deve ser o principal caminho de conversão.
+
+Inserir CTAs:
+
+- Agendar pelo WhatsApp
+- Consultar disponibilidade
+- Conhecer terapeutas
+
+O usuário nunca deve precisar procurar como entrar em contato.
+
+SEO
+
+Preparar o projeto para SEO:
+
+- URLs amigáveis
+- Meta titles
+- Meta descriptions
+- Otimização de imagens
+- Estrutura semântica HTML
+- SEO local
+
+ENTREGA ESPERADA
+
+Entregue um site completo, funcional e visualmente fiel ao Design System.
+
+O resultado final deve parecer um projeto desenvolvido sob medida para uma marca premium.
+
+Não criar um template genérico.
+
+A experiência deve transmitir:
+
+Privacidade.
+Confiança.
+Exclusividade.
+Desejo de contato.
