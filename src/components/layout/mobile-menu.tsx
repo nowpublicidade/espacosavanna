@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
 import {
@@ -28,6 +28,16 @@ type MobileMenuProps = {
  */
 export function MobileMenu({ nav, secondaryNav = [], cta }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+
+  // Fecha o painel se a janela crescer até o breakpoint do menu desktop.
+  useEffect(() => {
+    if (!open) return;
+    const query = window.matchMedia("(min-width: 64rem)");
+    const close = () => query.matches && setOpen(false);
+    close();
+    query.addEventListener("change", close);
+    return () => query.removeEventListener("change", close);
+  }, [open]);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>

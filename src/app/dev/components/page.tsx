@@ -8,9 +8,11 @@ import { CtaLink } from "@/components/shared/cta-link";
 import { Logo } from "@/components/shared/logo";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { FeatureRow } from "@/components/shared/feature-row";
+import { ImageMosaic } from "@/components/shared/image-mosaic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ctas, experiencesSection, footer, hero, space, therapistsSection } from "@/content/home";
+import { ctas, experiencesSection, features, footer, hero, space, therapistsSection } from "@/content/home";
 import { mainNav, secondaryNav } from "@/data/navigation";
 import { experiences } from "@/data/experiences";
 import { contact, siteConfig } from "@/data/site";
@@ -30,6 +32,8 @@ const index = [
   { id: "section-heading", label: "SectionHeading" },
   { id: "header", label: "Header" },
   { id: "footer", label: "Footer" },
+  { id: "feature-row", label: "FeatureRow" },
+  { id: "image-mosaic", label: "ImageMosaic" },
 ];
 
 /**
@@ -198,6 +202,30 @@ export default function ComponentsPage() {
           </Case>
           <Case label="centralizado" bleed>
             <SectionHeading copy={{ title: "Reserve o seu momento.", text: "Atendimento com hora marcada, em ambiente exclusivo e reservado." }} align="center" />
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="feature-row"
+          index="D1"
+          title="FeatureRow"
+          note="Faixa de diferenciais do Hero. Desktop: ícone à esquerda e divisores verticais. Mobile: colunas centralizadas com rótulo curto (RESERVADO / CONFORTÁVEL / SELECIONADAS)."
+        >
+          <Case label="features (content/home.ts)" bleed>
+            <FeatureRow features={features} />
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="image-mosaic"
+          index="D2"
+          title="ImageMosaic"
+          note="Mosaico da seção O Espaço: imagem principal em duas linhas + duas menores. Colunas 1.5fr/1fr (desktop) e 1.6fr/1fr (mobile)."
+        >
+          <Case label="space.images — na composição real ocupa a coluna direita (1.35fr) da seção" bleed>
+            <div className="lg:max-w-[57%]">
+              <ImageMosaic images={[space.images[0], space.images[1], space.images[2]]} />
+            </div>
           </Case>
         </Specimen>
 
