@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Logo } from "@/components/shared/logo";
 import { buildWhatsAppUrl, whatsappMessages } from "@/lib/whatsapp";
+import { cn } from "@/lib/utils";
 import type { Experience, NavItem, SiteContact } from "@/types/content";
 
 type FooterProps = {
@@ -11,6 +12,7 @@ type FooterProps = {
   tagline: string;
   ageNotice: string;
   siteName: string;
+  className?: string;
 };
 
 /**
@@ -19,7 +21,7 @@ type FooterProps = {
  * barra inferior com © e aviso de maioridade.
  * Mobile: centralizado, logo 62, links em coluna, aviso em uma linha.
  */
-export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName }: FooterProps) {
+export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName, className }: FooterProps) {
   const year = new Date().getFullYear();
   const contactLinks = [
     { label: "WhatsApp", href: buildWhatsAppUrl(whatsappMessages.default), external: true },
@@ -27,7 +29,7 @@ export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName
   ];
 
   return (
-    <footer className="border-t border-line">
+    <footer className={cn("border-t border-line", className)}>
       <div className="mx-auto w-full max-w-site px-gutter pt-11 pb-10 text-center lg:pt-16 lg:text-left">
         <div className="flex flex-col items-center gap-5 lg:grid lg:grid-cols-[minmax(0,1fr)_auto_auto_auto] lg:items-start lg:gap-[4.375rem] lg:pb-12">
           <div className="flex flex-col items-center lg:items-start">
@@ -65,7 +67,7 @@ type FooterColumnProps = {
 
 function FooterColumn({ title, items, className }: FooterColumnProps) {
   return (
-    <div className={`flex flex-col items-center gap-[0.5625rem] lg:items-start lg:gap-[0.8125rem] ${className ?? ""}`}>
+    <div className={cn("flex flex-col items-center gap-[0.5625rem] lg:items-start lg:gap-[0.8125rem]", className)}>
       <Eyebrow as="span" size="label" className="mb-1.5 max-lg:hidden">
         {title}
       </Eyebrow>

@@ -14,6 +14,8 @@ import { ExperienceCard } from "@/components/shared/experience-card";
 import { HorizontalScroller } from "@/components/shared/horizontal-scroller";
 import { FaqAccordion } from "@/components/shared/faq-accordion";
 import { Steps } from "@/components/shared/steps";
+import { Reveal } from "@/components/shared/reveal";
+import { WhatsAppFloating } from "@/components/layout/whatsapp-floating";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ctas, experiencesSection, faqSection, features, footer, hero, howItWorks, space, therapistsSection } from "@/content/home";
@@ -44,6 +46,8 @@ const index = [
   { id: "experience-card", label: "ExperienceCard" },
   { id: "faq", label: "FaqAccordion" },
   { id: "steps", label: "Steps" },
+  { id: "reveal", label: "Reveal" },
+  { id: "whatsapp-floating", label: "WhatsAppFloating" },
 ];
 
 /**
@@ -298,6 +302,36 @@ export default function ComponentsPage() {
         </Specimen>
 
         <Specimen
+          id="reveal"
+          index="G1"
+          title="Reveal"
+          note="Fade + 12px, 0,8s, uma vez. Com prefers-reduced-motion não anima. Uso pontual — nunca automático em todos os blocos."
+        >
+          <Case label="três blocos escalonados (0 / 0,1 / 0,2s) — role até aqui para ver" bleed>
+            <div className="grid gap-5 lg:grid-cols-3">
+              {featuredExperiences.map((experience, index) => (
+                <Reveal key={experience.slug} delay={index * 0.1}>
+                  <ExperienceCard experience={experience} />
+                </Reveal>
+              ))}
+            </div>
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="whatsapp-floating"
+          index="G2"
+          title="WhatsAppFloating"
+          note="Flag global siteConfig.features.whatsappFloating = false → não renderiza no site. Aqui forçado com enabled para avaliação: barra sticky (mobile, do layout aprovado) e balão (desktop, proposta)."
+        >
+          <Case label="enabled · variant auto — a barra aparece sticky ao final desta página no mobile; o balão no canto inferior direito no desktop" bleed>
+            <p className="text-small text-fg-muted">
+              Flag atual: <code className="text-gold-soft">{String(siteConfig.features.whatsappFloating)}</code>
+            </p>
+          </Case>
+        </Specimen>
+
+        <Specimen
           id="footer"
           index="C3"
           title="Footer"
@@ -314,7 +348,9 @@ export default function ComponentsPage() {
         tagline={footer.tagline}
         ageNotice={siteConfig.ageNotice}
         siteName={siteConfig.name}
+        className="max-lg:pb-[7.5rem]"
       />
+      <WhatsAppFloating cta={ctas.schedule} enabled />
     </div>
   );
 }
