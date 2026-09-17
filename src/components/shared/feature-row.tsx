@@ -33,7 +33,7 @@ export function FeatureRow({ features, className }: FeatureRowProps) {
             index === 2 && "lg:pl-11",
           )}
         >
-          <Icon name={feature.icon} className="size-5 shrink-0 text-gold lg:size-[1.375rem]" />
+          <Icon name={feature.icon} className="size-[1.375rem] shrink-0 text-gold lg:mt-0.5 lg:size-[1.875rem]" />
           <div className="flex flex-col">
             <Eyebrow
               as="span"

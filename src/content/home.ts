@@ -52,13 +52,13 @@ export const features: Feature[] = [
     description: "Discrição do primeiro contato ao atendimento.",
   },
   {
-    icon: "sofa",
+    icon: "bloom",
     title: "Ambiente confortável",
     shortTitle: "Confortável",
     description: "Espaços privativos e preparados para seu bem-estar.",
   },
   {
-    icon: "sparkles",
+    icon: "person",
     title: "Terapeutas selecionadas",
     shortTitle: "Selecionadas",
     description: "Profissionais experientes para proporcionar a melhor experiência.",
@@ -89,10 +89,10 @@ export const howItWorks = {
   eyebrow: "Como funciona",
   title: "Agendar é simples.",
   steps: [
-    { icon: "user", title: "Escolha sua terapeuta" },
+    { icon: "calendar", title: "Escolha sua terapeuta" },
     { icon: "whatsapp", title: "Entre em contato pelo WhatsApp" },
-    { icon: "calendar", title: "Combine seu horário" },
-    { icon: "sparkles", title: "Viva sua experiência" },
+    { icon: "clock", title: "Combine seu horário" },
+    { icon: "bloom", title: "Viva sua experiência" },
   ] satisfies Step[],
 } satisfies SectionCopy & { steps: Step[] };
 

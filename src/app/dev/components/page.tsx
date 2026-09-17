@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { WhatsAppIcon } from "@/components/shared/icons";
+import { ArrowIcon, WhatsAppIcon } from "@/components/shared/icons";
 import { CtaLink } from "@/components/shared/cta-link";
 import { Logo } from "@/components/shared/logo";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { FeatureRow } from "@/components/shared/feature-row";
 import { ImageMosaic } from "@/components/shared/image-mosaic";
+import { TherapistCard } from "@/components/shared/therapist-card";
+import { ExperienceCard } from "@/components/shared/experience-card";
+import { HorizontalScroller } from "@/components/shared/horizontal-scroller";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ctas, experiencesSection, features, footer, hero, space, therapistsSection } from "@/content/home";
 import { mainNav, secondaryNav } from "@/data/navigation";
-import { experiences } from "@/data/experiences";
+import { experiences, featuredExperiences } from "@/data/experiences";
+import { featuredTherapists } from "@/data/therapists";
 import { contact, siteConfig } from "@/data/site";
 import { Case, Specimen } from "./specimen";
 
@@ -34,6 +37,8 @@ const index = [
   { id: "footer", label: "Footer" },
   { id: "feature-row", label: "FeatureRow" },
   { id: "image-mosaic", label: "ImageMosaic" },
+  { id: "therapist-card", label: "TherapistCard" },
+  { id: "experience-card", label: "ExperienceCard" },
 ];
 
 /**
@@ -86,10 +91,10 @@ export default function ComponentsPage() {
             </div>
           </Case>
           <Case label="ghost · link com seta">
-            <Button variant="ghost" href="/terapeutas" icon={<ArrowRight />} iconPosition="right">
+            <Button variant="ghost" href="/terapeutas" icon={<ArrowIcon />} iconPosition="right">
               Ver todas as terapeutas
             </Button>
-            <Button variant="ghost" href="/experiencias" icon={<ArrowRight />} iconPosition="right">
+            <Button variant="ghost" href="/experiencias" icon={<ArrowIcon />} iconPosition="right">
               Ver todas
             </Button>
           </Case>
@@ -131,7 +136,7 @@ export default function ComponentsPage() {
             <CtaLink cta={ctas.availability} size="md" />
           </Case>
           <Case label="ghost com seta · card xs">
-            <CtaLink cta={therapistsSection.cta!} variant="ghost" icon={<ArrowRight />} iconPosition="right" />
+            <CtaLink cta={therapistsSection.cta!} variant="ghost" icon={<ArrowIcon />} iconPosition="right" />
             <CtaLink cta={{ ...therapistsSection.cardCta, href: "/terapeutas/babi" }} variant="outline-soft" size="xs" />
           </Case>
         </Specimen>
@@ -187,14 +192,14 @@ export default function ComponentsPage() {
             <SectionHeading
               copy={therapistsSection}
               titleMaxCh={18}
-              aside={<CtaLink cta={therapistsSection.cta!} variant="ghost" icon={<ArrowRight />} iconPosition="right" />}
+              aside={<CtaLink cta={therapistsSection.cta!} variant="ghost" icon={<ArrowIcon />} iconPosition="right" />}
             />
           </Case>
           <Case label="com aside e título limitado a 20ch (seção Experiências)" bleed>
             <SectionHeading
               copy={experiencesSection}
               titleMaxCh={20}
-              aside={<CtaLink cta={experiencesSection.cta!} variant="ghost" icon={<ArrowRight />} iconPosition="right" />}
+              aside={<CtaLink cta={experiencesSection.cta!} variant="ghost" icon={<ArrowIcon />} iconPosition="right" />}
             />
           </Case>
           <Case label="display com acento (hero) · h1" bleed>
@@ -225,6 +230,36 @@ export default function ComponentsPage() {
           <Case label="space.images — na composição real ocupa a coluna direita (1.35fr) da seção" bleed>
             <div className="lg:max-w-[57%]">
               <ImageMosaic images={[space.images[0], space.images[1], space.images[2]]} />
+            </div>
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="therapist-card"
+          index="E1"
+          title="TherapistCard + HorizontalScroller"
+          note="Foto 3:4 protagonista, nome em caps, três destaques e CTA interno. No mobile, o HorizontalScroller vira carrossel de 245px com snap; no desktop, grid de 3 colunas."
+        >
+          <Case label="featuredTherapists (data/therapists.ts) dentro de HorizontalScroller" bleed>
+            <HorizontalScroller columns={3}>
+              {featuredTherapists.map((therapist) => (
+                <TherapistCard key={therapist.slug} therapist={therapist} cta={therapistsSection.cardCta} />
+              ))}
+            </HorizontalScroller>
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="experience-card"
+          index="E2"
+          title="ExperienceCard"
+          note="A fotografia é o card: sem borda, sem fundo, sem botão. Desktop: 330px com overlay vertical. Mobile: 150px empilhados, overlay horizontal e seta."
+        >
+          <Case label="featuredExperiences — grid 3 colunas (desktop) / coluna (mobile), como no layout" bleed>
+            <div className="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-5">
+              {featuredExperiences.map((experience) => (
+                <ExperienceCard key={experience.slug} experience={experience} />
+              ))}
             </div>
           </Case>
         </Specimen>

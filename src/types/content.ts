@@ -52,24 +52,24 @@ export type Therapist = {
 export type Experience = {
   slug: string;
   name: string;
+  icon: IconName;
   tagline: string;
   description: string;
   image: ImageAsset;
   featured?: boolean;
 };
 
-/** Nomes de ícone resolvidos em components/shared/icons.tsx. */
+/** Ícones de linha do layout aprovado, resolvidos em components/shared/icons. */
 export type IconName =
+  | "whatsapp"
   | "lock"
-  | "sofa"
-  | "sparkles"
-  | "map-pin"
-  | "clock"
-  | "shield-check"
-  | "user"
-  | "message"
+  | "bloom"
+  | "lotus"
+  | "person"
   | "calendar"
-  | "whatsapp";
+  | "clock"
+  | "petal"
+  | "sun";
 
 export type Feature = {
   icon: IconName;

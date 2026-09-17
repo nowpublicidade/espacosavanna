@@ -47,7 +47,7 @@ const buttonVariants = cva(
       },
     },
     compoundVariants: [
-      { variant: "ghost", size: ["lg", "md", "sm", "xs"], class: "text-small [&_svg]:size-4" },
+      { variant: "ghost", size: ["lg", "md", "sm", "xs"], class: "text-small [&_svg]:h-2.5 [&_svg]:w-5" },
     ],
     defaultVariants: { variant: "primary", size: "lg" },
   },
