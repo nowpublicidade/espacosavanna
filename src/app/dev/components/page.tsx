@@ -8,7 +8,12 @@ import { CtaLink } from "@/components/shared/cta-link";
 import { Logo } from "@/components/shared/logo";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { ctas, experiencesSection, hero, space, therapistsSection } from "@/content/home";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { ctas, experiencesSection, footer, hero, space, therapistsSection } from "@/content/home";
+import { mainNav, secondaryNav } from "@/data/navigation";
+import { experiences } from "@/data/experiences";
+import { contact, siteConfig } from "@/data/site";
 import { Case, Specimen } from "./specimen";
 
 export const metadata: Metadata = {
@@ -23,6 +28,8 @@ const index = [
   { id: "logo", label: "Logo" },
   { id: "section", label: "Section" },
   { id: "section-heading", label: "SectionHeading" },
+  { id: "header", label: "Header" },
+  { id: "footer", label: "Footer" },
 ];
 
 /**
@@ -34,7 +41,10 @@ export default function ComponentsPage() {
 
   return (
     <div className="flex flex-1 flex-col">
-      <header className="border-b border-line px-gutter py-8">
+      {/* C1 · Header real, sticky — o mesmo usado no site */}
+      <Header nav={mainNav} secondaryNav={secondaryNav} cta={ctas.schedule} />
+
+      <header id="header" className="border-b border-line px-gutter py-8">
         <div className="mx-auto flex w-full max-w-site flex-col gap-3">
           <Eyebrow>Espaço Savanna · Fase 02</Eyebrow>
           <h1 className="text-h2">Componentes</h1>
@@ -190,7 +200,25 @@ export default function ComponentsPage() {
             <SectionHeading copy={{ title: "Reserve o seu momento.", text: "Atendimento com hora marcada, em ambiente exclusivo e reservado." }} align="center" />
           </Case>
         </Specimen>
+
+        <Specimen
+          id="footer"
+          index="C3"
+          title="Footer"
+          note="Renderizado abaixo, fora do container, com dados de site.ts, navigation.ts e experiences.ts. Header (C1) está fixo no topo desta página; MobileMenu (C2) abre pelo hambúrguer no mobile."
+        >
+          <p className="text-small text-fg-muted">↓ Footer real ao final da página.</p>
+        </Specimen>
       </main>
+
+      <Footer
+        nav={mainNav}
+        experiences={experiences}
+        contact={contact}
+        tagline={footer.tagline}
+        ageNotice={siteConfig.ageNotice}
+        siteName={siteConfig.name}
+      />
     </div>
   );
 }
