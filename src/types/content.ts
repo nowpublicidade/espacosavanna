@@ -58,14 +58,31 @@ export type Experience = {
   featured?: boolean;
 };
 
+/** Nomes de ícone resolvidos em components/shared/icons.tsx. */
+export type IconName =
+  | "lock"
+  | "sofa"
+  | "sparkles"
+  | "map-pin"
+  | "clock"
+  | "shield-check"
+  | "user"
+  | "message"
+  | "calendar"
+  | "whatsapp";
+
 export type Feature = {
-  /** Nome do ícone Lucide (resolvido no componente). */
-  icon: "lock" | "sofa" | "sparkles" | "map-pin" | "clock" | "shield-check";
+  icon: IconName;
   title: string;
+  /** Rótulo curto exibido no mobile (layout aprovado usa uma palavra). */
+  shortTitle?: string;
   description: string;
+  /** Versão curta do texto para o mobile, quando o layout pedir. */
+  shortDescription?: string;
 };
 
 export type Step = {
+  icon?: IconName;
   title: string;
   description?: string;
 };

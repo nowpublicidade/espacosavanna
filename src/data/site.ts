@@ -15,6 +15,13 @@ export const siteConfig = {
   foundingYear: 2026,
   /** Aviso obrigatório no rodapé (Documento 01, item 14). */
   ageNotice: "Entrada permitida apenas para maiores de 18 anos",
+  /**
+   * Flags de funcionalidades aguardando validação visual.
+   * whatsappFloating: barra sticky inferior (mobile) / balão (desktop).
+   */
+  features: {
+    whatsappFloating: false,
+  },
 } as const;
 
 export const contact: SiteContact = {

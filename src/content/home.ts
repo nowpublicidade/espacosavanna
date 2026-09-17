@@ -48,17 +48,21 @@ export const features: Feature[] = [
   {
     icon: "lock",
     title: "Atendimento reservado",
+    shortTitle: "Reservado",
     description: "Discrição do primeiro contato ao atendimento.",
   },
   {
     icon: "sofa",
     title: "Ambiente confortável",
+    shortTitle: "Confortável",
     description: "Espaços privativos e preparados para seu bem-estar.",
   },
   {
     icon: "sparkles",
     title: "Terapeutas selecionadas",
+    shortTitle: "Selecionadas",
     description: "Profissionais experientes para proporcionar a melhor experiência.",
+    shortDescription: "Profissionais experientes e preparadas.",
   },
 ];
 
@@ -85,10 +89,10 @@ export const howItWorks = {
   eyebrow: "Como funciona",
   title: "Agendar é simples.",
   steps: [
-    { title: "Escolha sua terapeuta" },
-    { title: "Entre em contato pelo WhatsApp" },
-    { title: "Combine seu horário" },
-    { title: "Viva sua experiência" },
+    { icon: "user", title: "Escolha sua terapeuta" },
+    { icon: "whatsapp", title: "Entre em contato pelo WhatsApp" },
+    { icon: "calendar", title: "Combine seu horário" },
+    { icon: "sparkles", title: "Viva sua experiência" },
   ] satisfies Step[],
 } satisfies SectionCopy & { steps: Step[] };
 
@@ -113,4 +117,10 @@ export const finalCta = {
   title: "Reserve o seu momento.",
   text: "Atendimento com hora marcada, em ambiente exclusivo e reservado.",
   cta: ctas.schedule,
-} satisfies SectionCopy;
+  image: placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+} satisfies SectionCopy & { image: ReturnType<typeof placeholderImage> };
+
+/** Texto institucional do rodapé (layout aprovado). */
+export const footer = {
+  tagline: "Atendimento com hora marcada. Ambiente exclusivo e reservado.",
+} as const;
