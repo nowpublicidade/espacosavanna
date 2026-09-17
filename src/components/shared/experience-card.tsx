@@ -17,6 +17,7 @@ type ExperienceCardProps = {
  * Sem borda, sem fundo, sem botão: o link é a imagem inteira com overlay
  * e texto sobreposto (ícone · nome em caps · frase curta).
  * Desktop: 330px, overlay vertical. Mobile: 150px, overlay horizontal + seta.
+ * Hover: apenas leve ganho de luminosidade na foto e no overlay — sem movimento.
  */
 export function ExperienceCard({
   experience,
@@ -40,7 +41,7 @@ export function ExperienceCard({
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover transition-transform duration-(--duration-slow) ease-(--ease-out) group-hover:scale-[1.02]"
+        className="object-cover transition-[filter] duration-(--duration) ease-(--ease-out) group-hover:brightness-[1.08] group-focus-visible:brightness-[1.08]"
         style={{ objectPosition: experience.image.focal }}
       />
 
@@ -50,7 +51,10 @@ export function ExperienceCard({
         className="absolute inset-0 bg-[linear-gradient(90deg,rgb(11_8_6/0.96)_0_58%,rgb(11_8_6/0.62)_100%)] lg:hidden"
       />
       <span aria-hidden className="absolute inset-0 bg-(--overlay-card) lg:hidden" />
-      <span aria-hidden className="absolute inset-0 hidden bg-(--overlay-hero) lg:block" />
+      <span
+        aria-hidden
+        className="absolute inset-0 hidden bg-(--overlay-hero) transition-opacity duration-(--duration) ease-(--ease-out) group-hover:opacity-85 lg:block"
+      />
 
       <span className="absolute bottom-[1.125rem] left-[1.125rem] right-[4.375rem] flex flex-col gap-[0.4375rem] lg:inset-x-[1.625rem] lg:bottom-[1.625rem] lg:gap-[0.6875rem]">
         <Icon name={experience.icon} className="size-[1.375rem] text-gold lg:size-[1.625rem]" />

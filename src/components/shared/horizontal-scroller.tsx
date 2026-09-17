@@ -34,7 +34,7 @@ export function HorizontalScroller({
       className={cn(
         "flex snap-x snap-mandatory gap-3 overflow-x-auto pb-1.5 scrollbar-none",
         "[&>*]:w-[var(--scroller-item)] [&>*]:shrink-0 [&>*]:snap-start",
-        bleed && "-mx-gutter px-gutter",
+        bleed && "-mx-gutter px-gutter scroll-px-gutter",
         "lg:mx-0 lg:grid lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0 lg:[&>*]:w-auto",
         columnClass[columns],
         className,

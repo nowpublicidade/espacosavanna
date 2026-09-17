@@ -1,4 +1,4 @@
-import type { Cta, Feature, SectionCopy, Step } from "@/types/content";
+import type { Cta, Feature, ImageAsset, SectionCopy, Step } from "@/types/content";
 import { placeholderImage } from "@/data/images";
 
 /**
@@ -75,8 +75,8 @@ export const space = {
     placeholderImage("space", "Sala de atendimento do Espaço Savanna", 4 / 5),
     placeholderImage("space", "Detalhe do ambiente", 1),
     placeholderImage("space", "Iluminação e texturas do espaço", 1),
-  ],
-} satisfies SectionCopy & { images: ReturnType<typeof placeholderImage>[] };
+  ] as const,
+} satisfies SectionCopy & { images: readonly [ImageAsset, ImageAsset, ImageAsset] };
 
 export const therapistsSection = {
   eyebrow: "Nossas terapeutas",
@@ -99,6 +99,7 @@ export const howItWorks = {
 export const experiencesSection = {
   eyebrow: "Experiências",
   title: "Escolha o tipo de experiência ideal para você.",
+  shortTitle: "Escolha seu tipo de experiência.",
   cta: { label: "Ver todas", href: "/experiencias" },
 } satisfies SectionCopy;
 

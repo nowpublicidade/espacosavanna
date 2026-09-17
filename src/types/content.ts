@@ -120,6 +120,8 @@ export type SiteContact = {
 export type SectionCopy = {
   eyebrow?: string;
   title: string;
+  /** Título alternativo exibido no mobile quando o layout aprovado difere. */
+  shortTitle?: string;
   /** Trecho do título destacado em itálico dourado, se o layout pedir. */
   titleAccent?: string;
   text?: string;

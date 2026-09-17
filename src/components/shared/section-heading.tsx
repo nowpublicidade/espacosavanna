@@ -54,7 +54,14 @@ export function SectionHeading({
           className={cn(size === "display" ? "text-display" : "text-h2")}
           style={titleMaxCh ? { maxWidth: `${titleMaxCh}ch` } : undefined}
         >
-          {copy.title}
+          {copy.shortTitle ? (
+            <>
+              <span className="lg:hidden">{copy.shortTitle}</span>
+              <span className="max-lg:hidden">{copy.title}</span>
+            </>
+          ) : (
+            copy.title
+          )}
           {copy.titleAccent ? (
             <>
               <br />
