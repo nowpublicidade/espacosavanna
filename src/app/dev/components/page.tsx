@@ -16,9 +16,11 @@ import { FaqAccordion } from "@/components/shared/faq-accordion";
 import { Steps } from "@/components/shared/steps";
 import { Reveal } from "@/components/shared/reveal";
 import { WhatsAppFloating } from "@/components/layout/whatsapp-floating";
+import { Hero } from "@/components/sections/hero";
+import { FinalCta } from "@/components/sections/final-cta";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ctas, experiencesSection, faqSection, features, footer, hero, howItWorks, space, therapistsSection } from "@/content/home";
+import { ctas, experiencesSection, faqSection, features, finalCta, footer, hero, howItWorks, space, therapistsSection } from "@/content/home";
 import { homeFaq } from "@/data/faq";
 import { mainNav, secondaryNav } from "@/data/navigation";
 import { experiences, featuredExperiences } from "@/data/experiences";
@@ -48,6 +50,8 @@ const index = [
   { id: "steps", label: "Steps" },
   { id: "reveal", label: "Reveal" },
   { id: "whatsapp-floating", label: "WhatsAppFloating" },
+  { id: "hero", label: "Hero" },
+  { id: "final-cta", label: "FinalCta" },
 ];
 
 /**
@@ -340,6 +344,34 @@ export default function ComponentsPage() {
           <p className="text-small text-fg-muted">↓ Footer real ao final da página.</p>
         </Specimen>
       </main>
+
+      {/* H1 · Hero — full-bleed, fora do container, com FeatureRow no slot below */}
+      <div id="hero" className="scroll-mt-24 border-t border-line-subtle">
+        <div className="mx-auto w-full max-w-site px-gutter pt-section-tight pb-stack-lg">
+          <div className="flex items-baseline gap-4">
+            <span className="font-heading text-h3 text-gold">H1</span>
+            <h2 className="text-h2">Hero</h2>
+          </div>
+          <p className="mt-2 max-w-[64ch] text-small text-fg-muted">
+            Fiel ao layout aprovado: imagem dominante, pouco texto, hierarquia editorial. Desktop com CTAs dentro da imagem; mobile com CTAs abaixo. FeatureRow no slot <code>below</code>.
+          </p>
+        </div>
+        <Hero content={hero} below={<FeatureRow features={features} />} />
+      </div>
+
+      {/* H2 · FinalCta */}
+      <div id="final-cta" className="scroll-mt-24 border-t border-line-subtle">
+        <div className="mx-auto w-full max-w-site px-gutter pt-section-tight">
+          <div className="flex items-baseline gap-4">
+            <span className="font-heading text-h3 text-gold">H2</span>
+            <h2 className="text-h2">FinalCta</h2>
+          </div>
+          <p className="mt-2 max-w-[64ch] text-small text-fg-muted">
+            Cartão com fotografia, gradiente horizontal e CTA primário. No layout aprovado existe apenas no desktop — no mobile o rodapé cumpre esse papel.
+          </p>
+        </div>
+        <FinalCta copy={finalCta} />
+      </div>
 
       <Footer
         nav={mainNav}
