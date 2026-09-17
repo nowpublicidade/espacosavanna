@@ -12,9 +12,12 @@ import { ImageMosaic } from "@/components/shared/image-mosaic";
 import { TherapistCard } from "@/components/shared/therapist-card";
 import { ExperienceCard } from "@/components/shared/experience-card";
 import { HorizontalScroller } from "@/components/shared/horizontal-scroller";
+import { FaqAccordion } from "@/components/shared/faq-accordion";
+import { Steps } from "@/components/shared/steps";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ctas, experiencesSection, features, footer, hero, space, therapistsSection } from "@/content/home";
+import { ctas, experiencesSection, faqSection, features, footer, hero, howItWorks, space, therapistsSection } from "@/content/home";
+import { homeFaq } from "@/data/faq";
 import { mainNav, secondaryNav } from "@/data/navigation";
 import { experiences, featuredExperiences } from "@/data/experiences";
 import { featuredTherapists } from "@/data/therapists";
@@ -39,6 +42,8 @@ const index = [
   { id: "image-mosaic", label: "ImageMosaic" },
   { id: "therapist-card", label: "TherapistCard" },
   { id: "experience-card", label: "ExperienceCard" },
+  { id: "faq", label: "FaqAccordion" },
+  { id: "steps", label: "Steps" },
 ];
 
 /**
@@ -260,6 +265,34 @@ export default function ComponentsPage() {
               {featuredExperiences.map((experience) => (
                 <ExperienceCard key={experience.slug} experience={experience} />
               ))}
+            </div>
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="faq"
+          index="F1"
+          title="Accordion + FaqAccordion"
+          note="Perguntas separadas por linha dourada; chevron gira ao abrir; primeiro item aberto por padrão. Desktop: composição em duas colunas (título .8fr / lista 1.2fr) como no layout."
+        >
+          <Case label="homeFaq (data/faq.ts) na composição da seção Dúvidas" bleed>
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-[4.375rem]">
+              <SectionHeading copy={faqSection} />
+              <FaqAccordion items={homeFaq} />
+            </div>
+          </Case>
+        </Specimen>
+
+        <Specimen
+          id="steps"
+          index="F2"
+          title="Steps"
+          note="Passos 01–04 do Como funciona. Desktop: colunas centralizadas com conectores de seta. Mobile: grid 2×2 com contorno."
+        >
+          <Case label="howItWorks.steps (content/home.ts)" bleed>
+            <div className="flex flex-col gap-6 lg:gap-[3.25rem]">
+              <SectionHeading copy={howItWorks} />
+              <Steps steps={howItWorks.steps} />
             </div>
           </Case>
         </Specimen>
