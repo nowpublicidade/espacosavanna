@@ -34,7 +34,7 @@ const buttonVariants = cva(
         "outline-soft":
           "rounded-inner border border-gold/40 font-normal text-gold-soft hover:border-gold/70 hover:text-gold-hover",
         ghost:
-          "h-auto! gap-2.5 px-0! font-normal normal-case tracking-[0.12em] text-gold-soft hover:text-gold-hover",
+          "h-auto! gap-2.5 px-0! font-normal text-gold-soft hover:text-gold-hover max-md:text-[0.71875rem] max-md:tracking-[0.14em] md:normal-case md:tracking-[0.12em]",
       },
       size: {
         lg: "h-control-lg px-[2.125rem] text-button [&_svg]:size-4",
