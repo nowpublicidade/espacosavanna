@@ -326,11 +326,12 @@ export default function ComponentsPage() {
           id="whatsapp-floating"
           index="G2"
           title="WhatsAppFloating"
-          note="Flag global siteConfig.features.whatsappFloating = false → não renderiza no site. Aqui forçado com enabled para avaliação: barra sticky (mobile, do layout aprovado) e balão (desktop, proposta)."
+          note="Flags: whatsappBar (barra sticky mobile do layout aprovado) e whatsappBubble (balão desktop, proposta). Aqui ambos forçados para avaliação."
         >
           <Case label="enabled · variant auto — a barra aparece sticky ao final desta página no mobile; o balão no canto inferior direito no desktop" bleed>
             <p className="text-small text-fg-muted">
-              Flag atual: <code className="text-gold-soft">{String(siteConfig.features.whatsappFloating)}</code>
+              Flags atuais: bar <code className="text-gold-soft">{String(siteConfig.features.whatsappBar)}</code> · bubble{" "}
+              <code className="text-gold-soft">{String(siteConfig.features.whatsappBubble)}</code>
             </p>
           </Case>
         </Specimen>
@@ -382,7 +383,7 @@ export default function ComponentsPage() {
         siteName={siteConfig.name}
         className="max-lg:pb-[7.5rem]"
       />
-      <WhatsAppFloating cta={ctas.schedule} enabled />
+      <WhatsAppFloating cta={ctas.schedule} bar bubble />
     </div>
   );
 }

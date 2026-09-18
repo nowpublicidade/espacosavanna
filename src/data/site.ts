@@ -16,11 +16,13 @@ export const siteConfig = {
   /** Aviso obrigatório no rodapé (Documento 01, item 14). */
   ageNotice: "Entrada permitida apenas para maiores de 18 anos",
   /**
-   * Flags de funcionalidades aguardando validação visual.
-   * whatsappFloating: barra sticky inferior (mobile) / balão (desktop).
+   * Flags de funcionalidades.
+   * whatsappBar: barra sticky inferior no mobile (layout aprovado) — ativa.
+   * whatsappBubble: balão fixo no desktop (proposta) — desligado.
    */
   features: {
-    whatsappFloating: false,
+    whatsappBar: true,
+    whatsappBubble: false,
   },
 } as const;
 

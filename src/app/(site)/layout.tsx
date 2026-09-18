@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
  * As rotas /dev ficam fora deste grupo e montam a própria casca.
  */
 export default function SiteLayout({ children }: LayoutProps<"/">) {
-  const floating = siteConfig.features.whatsappFloating;
+  const bar = siteConfig.features.whatsappBar;
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function SiteLayout({ children }: LayoutProps<"/">) {
         tagline={footer.tagline}
         ageNotice={siteConfig.ageNotice}
         siteName={siteConfig.name}
-        className={cn(floating && "max-lg:pb-[7.5rem]")}
+        className={cn(bar && "max-lg:pb-[7.5rem]")}
       />
       <WhatsAppFloating cta={ctas.schedule} />
     </>

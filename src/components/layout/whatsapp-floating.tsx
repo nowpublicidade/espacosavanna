@@ -7,34 +7,28 @@ import type { Cta } from "@/types/content";
 
 type WhatsAppFloatingProps = {
   cta: Cta;
-  /**
-   * Sobrescreve a flag global `siteConfig.features.whatsappFloating`.
-   * Enquanto a flag estiver desligada, o componente não renderiza nada.
-   */
-  enabled?: boolean;
-  /**
-   * bar    = barra sticky inferior do layout aprovado (mobile)
-   * bubble = balão circular no canto (desktop, fora do layout — a validar)
-   * auto   = bar abaixo de lg, bubble a partir de lg
-   */
-  variant?: "bar" | "bubble" | "auto";
+  /** Barra sticky inferior do layout aprovado (apenas abaixo de lg). */
+  bar?: boolean;
+  /** Balão circular fixo no canto (apenas a partir de lg) — proposta, desligado. */
+  bubble?: boolean;
   className?: string;
 };
 
 /**
- * CTA de WhatsApp sempre visível. Desligado por padrão (Fase 02):
- * a barra segue exatamente o layout aprovado; o balão é proposta.
+ * CTA de WhatsApp sempre visível.
+ * A barra segue o layout aprovado: sticky na base, gradiente de fusão com o
+ * fundo, botão primário de 54px — sem sombra, sem movimento.
  */
 export function WhatsAppFloating({
   cta,
-  enabled = siteConfig.features.whatsappFloating,
-  variant = "auto",
+  bar = siteConfig.features.whatsappBar,
+  bubble = siteConfig.features.whatsappBubble,
   className,
 }: WhatsAppFloatingProps) {
-  if (!enabled) return null;
+  if (!bar && !bubble) return null;
 
-  const showBar = variant !== "bubble";
-  const showBubble = variant !== "bar";
+  const showBar = bar;
+  const showBubble = bubble;
 
   return (
     <>
@@ -42,8 +36,7 @@ export function WhatsAppFloating({
         <div
           className={cn(
             "sticky bottom-0 z-30 px-[1.125rem] pt-3 pb-[max(1rem,env(safe-area-inset-bottom))]",
-            "bg-[linear-gradient(180deg,rgb(11_8_6/0)_0%,rgb(11_8_6/0.94)_40%)]",
-            variant === "auto" && "lg:hidden",
+            "bg-[linear-gradient(180deg,rgb(11_8_6/0)_0%,rgb(11_8_6/0.94)_40%)] lg:hidden",
             className,
           )}
         >
@@ -60,8 +53,7 @@ export function WhatsAppFloating({
           className={cn(
             "surface-gold fixed right-6 bottom-6 z-30 flex size-14 items-center justify-center rounded-full",
             "shadow-[0_10px_30px_rgb(0_0_0/0.5)] transition-[filter,transform] duration-(--duration-fast) ease-(--ease-out) hover:brightness-[1.04] hover:scale-[1.03]",
-            "outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-            variant === "auto" && "max-lg:hidden",
+            "outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background max-lg:hidden",
             className,
           )}
         >
