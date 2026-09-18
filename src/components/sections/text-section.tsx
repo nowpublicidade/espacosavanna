@@ -1,3 +1,4 @@
+import { CtaLink } from "@/components/shared/cta-link";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import type { SectionCopy } from "@/types/content";
@@ -22,6 +23,11 @@ export function TextSection({ copy, paragraphs, surface = "alt", id }: TextSecti
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          {copy.cta ? (
+            <div className="pt-2">
+              <CtaLink cta={copy.cta} variant="secondary" size="md" />
+            </div>
+          ) : null}
         </div>
       </div>
     </Section>
