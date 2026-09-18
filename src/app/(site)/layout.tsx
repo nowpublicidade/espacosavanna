@@ -2,7 +2,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppFloating } from "@/components/layout/whatsapp-floating";
 import { ctas, footer } from "@/content/home";
-import { mainNav, secondaryNav } from "@/data/navigation";
+import { footerNav, mainNav, secondaryNav } from "@/data/navigation";
 import { experiences } from "@/data/experiences";
 import { contact, siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -19,7 +19,7 @@ export default function SiteLayout({ children }: LayoutProps<"/">) {
       <Header nav={mainNav} secondaryNav={secondaryNav} cta={ctas.schedule} />
       <main className="flex flex-1 flex-col">{children}</main>
       <Footer
-        nav={mainNav}
+        nav={footerNav.navigate}
         experiences={experiences}
         contact={contact}
         tagline={footer.tagline}

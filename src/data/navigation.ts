@@ -17,5 +17,5 @@ export const secondaryNav: NavItem[] = [
 ];
 
 export const footerNav = {
-  navigate: [...mainNav, ...secondaryNav],
-} as const;
+  navigate: [...mainNav, ...secondaryNav] as NavItem[],
+};
