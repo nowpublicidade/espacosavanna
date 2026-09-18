@@ -22,7 +22,7 @@ export function TherapistsGridSection({
   return (
     <Section id={id} surface={surface}>
       {copy ? <SectionHeading copy={copy} titleMaxCh={24} className="mb-5 lg:mb-10" /> : null}
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
         {therapists.map((therapist) => (
           <li key={therapist.slug}>
             <TherapistCard therapist={therapist} cta={cardCta} className="h-full" />

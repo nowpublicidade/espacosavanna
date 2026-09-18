@@ -32,7 +32,7 @@ export function MobileMenu({ nav, secondaryNav = [], cta }: MobileMenuProps) {
   // Fecha o painel se a janela crescer até o breakpoint do menu desktop.
   useEffect(() => {
     if (!open) return;
-    const query = window.matchMedia("(min-width: 64rem)");
+    const query = window.matchMedia("(min-width: 80rem)");
     const close = () => query.matches && setOpen(false);
     close();
     query.addEventListener("change", close);

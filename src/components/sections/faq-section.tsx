@@ -17,7 +17,7 @@ type FaqSectionProps = {
 export function FaqSection({ copy, items, surface = "alt", id = "duvidas" }: FaqSectionProps) {
   return (
     <Section id={id} surface={surface}>
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-[4.375rem]">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-[4.375rem]">
         <SectionHeading copy={copy} />
         <FaqAccordion items={items} />
       </div>

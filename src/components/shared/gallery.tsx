@@ -21,7 +21,7 @@ export function Gallery({ images, layout = "editorial", className }: GalleryProp
   return (
     <ul
       className={cn(
-        "grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-3",
+        "grid grid-flow-dense grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-3",
         "[grid-auto-rows:9.5rem] lg:[grid-auto-rows:16rem]",
         className,
       )}

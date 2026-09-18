@@ -17,7 +17,7 @@ type TextSectionProps = {
 export function TextSection({ copy, paragraphs, surface = "alt", id }: TextSectionProps) {
   return (
     <Section id={id} surface={surface}>
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-[4.375rem]">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-[4.375rem]">
         <SectionHeading copy={copy} titleMaxCh={18} />
         <div className="flex max-w-[58ch] flex-col gap-5 text-body text-fg-muted lg:pt-2">
           {paragraphs.map((paragraph) => (

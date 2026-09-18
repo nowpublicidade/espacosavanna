@@ -19,7 +19,7 @@ type SpaceSectionProps = {
 export function SpaceSection({ copy, images, surface = "alt", id = "espaco" }: SpaceSectionProps) {
   return (
     <Section id={id} surface={surface}>
-      <div className="grid gap-3.5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.35fr)] lg:items-center lg:gap-[4.375rem]">
+      <div className="grid grid-cols-1 gap-3.5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.35fr)] lg:items-center lg:gap-[4.375rem]">
         <div>
           <SectionHeading copy={copy} />
           {copy.cta ? (

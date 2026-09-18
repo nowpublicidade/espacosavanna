@@ -14,7 +14,7 @@ type ProfileDetailsSectionProps = {
 export function ProfileDetailsSection({ about, service, id = "sobre" }: ProfileDetailsSectionProps) {
   return (
     <Section id={id} surface="alt">
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-[4.375rem]">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-[4.375rem]">
         <div>
           <Eyebrow className="mb-4">{about.eyebrow}</Eyebrow>
           <div className="flex max-w-[58ch] flex-col gap-5 text-body text-fg-muted">

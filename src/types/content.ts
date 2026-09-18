@@ -129,6 +129,15 @@ export type SectionCopy = {
   secondaryCta?: Cta;
 };
 
+export type FormField = {
+  name: string;
+  label: string;
+  type: "text" | "tel" | "email" | "textarea";
+  required?: boolean;
+  placeholder?: string;
+  autoComplete?: string;
+};
+
 export type PageMeta = {
   title: string;
   description: string;

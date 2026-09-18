@@ -35,7 +35,7 @@ export function ProfileHero({
 }: ProfileHeroProps) {
   return (
     <Section spacing="tight">
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-[4.375rem]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-[4.375rem]">
         <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-surface-3 lg:aspect-[3/4]">
           <Image
             src={image.src}
