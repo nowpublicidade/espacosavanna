@@ -20,6 +20,8 @@ type HeroProps = {
   content: HeroContent;
   /** Bloco renderizado abaixo da imagem, dentro da seção (ex.: FeatureRow). */
   below?: ReactNode;
+  /** default = Home (760/460px) · compact = páginas internas (560/380px). */
+  size?: "default" | "compact";
   id?: string;
   className?: string;
 };
@@ -31,7 +33,7 @@ type HeroProps = {
  * Mobile: imagem 460px com texto sobreposto na base; CTAs empilhados
  * abaixo da imagem, fora dela.
  */
-export function Hero({ content, below, id = "inicio", className }: HeroProps) {
+export function Hero({ content, below, size = "default", id = "inicio", className }: HeroProps) {
   const { eyebrow, title, titleAccent, text, cta, secondaryCta, image } = content;
 
   const heading = (
@@ -74,7 +76,12 @@ export function Hero({ content, below, id = "inicio", className }: HeroProps) {
   return (
     <section id={id} className={cn("relative", className)}>
       {/* Fotografia + overlays */}
-      <div className="relative flex min-h-[28.75rem] items-end bg-surface-3 lg:min-h-[47.5rem] lg:items-center">
+      <div
+        className={cn(
+          "relative flex items-end bg-surface-3 lg:items-center",
+          size === "default" ? "min-h-[28.75rem] lg:min-h-[47.5rem]" : "min-h-[23.75rem] lg:min-h-[35rem]",
+        )}
+      >
         <Image
           src={image.src}
           alt={image.alt}
