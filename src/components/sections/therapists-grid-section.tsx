@@ -1,6 +1,7 @@
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { TherapistCard } from "@/components/shared/therapist-card";
+import { REVEAL_STAGGER, Reveal } from "@/components/shared/reveal";
 import type { Cta, SectionCopy, Therapist } from "@/types/content";
 
 type TherapistsGridSectionProps = {
@@ -23,10 +24,10 @@ export function TherapistsGridSection({
     <Section id={id} surface={surface}>
       {copy ? <SectionHeading copy={copy} titleMaxCh={24} className="mb-5 lg:mb-10" /> : null}
       <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-        {therapists.map((therapist) => (
-          <li key={therapist.slug}>
+        {therapists.map((therapist, index) => (
+          <Reveal as="li" key={therapist.slug} delay={(index % 3) * REVEAL_STAGGER}>
             <TherapistCard therapist={therapist} cta={cardCta} className="h-full" />
-          </li>
+          </Reveal>
         ))}
       </ul>
     </Section>

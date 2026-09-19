@@ -5,6 +5,10 @@ import { ProfileDetailsSection } from "@/components/sections/profile-details-sec
 import { TherapistsGridSection } from "@/components/sections/therapists-grid-section";
 import { detail } from "@/content/experiences";
 import { pages } from "@/content/pages";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/shared/json-ld";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { siteConfig } from "@/data/site";
 import { experiences, getExperience } from "@/data/experiences";
 import { therapists } from "@/data/therapists";
 import { whatsappMessages } from "@/lib/whatsapp";
@@ -17,11 +21,12 @@ export async function generateMetadata({ params }: PageProps<"/experiencias/[slu
   const { slug } = await params;
   const experience = getExperience(slug);
   if (!experience) return {};
-  return {
-    title: `${experience.name} — Experiências`,
+  return buildMetadata({
+    title: `${experience.name} — Experiências — ${siteConfig.name}`,
     description: experience.tagline,
-    alternates: { canonical: `${pages.experiences.path}/${experience.slug}` },
-  };
+    path: `${pages.experiences.path}/${experience.slug}`,
+    type: "article",
+  });
 }
 
 /** Página individual da experiência: apresentação + terapeutas que a oferecem. */
@@ -34,6 +39,12 @@ export default async function ExperiencePage({ params }: PageProps<"/experiencia
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Experiências", path: pages.experiences.path },
+          { name: experience.name, path: `${pages.experiences.path}/${experience.slug}` },
+        ])}
+      />
       <ProfileHero
         eyebrow={detail.eyebrow}
         name={experience.name}

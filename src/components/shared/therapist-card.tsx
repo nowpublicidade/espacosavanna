@@ -30,6 +30,7 @@ export function TherapistCard({
     <article
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-line-strong bg-surface-2",
+        "transition-colors duration-(--duration) ease-(--ease-out) hover:border-gold/35",
         className,
       )}
     >

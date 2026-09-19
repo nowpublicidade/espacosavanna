@@ -10,8 +10,13 @@ export const siteConfig = {
   legalName: "Espaço Savanna",
   shortDescription:
     "Experiência premium de bem-estar em ambiente reservado, confortável e exclusivo.",
-  url: "https://www.espacosavanna.com.br", // TODO: domínio oficial
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.espacosavanna.com.br", // TODO: domínio oficial
   locale: "pt-BR",
+  /**
+   * Indexação por buscadores. Fica desligada até a publicação oficial:
+   * defina NEXT_PUBLIC_INDEXABLE=true no ambiente de produção.
+   */
+  indexable: process.env.NEXT_PUBLIC_INDEXABLE === "true",
   foundingYear: 2026,
   /** Aviso obrigatório no rodapé (Documento 01, item 14). */
   ageNotice: "Entrada permitida apenas para maiores de 18 anos",
@@ -23,6 +28,17 @@ export const siteConfig = {
   features: {
     whatsappBar: true,
     whatsappBubble: false,
+  },
+  /**
+   * Estado dos dados operacionais. Enquanto `true`, o dado é placeholder:
+   * não entra no JSON-LD nem em metadados públicos.
+   */
+  placeholders: {
+    contact: true,   // WhatsApp e Instagram
+    address: true,   // endereço e mapa
+    hours: true,     // horários
+    domain: true,    // URL oficial
+    logo: true,      // logo e imagem OG
   },
 } as const;
 

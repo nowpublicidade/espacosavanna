@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { REVEAL_STAGGER, Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
 import type { ImageAsset } from "@/types/content";
 
@@ -29,8 +30,10 @@ export function Gallery({ images, layout = "editorial", className }: GalleryProp
       {images.map((image, index) => {
         const featured = layout === "editorial" && index % 5 === 0;
         return (
-          <li
+          <Reveal
+            as="li"
             key={image.src + image.alt + index}
+            delay={(index % 3) * REVEAL_STAGGER}
             className={cn(
               "relative overflow-hidden rounded-lg bg-surface-3",
               featured && "col-span-2 row-span-2",
@@ -44,7 +47,7 @@ export function Gallery({ images, layout = "editorial", className }: GalleryProp
               className="object-cover"
               style={{ objectPosition: image.focal }}
             />
-          </li>
+          </Reveal>
         );
       })}
     </ul>

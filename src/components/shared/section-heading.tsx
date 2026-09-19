@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { CtaLink } from "@/components/shared/cta-link";
+import { Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
 import type { SectionCopy } from "@/types/content";
 
@@ -38,7 +39,7 @@ export function SectionHeading({
   const centered = align === "center";
 
   return (
-    <div
+    <Reveal
       className={cn(
         "flex flex-col gap-5",
         aside && "md:flex-row md:items-end md:justify-between md:gap-10",
@@ -84,6 +85,6 @@ export function SectionHeading({
         ) : null}
       </div>
       {aside ? <div className="shrink-0 md:pb-1">{aside}</div> : null}
-    </div>
+    </Reveal>
   );
 }

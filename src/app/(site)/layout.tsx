@@ -6,6 +6,8 @@ import { footerNav, mainNav, secondaryNav } from "@/data/navigation";
 import { experiences } from "@/data/experiences";
 import { contact, siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { JsonLd } from "@/components/shared/json-ld";
+import { organizationJsonLd, webSiteJsonLd } from "@/lib/structured-data";
 
 /**
  * Casca das páginas públicas: Header, conteúdo e Footer.
@@ -16,6 +18,7 @@ export default function SiteLayout({ children }: LayoutProps<"/">) {
 
   return (
     <>
+      <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
       <Header nav={mainNav} secondaryNav={secondaryNav} cta={ctas.schedule} />
       <main className="flex flex-1 flex-col">{children}</main>
       <Footer

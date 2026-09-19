@@ -4,6 +4,7 @@ import { ArrowIcon } from "@/components/shared/icons";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { TherapistCard } from "@/components/shared/therapist-card";
+import { REVEAL_STAGGER, Reveal } from "@/components/shared/reveal";
 import type { Cta, SectionCopy, Therapist } from "@/types/content";
 
 type TherapistsSectionProps = {
@@ -33,8 +34,10 @@ export function TherapistsSection({ copy, therapists, cardCta, id = "terapeutas"
       />
 
       <HorizontalScroller columns={3}>
-        {therapists.map((therapist) => (
-          <TherapistCard key={therapist.slug} therapist={therapist} cta={cardCta} />
+        {therapists.map((therapist, index) => (
+          <Reveal key={therapist.slug} delay={index * REVEAL_STAGGER} className="flex">
+            <TherapistCard therapist={therapist} cta={cardCta} className="w-full" />
+          </Reveal>
         ))}
       </HorizontalScroller>
 

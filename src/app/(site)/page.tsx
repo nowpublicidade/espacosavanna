@@ -9,15 +9,12 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { FinalCta } from "@/components/sections/final-cta";
 import * as home from "@/content/home";
 import { pages } from "@/content/pages";
+import { buildMetadata } from "@/lib/seo";
 import { featuredTherapists } from "@/data/therapists";
 import { featuredExperiences } from "@/data/experiences";
 import { homeFaq } from "@/data/faq";
 
-export const metadata: Metadata = {
-  title: { absolute: pages.home.title },
-  description: pages.home.description,
-  alternates: { canonical: pages.home.path },
-};
+export const metadata: Metadata = buildMetadata(pages.home);
 
 /**
  * Home — ordem das seções exatamente como no layout aprovado.

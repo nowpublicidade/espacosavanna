@@ -42,7 +42,7 @@ export const colorGroups = [
 export const typeScale = [
   { cls: "text-display font-heading", name: "display", size: "40 → 76px", font: "Cormorant 400", sample: "Uma experiência além do convencional." },
   { cls: "text-h2 font-heading", name: "h2", size: "30 → 46px", font: "Cormorant 400", sample: "Um ambiente pensado para você se desconectar." },
-  { cls: "text-h3 font-heading font-medium", name: "h3", size: "17 → 19px", font: "Cormorant 500", sample: "Massagem Tântrica" },
+  { cls: "text-h3 font-heading", name: "h3", size: "17 → 19px", font: "Cormorant 400", sample: "Massagem Tântrica" },
   { cls: "text-lead text-fg-body", name: "lead", size: "14 → 17px", font: "Jost 300", sample: "Ambiente sofisticado, atendimento personalizado e total discrição." },
   { cls: "text-body text-fg-body", name: "body", size: "13.5 → 15.5px", font: "Jost 300", sample: "Cada detalhe do Espaço Savanna foi planejado para proporcionar conforto, privacidade e uma atmosfera acolhedora." },
   { cls: "text-small text-fg-muted", name: "small", size: "12.5 → 13px", font: "Jost 300", sample: "Atendimento com hora marcada. Ambiente exclusivo e reservado." },

@@ -5,6 +5,10 @@ import { ProfileDetailsSection } from "@/components/sections/profile-details-sec
 import { ExperiencesSection } from "@/components/sections/experiences-section";
 import { profile } from "@/content/therapists";
 import { pages } from "@/content/pages";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/shared/json-ld";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { siteConfig } from "@/data/site";
 import { getTherapist, therapists } from "@/data/therapists";
 import { experiences } from "@/data/experiences";
 import { whatsappMessages } from "@/lib/whatsapp";
@@ -17,11 +21,12 @@ export async function generateMetadata({ params }: PageProps<"/terapeutas/[slug]
   const { slug } = await params;
   const therapist = getTherapist(slug);
   if (!therapist) return {};
-  return {
-    title: `${therapist.name} — Terapeutas`,
+  return buildMetadata({
+    title: `${therapist.name} — Terapeutas — ${siteConfig.name}`,
     description: therapist.summary,
-    alternates: { canonical: `${pages.therapists.path}/${therapist.slug}` },
-  };
+    path: `${pages.therapists.path}/${therapist.slug}`,
+    type: "article",
+  });
 }
 
 /** Página individual da terapeuta (Documento 02 §8, Documento 03 §10). */
@@ -34,6 +39,12 @@ export default async function TherapistPage({ params }: PageProps<"/terapeutas/[
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Terapeutas", path: pages.therapists.path },
+          { name: therapist.name, path: `${pages.therapists.path}/${therapist.slug}` },
+        ])}
+      />
       <ProfileHero
         eyebrow="Terapeuta"
         name={therapist.name}

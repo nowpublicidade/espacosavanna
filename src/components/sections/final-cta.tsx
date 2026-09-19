@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CtaLink } from "@/components/shared/cta-link";
 import { Section } from "@/components/shared/section";
+import { Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
 import type { ImageAsset, SectionCopy } from "@/types/content";
 
@@ -18,7 +19,7 @@ type FinalCtaProps = {
 export function FinalCta({ copy, id = "agendar", className }: FinalCtaProps) {
   return (
     <Section id={id} className={className}>
-      <div className="relative flex min-h-[21.25rem] items-center overflow-hidden rounded-lg bg-surface-3">
+      <Reveal className="relative flex min-h-[21.25rem] items-center overflow-hidden rounded-lg bg-surface-3">
         {copy.image ? (
           <Image
             src={copy.image.src}
@@ -49,7 +50,7 @@ export function FinalCta({ copy, id = "agendar", className }: FinalCtaProps) {
             </div>
           ) : null}
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }

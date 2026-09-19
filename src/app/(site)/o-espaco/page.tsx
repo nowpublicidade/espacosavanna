@@ -7,13 +7,12 @@ import { GallerySection } from "@/components/sections/gallery-section";
 import { FinalCta } from "@/components/sections/final-cta";
 import * as space from "@/content/space";
 import { pages } from "@/content/pages";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/shared/json-ld";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 import { spaceGallery } from "@/data/gallery";
 
-export const metadata: Metadata = {
-  title: { absolute: pages.space.title },
-  description: pages.space.description,
-  alternates: { canonical: pages.space.path },
-};
+export const metadata: Metadata = buildMetadata(pages.space);
 
 /**
  * O Espaço — objetivo: gerar confiança (Documento 02, item 7).
@@ -22,6 +21,7 @@ export const metadata: Metadata = {
 export default function SpacePage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "O Espaço", path: pages.space.path }])} />
       <Hero content={space.hero} size="compact" id="o-espaco" />
       <TextSection copy={space.concept} paragraphs={space.concept.paragraphs} id="conceito" />
       <SpaceSection copy={space.structure} images={space.structure.images} surface="base" id="estrutura" />

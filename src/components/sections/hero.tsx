@@ -102,6 +102,7 @@ export function Hero({ content, below, size = "default", id = "inicio", classNam
         />
 
         <div className="relative mx-auto w-full max-w-site px-[1.375rem] pb-[1.625rem] lg:px-gutter lg:py-section">
+          {/* Sem Reveal aqui: o h1 é o elemento LCP e precisa pintar de imediato. */}
           <div className="lg:max-w-[37.5rem]">
             {heading}
             {actions ? <div className="hidden lg:mt-10 lg:block">{actions}</div> : null}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
 import type { ImageAsset } from "@/types/content";
 
@@ -22,7 +23,7 @@ export function ImageMosaic({
   const [main, ...rest] = images;
 
   return (
-    <div
+    <Reveal
       className={cn(
         "grid grid-cols-[1.6fr_1fr] grid-rows-[repeat(2,5.625rem)] gap-2",
         "lg:grid-cols-[1.5fr_1fr] lg:grid-rows-[repeat(2,12.25rem)] lg:gap-3",
@@ -33,7 +34,7 @@ export function ImageMosaic({
       {rest.map((image) => (
         <MosaicImage key={image.src + image.alt} image={image} sizes={sizes} />
       ))}
-    </div>
+    </Reveal>
   );
 }
 

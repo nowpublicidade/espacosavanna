@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { ConnectorIcon, Icon } from "@/components/shared/icons";
+import { REVEAL_STAGGER, Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
 import type { Step } from "@/types/content";
 
@@ -25,7 +26,9 @@ export function Steps({ steps, className }: StepsProps) {
     >
       {steps.map((step, index) => (
         <Fragment key={step.title}>
-          <li
+          <Reveal
+            as="li"
+            delay={index * REVEAL_STAGGER}
             className={cn(
               "flex flex-col gap-[0.6875rem] rounded-lg border border-gold/18 px-3.5 py-[1.125rem]",
               "lg:items-center lg:gap-4 lg:border-0 lg:px-4 lg:py-0 lg:text-center",
@@ -40,7 +43,7 @@ export function Steps({ steps, className }: StepsProps) {
             <span className="text-[0.78125rem] leading-[1.5] text-fg-body lg:max-w-[16ch] lg:text-[0.875rem] lg:leading-[1.55]">
               {step.title}
             </span>
-          </li>
+          </Reveal>
           {index < steps.length - 1 ? (
             <ConnectorIcon
               className="mt-3.5 hidden h-2.5 w-11 self-start text-gold/55 lg:block"

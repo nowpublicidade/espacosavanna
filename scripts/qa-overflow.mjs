@@ -1,6 +1,6 @@
 /**
  * QA: verifica overflow horizontal por elemento em todas as rotas públicas,
- * em 375 / 1024 / 1440px, usando o Chrome local via CDP (sem dependências).
+ * em 375 / 768 / 1024 / 1280 / 1440px, usando o Chrome local via CDP (sem dependências).
  *
  * Uso: npm run qa:overflow  (com `npm run dev` ativo em :3000)
  *      CHROME=/caminho/para/chrome npm run qa:overflow
@@ -23,10 +23,14 @@ const routes = [
   "/trabalhe-conosco",
   "/aluguel-de-salas",
   "/contato",
+  "/terapeutas/luana",
+  "/experiencias/experiencia-sensorial",
 ];
 const viewports = [
   [375, 812],
+  [768, 1024],
   [1024, 800],
+  [1280, 800],
   [1440, 900],
 ];
 

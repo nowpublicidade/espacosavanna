@@ -1,5 +1,6 @@
 import { CtaLink } from "@/components/shared/cta-link";
 import { ExperienceCard } from "@/components/shared/experience-card";
+import { REVEAL_STAGGER, Reveal } from "@/components/shared/reveal";
 import { ArrowIcon } from "@/components/shared/icons";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -32,8 +33,10 @@ export function ExperiencesSection({ copy, experiences, id = "experiencias" }: E
         className="mb-5 lg:mb-10"
       />
       <div className="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-5">
-        {experiences.map((experience) => (
-          <ExperienceCard key={experience.slug} experience={experience} />
+        {experiences.map((experience, index) => (
+          <Reveal key={experience.slug} delay={(index % 3) * REVEAL_STAGGER}>
+            <ExperienceCard experience={experience} />
+          </Reveal>
         ))}
       </div>
     </Section>

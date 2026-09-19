@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import { siteConfig } from "@/data/site";
 import { pages } from "@/content/pages";
+import { defaultOgImage } from "@/lib/seo";
 import "./globals.css";
 
-/** Títulos, frases institucionais. Pesos e itálico usados no layout aprovado. */
+/**
+ * Títulos e frases institucionais. Apenas os pesos usados no layout aprovado:
+ * 400 e itálico 400 (acento do hero mobile). Cada peso é um arquivo — e a
+ * troca da fonte é o que define o LCP do h1.
+ */
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -33,8 +38,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: siteConfig.name,
+    images: [{ url: defaultOgImage.src, alt: defaultOgImage.alt, width: defaultOgImage.width, height: defaultOgImage.height }],
   },
-  robots: { index: false, follow: false }, // TODO: liberar indexação na publicação
+  twitter: { card: "summary_large_image" },
+  // Indexação controlada por NEXT_PUBLIC_INDEXABLE (ver data/site.ts).
+  robots: siteConfig.indexable ? { index: true, follow: true } : { index: false, follow: false },
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

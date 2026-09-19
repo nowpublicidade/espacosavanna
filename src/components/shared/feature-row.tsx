@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Icon } from "@/components/shared/icons";
+import { REVEAL_STAGGER, Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
 import type { Feature } from "@/types/content";
 
@@ -23,8 +24,10 @@ export function FeatureRow({ features, className }: FeatureRowProps) {
       )}
     >
       {features.map((feature, index) => (
-        <li
+        <Reveal
+          as="li"
           key={feature.title}
+          delay={index * REVEAL_STAGGER}
           className={cn(
             "flex flex-col items-center gap-[0.5625rem] px-1 text-center",
             "lg:flex-row lg:items-start lg:gap-[1.125rem] lg:text-left",
@@ -48,7 +51,7 @@ export function FeatureRow({ features, className }: FeatureRowProps) {
               <span className="max-lg:hidden">{feature.description}</span>
             </p>
           </div>
-        </li>
+        </Reveal>
       ))}
     </ul>
   );
