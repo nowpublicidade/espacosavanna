@@ -95,8 +95,15 @@ export type FaqItem = {
 };
 
 export type OpeningHours = {
+  /** Texto exibido no site, ex.: "Segunda a sábado". */
   days: string;
   hours: string;
+  /** Versão estruturada para o JSON-LD (schema.org OpeningHoursSpecification). */
+  schema?: {
+    dayOfWeek: ("Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday")[];
+    opens: string;
+    closes: string;
+  };
 };
 
 export type SiteContact = {

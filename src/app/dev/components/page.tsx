@@ -26,6 +26,7 @@ import { mainNav, secondaryNav } from "@/data/navigation";
 import { experiences, featuredExperiences } from "@/data/experiences";
 import { featuredTherapists } from "@/data/therapists";
 import { contact, siteConfig } from "@/data/site";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Case, Specimen } from "./specimen";
 
 export const metadata: Metadata = {
@@ -115,7 +116,7 @@ export default function ComponentsPage() {
             <Button variant="primary" size="md" disabled>Indisponível</Button>
             <Button variant="secondary" size="md" disabled>Indisponível</Button>
             <div className="w-72">
-              <Button variant="primary" size="md" fullWidth icon={<WhatsAppIcon />} href="https://wa.me/5500000000000" external>
+              <Button variant="primary" size="md" fullWidth icon={<WhatsAppIcon />} href={buildWhatsAppUrl()} external>
                 Agendar pelo WhatsApp
               </Button>
             </div>

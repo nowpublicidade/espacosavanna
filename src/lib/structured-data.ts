@@ -23,11 +23,10 @@ export function organizationJsonLd() {
     inLanguage: "pt-BR",
     // Pendentes de dados oficiais — preenchidos automaticamente ao virar a flag:
     ...(placeholders.logo ? {} : { logo: absolute("/brand/logo.png"), image: absolute(defaultOgImage.src) }),
-    ...(placeholders.contact
+    ...(placeholders.whatsapp
       ? {}
       : {
           telephone: `+${contact.whatsappNumber}`,
-          sameAs: [contact.instagramUrl],
           contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer service",
@@ -35,6 +34,7 @@ export function organizationJsonLd() {
             availableLanguage: "Portuguese",
           },
         }),
+    ...(placeholders.instagram ? {} : { sameAs: [contact.instagramUrl] }),
     ...(placeholders.address
       ? {}
       : {
@@ -51,7 +51,14 @@ export function organizationJsonLd() {
     ...(placeholders.hours
       ? {}
       : {
-          openingHours: contact.openingHours.map((slot) => `${slot.days}: ${slot.hours}`),
+          openingHoursSpecification: contact.openingHours
+            .filter((slot) => slot.schema)
+            .map((slot) => ({
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: slot.schema!.dayOfWeek,
+              opens: slot.schema!.opens,
+              closes: slot.schema!.closes,
+            })),
         }),
   };
 }

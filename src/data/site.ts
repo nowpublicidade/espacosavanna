@@ -1,9 +1,8 @@
 import type { SiteContact } from "@/types/content";
 
 /**
- * Conteúdo operacional — PLACEHOLDERS.
- * Substituir pelos dados reais antes da publicação. Nenhum outro arquivo
- * deve conter número de telefone, endereço ou @ do Instagram.
+ * Conteúdo operacional. Nenhum outro arquivo deve conter número de
+ * telefone, endereço ou @ do Instagram — tudo vem daqui.
  */
 export const siteConfig = {
   name: "Espaço Savanna",
@@ -34,30 +33,45 @@ export const siteConfig = {
    * não entra no JSON-LD nem em metadados públicos.
    */
   placeholders: {
-    contact: true,   // WhatsApp e Instagram
-    address: true,   // endereço e mapa
-    hours: true,     // horários
-    domain: true,    // URL oficial
-    logo: false,     // logo oficial aplicada; imagem OG usa fotografia placeholder
+    whatsapp: false,  // (11) 94565-3708 — oficial
+    instagram: true,  // @ pendente
+    address: false,   // R. Dr. Miranda de Azevedo, 360 — oficial
+    hours: false,     // seg–sáb 10h–22h, dom fechado — oficial
+    domain: true,     // URL oficial pendente
+    logo: false,      // logo oficial aplicada
   },
 } as const;
 
+const ADDRESS_QUERY = encodeURIComponent(
+  "R. Dr. Miranda de Azevedo, 360 - Vila Anglo Brasileira, São Paulo - SP, 05027-000",
+);
+
 export const contact: SiteContact = {
-  whatsappNumber: "5500000000000", // TODO: número real (somente dígitos, com DDI)
-  whatsappDisplay: "(00) 00000-0000",
-  instagramHandle: "@espacosavanna", // TODO
+  whatsappNumber: "5511945653708",
+  whatsappDisplay: "(11) 94565-3708",
+  instagramHandle: "@espacosavanna", // TODO: confirmar o @ oficial
   instagramUrl: "https://instagram.com/espacosavanna",
   address: {
-    street: "Rua Exemplo, 000", // TODO
-    neighborhood: "Bairro",
-    city: "Cidade",
-    state: "UF",
-    zip: "00000-000",
-    mapsEmbedUrl: "", // TODO: URL de embed do Google Maps
-    mapsUrl: "https://maps.google.com", // TODO
+    street: "R. Dr. Miranda de Azevedo, 360",
+    neighborhood: "Vila Anglo Brasileira",
+    city: "São Paulo",
+    state: "SP",
+    zip: "05027-000",
+    // Embed por endereço, sem chave de API. Pode ser trocado pelo embed do
+    // "Compartilhar → Incorporar um mapa" do Google Maps quando houver a ficha do negócio.
+    mapsEmbedUrl: `https://www.google.com/maps?q=${ADDRESS_QUERY}&output=embed&z=16&hl=pt-BR`,
+    mapsUrl: `https://www.google.com/maps/search/?api=1&query=${ADDRESS_QUERY}`,
   },
   openingHours: [
-    { days: "Segunda a sábado", hours: "10h às 22h" }, // TODO
-    { days: "Domingo", hours: "Sob consulta" },
+    {
+      days: "Segunda a sábado",
+      hours: "10h às 22h",
+      schema: {
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "10:00",
+        closes: "22:00",
+      },
+    },
+    { days: "Domingo", hours: "Fechado" },
   ],
 };

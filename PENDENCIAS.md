@@ -20,13 +20,13 @@ Onde cada item vive no código está indicado para facilitar a troca.
 - Originais entregues ficam em `savanna img/` (fora do git); versões web em `public/images/`
 
 ## Dados operacionais (`src/data/site.ts`)
-- [ ] **WhatsApp oficial** → `contact.whatsappNumber` (somente dígitos com DDI) e `contact.whatsappDisplay`
+- [x] **WhatsApp oficial** (11) 94565-3708 → `contact.whatsappNumber`
 - [ ] **Instagram** → `contact.instagramHandle` / `contact.instagramUrl`
-- [ ] **Endereço** completo → `contact.address.*`
-- [ ] **Horários** → `contact.openingHours`
-- [ ] **Mapa**: URL de embed do Google Maps → `contact.address.mapsEmbedUrl` (sem ela a página Contato mostra um bloco "Mapa") e `mapsUrl`
+- [x] **Endereço** R. Dr. Miranda de Azevedo, 360 — Vila Anglo Brasileira, São Paulo/SP → `contact.address.*`
+- [x] **Horários** seg–sáb 10h–22h, domingo fechado → `contact.openingHours`
+- [x] **Mapa**: embed por endereço aplicado; opcional trocar pelo embed da ficha do negócio no Google Maps
 - [ ] **Domínio oficial** → `NEXT_PUBLIC_SITE_URL` (ver `.env.example`)
-- [ ] Após preencher, virar as flags `siteConfig.placeholders.{contact,address,hours,domain}` para `false` — o JSON-LD passa a incluir telefone, endereço e horários automaticamente
+- [ ] Ao confirmar o Instagram, virar `siteConfig.placeholders.instagram = false` (o JSON-LD já publica telefone, endereço e horários)
 
 ## Terapeutas (`src/data/therapists.ts`)
 - [x] Nomes e fotos aplicados: Babi, Luana, Mily, Adriana, Manu, Mariah, Maya (Júlia, do layout, saiu por não ter foto)
