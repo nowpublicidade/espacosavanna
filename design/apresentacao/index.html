@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#EDE9E2;-webkit-font-smoothing:antialiased}
+a{color:#8A6A2E;text-decoration:none}
+a:hover{color:#5E4720}
+[data-frame]{display:block}
+[data-open]{display:none}
+@media (max-width:1120px){
+  [data-frame]{display:none}
+  [data-open]{display:flex}
+  section{padding-left:24px!important;padding-right:24px!important}
+  [data-cols]{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  [data-h1]{font-size:38px!important}
+  [data-h2]{font-size:28px!important}
+  [data-cmp]{grid-template-columns:minmax(0,1fr)!important}
+  [data-cmp]>*{padding-left:0!important;padding-right:0!important}
+  [data-steps]{grid-template-columns:44px 1fr!important}
+  [data-steps]>span:last-child{grid-column:2;font-size:12px!important}
+}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#0A0807"/><text x="200" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#C8A25E">SAVANNA</text><text x="200" y="176" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="13" letter-spacing="5" fill="#8A7050">APROVAÇÃO</text></svg></template>
+
+<div style="background:#EDE9E2;color:#1A1614;font-family:'Public Sans',system-ui,sans-serif;padding:0 0 90px">
+
+  <section style="background:#0A0807;color:#EFE8DC;padding:96px 56px 88px">
+    <div style="max-width:1120px;margin:0 auto">
+      <img src="img/logo-sm.png" alt="Espaço Savanna" style="height:52px;width:auto;display:block;margin-bottom:64px" />
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px">
+        <span style="width:32px;height:1px;background:#C8A25E"></span>
+        <span style="font-size:10.5px;letter-spacing:.34em;color:#C8A25E">DIREÇÃO CRIATIVA · SITE</span>
+      </div>
+      <h1 data-h1="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:64px;line-height:1.12;margin:0 0 26px;max-width:20ch">Duas propostas de layout para o novo site.</h1>
+      <p style="margin:0 0 48px;font-size:17px;line-height:1.75;color:rgba(239,232,220,.7);font-weight:300;max-width:56ch">Este documento apresenta duas direções visuais completas, em versão celular e computador. As telas são navegáveis: role, abra as perguntas, arraste os carrosséis.</p>
+      <div style="display:flex;gap:56px;padding-top:28px;border-top:1px solid rgba(200,162,94,.2);font-size:12.5px;color:rgba(239,232,220,.55);font-weight:300">
+        <span>Setembro de 2026</span>
+        <span>Versão 1 para aprovação</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:80px 56px 0">
+    <div data-cols="1" style="display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:64px;align-items:start">
+      <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:34px;line-height:1.2;margin:0">Como usar este documento</h2>
+      <div style="display:flex;flex-direction:column;gap:22px;font-size:15.5px;line-height:1.8;color:#3A322C;font-weight:300">
+        <p style="margin:0">As duas direções têm exatamente o mesmo conteúdo e a mesma estrutura de páginas. O que muda é o tratamento visual: tipografia, uso da cor dourada, formato dos blocos e ritmo das seções.</p>
+        <p style="margin:0">Você não precisa escolher detalhes. Precisa escolher <strong style="font-weight:500">qual das duas parece mais com o Espaço Savanna</strong>. A partir daí eu refino a escolhida e produzo as páginas internas.</p>
+        <p style="margin:0">As imagens que estão no layout são demonstrativas, no desenvolvimento iremos inserir as imagens finais</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:88px 56px 0">
+    <div style="display:flex;align-items:flex-start;gap:26px;margin-bottom:14px">
+      <span style="font-family:'Bodoni Moda',serif;font-size:56px;line-height:.9;color:#C0A067">A</span>
+      <div style="padding-top:6px">
+        <div style="font-size:10.5px;letter-spacing:.3em;color:#8A6A2E;margin-bottom:12px">DIREÇÃO A</div>
+        <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0">Clássica e acolhedora</h2>
+      </div>
+    </div>
+    <div data-cols="1" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:34px 0 44px;border-top:1px solid rgba(26,22,20,.14);margin-top:30px">
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">TIPOGRAFIA</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Serifa clássica de traço suave. Leitura confortável, tom tradicional.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">FORMA</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Cantos arredondados, cartões com contorno, ícones em cada informação.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">SENSAÇÃO</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Familiar e explicativa. Guia o visitante passo a passo, com muito dourado.</p>
+      </div>
+    </div>
+
+    <div data-open="1" style="flex-direction:column;gap:12px;margin-bottom:8px">
+      <a href="direcao-a-desktop.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:#0B0806;color:#E3CB9A;font-size:13px;letter-spacing:.14em">ABRIR VERSÃO COMPUTADOR<span>→</span></a>
+      <a href="direcao-a-celular.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:#0B0806;color:#E3CB9A;font-size:13px;letter-spacing:.14em">ABRIR VERSÃO CELULAR<span>→</span></a>
+    </div>
+    <div data-frame="1">
+      <div style="margin-bottom:16px;font-size:10.5px;letter-spacing:.26em;color:#8A6A2E">COMPUTADOR</div>
+      <div style="position:relative;width:1008px;height:660px;overflow:hidden;background:#0B0806;box-shadow:0 30px 70px rgba(26,22,20,.24)">
+        <iframe src="direcao-a-desktop.html" title="Direção A — desktop" style="position:absolute;top:0;left:0;width:1440px;height:943px;border:0;transform:scale(.7);transform-origin:0 0"></iframe>
+      </div>
+      <div style="margin:44px 0 16px;font-size:10.5px;letter-spacing:.26em;color:#8A6A2E">CELULAR</div>
+      <div style="position:relative;width:430px;height:820px;overflow:hidden;background:#0B0806;box-shadow:0 30px 70px rgba(26,22,20,.24)">
+        <iframe src="direcao-a-celular.html" title="Direção A — mobile" style="width:100%;height:100%;border:0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:96px 56px 0">
+    <div style="display:flex;align-items:flex-start;gap:26px;margin-bottom:14px">
+      <span style="font-family:'Bodoni Moda',serif;font-size:56px;line-height:.9;color:#C0A067">B</span>
+      <div style="padding-top:6px">
+        <div style="font-size:10.5px;letter-spacing:.3em;color:#8A6A2E;margin-bottom:12px">DIREÇÃO B · RECOMENDADA</div>
+        <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0">Editorial e contemporânea</h2>
+      </div>
+    </div>
+    <div data-cols="1" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:34px 0 44px;border-top:1px solid rgba(26,22,20,.14);margin-top:30px">
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">TIPOGRAFIA</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Serifa de alto contraste, como capa de revista. Conversa direto com o logo.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">FORMA</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Cantos retos, fotos grandes, estrutura feita por linhas finas em vez de caixas.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.24em;color:#8A6A2E;margin-bottom:12px">SENSAÇÃO</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.75;color:#3A322C;font-weight:300">Mais silenciosa e cara. O dourado aparece pouco, e por isso pesa mais.</p>
+      </div>
+    </div>
+
+    <div data-open="1" style="flex-direction:column;gap:12px;margin-bottom:8px">
+      <a href="direcao-b-desktop.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:#0A0807;color:#C8A25E;font-size:13px;letter-spacing:.14em">ABRIR VERSÃO COMPUTADOR<span>→</span></a>
+      <a href="direcao-b-celular.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:#0A0807;color:#C8A25E;font-size:13px;letter-spacing:.14em">ABRIR VERSÃO CELULAR<span>→</span></a>
+    </div>
+    <div data-frame="1">
+      <div style="margin-bottom:16px;font-size:10.5px;letter-spacing:.26em;color:#8A6A2E">COMPUTADOR</div>
+      <div style="position:relative;width:1008px;height:660px;overflow:hidden;background:#0A0807;box-shadow:0 30px 70px rgba(26,22,20,.24)">
+        <iframe src="direcao-b-desktop.html" title="Direção B — desktop" style="position:absolute;top:0;left:0;width:1440px;height:943px;border:0;transform:scale(.7);transform-origin:0 0"></iframe>
+      </div>
+      <div style="margin:44px 0 16px;font-size:10.5px;letter-spacing:.26em;color:#8A6A2E">CELULAR</div>
+      <div style="position:relative;width:430px;height:820px;overflow:hidden;background:#0A0807;box-shadow:0 30px 70px rgba(26,22,20,.24)">
+        <iframe src="direcao-b-celular.html" title="Direção B — mobile" style="width:100%;height:100%;border:0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:96px 56px 0">
+    <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0 0 40px">Lado a lado</h2>
+    <div data-cmp="1" style="display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);gap:0;border-top:1px solid rgba(26,22,20,.14)">
+      <div style="padding:22px 0;font-size:10.5px;letter-spacing:.2em;color:#8A6A2E">&nbsp;</div>
+      <div style="padding:22px 24px;font-family:'Bodoni Moda',serif;font-size:22px">Direção A</div>
+      <div style="padding:22px 24px;font-family:'Bodoni Moda',serif;font-size:22px">Direção B</div>
+
+      <div style="padding:20px 0;border-top:1px solid rgba(26,22,20,.12);font-size:11px;letter-spacing:.16em;color:#8A6A2E">TIPOGRAFIA</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Cormorant Garamond + Jost</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Bodoni Moda + Public Sans</div>
+
+      <div style="padding:20px 0;border-top:1px solid rgba(26,22,20,.12);font-size:11px;letter-spacing:.16em;color:#8A6A2E">DOURADO</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Presente em quase todos os elementos</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Reservado a poucos pontos de destaque</div>
+
+      <div style="padding:20px 0;border-top:1px solid rgba(26,22,20,.12);font-size:11px;letter-spacing:.16em;color:#8A6A2E">CARTÕES</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Contorno e canto arredondado</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Sem contorno, canto reto, foto em primeiro plano</div>
+
+      <div style="padding:20px 0;border-top:1px solid rgba(26,22,20,.12);font-size:11px;letter-spacing:.16em;color:#8A6A2E">ÍCONES</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Em todas as seções</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Apenas WhatsApp e setas</div>
+
+      <div style="padding:20px 0;border-top:1px solid rgba(26,22,20,.12);border-bottom:1px solid rgba(26,22,20,.14);font-size:11px;letter-spacing:.16em;color:#8A6A2E">MELHOR PARA</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);border-bottom:1px solid rgba(26,22,20,.14);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Público que precisa de mais explicação e conforto de leitura</div>
+      <div style="padding:20px 24px;border-top:1px solid rgba(26,22,20,.12);border-bottom:1px solid rgba(26,22,20,.14);font-size:14.5px;line-height:1.7;color:#3A322C;font-weight:300">Posicionamento de alto padrão, ênfase na fotografia</div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:96px 56px 0">
+    <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0 0 12px">O sistema por trás</h2>
+    <p style="margin:0 0 44px;font-size:15.5px;line-height:1.8;color:#3A322C;font-weight:300;max-width:56ch">Qualquer que seja a escolha, o site é montado sobre um conjunto fixo de cores, tamanhos de texto e espaçamentos. Isso mantém tudo coerente quando novas páginas forem criadas.</p>
+    <div data-cols="1" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px">
+      <div>
+        <div style="font-size:10.5px;letter-spacing:.26em;color:#8A6A2E;margin-bottom:20px">DIREÇÃO A</div>
+        <div style="display:flex;gap:0;height:64px;margin-bottom:18px">
+          <span style="flex:1;background:#0B0806"></span>
+          <span style="flex:1;background:#100C09"></span>
+          <span style="flex:1;background:#120E0A"></span>
+          <span style="flex:1;background:#C6A15B"></span>
+          <span style="flex:1;background:#E3CB9A"></span>
+          <span style="flex:1;background:#F2EBE0"></span>
+        </div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.15;margin-bottom:8px">Uma experiência</div>
+        <div style="font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.16em;color:#3A322C">CORMORANT GARAMOND · JOST</div>
+      </div>
+      <div>
+        <div style="font-size:10.5px;letter-spacing:.26em;color:#8A6A2E;margin-bottom:20px">DIREÇÃO B</div>
+        <div style="display:flex;gap:0;height:64px;margin-bottom:18px">
+          <span style="flex:1;background:#0A0807"></span>
+          <span style="flex:1;background:#0F0C0A"></span>
+          <span style="flex:1;background:#14100C"></span>
+          <span style="flex:1;background:#C8A25E"></span>
+          <span style="flex:1;background:#EFE8DC"></span>
+          <span style="flex:1;background:#8A7050"></span>
+        </div>
+        <div style="font-family:'Bodoni Moda',serif;font-size:34px;line-height:1.15;margin-bottom:8px">Uma experiência</div>
+        <div style="font-family:'Public Sans',sans-serif;font-size:13px;letter-spacing:.16em;color:#3A322C">BODONI MODA · PUBLIC SANS</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:96px 56px 0">
+    <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:40px;line-height:1.15;margin:0 0 40px">Próximos passos</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid rgba(26,22,20,.14)">
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.12);align-items:baseline">
+        <span style="font-family:'Bodoni Moda',serif;font-size:24px;color:#C0A067">01</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Escolha da direção visual</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">com você</span>
+      </div>
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.12);align-items:baseline">
+        <span style="font-family:'Bodoni Moda',serif;font-size:24px;color:#C0A067">02</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Ensaio fotográfico do espaço e das terapeutas</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">recomendado</span>
+      </div>
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.12);align-items:baseline">
+        <span style="font-family:'Bodoni Moda',serif;font-size:24px;color:#C0A067">03</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Páginas internas: perfil da terapeuta, galeria e menu</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">próxima entrega</span>
+      </div>
+      <div data-steps="1" style="display:grid;grid-template-columns:64px 1fr 220px;gap:28px;padding:26px 0;border-bottom:1px solid rgba(26,22,20,.14);align-items:baseline">
+        <span style="font-family:'Bodoni Moda',serif;font-size:24px;color:#C0A067">04</span>
+        <span style="font-size:17px;line-height:1.5;color:#1A1614;font-weight:300">Textos finais e desenvolvimento</span>
+        <span style="font-size:13px;color:#6B615A;font-weight:300">após aprovação</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1120px;margin:0 auto;padding:80px 56px 0">
+    <div style="background:#0A0807;color:#EFE8DC;padding:64px 56px">
+      <h2 data-h2="1" style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:38px;line-height:1.15;margin:0 0 18px">Para aprovar, responda com uma letra.</h2>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:rgba(239,232,220,.7);font-weight:300;max-width:52ch"><strong style="color:#C8A25E;font-weight:400">A</strong> ou <strong style="color:#C8A25E;font-weight:400">B</strong>. Se algo específico incomodar em qualquer uma das duas, aponte — dá para trazer elementos de uma para a outra.</p>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+</body>
+</html>

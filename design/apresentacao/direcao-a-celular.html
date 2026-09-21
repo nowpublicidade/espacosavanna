@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--gold:#C6A15B;--gold-soft:#E3CB9A;--r:14px}
+*{box-sizing:border-box}
+body{margin:0;background:#070504;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-soft);text-decoration:none}
+a:hover{color:#F3E4C4}
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+details[open] .chev{transform:rotate(45deg)}
+.hscroll{scrollbar-width:none}
+.hscroll::-webkit-scrollbar{display:none}
+</style>
+</helmet>
+
+<div style="min-height:100%;background:#070504;padding:0 0 0 0;display:flex;justify-content:center;font-family:'Jost',system-ui,sans-serif">
+<div style="width:100%;max-width:430px;background:#0B0806;color:#F2EBE0;position:relative;overflow:hidden">
+
+  <div style="position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(11,8,6,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(198,161,91,.16)">
+    <img src="img/logo-sm.png" alt="Espaço Savanna" style="height:38px;width:auto;display:block" />
+    <button aria-label="Menu" style="display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:10px;cursor:pointer">
+      <span style="display:block;width:22px;height:1.5px;background:var(--gold-soft)"></span>
+      <span style="display:block;width:22px;height:1.5px;background:var(--gold-soft)"></span>
+      <span style="display:block;width:14px;height:1.5px;background:var(--gold-soft);align-self:flex-end"></span>
+    </button>
+  </div>
+
+  <section style="position:relative;padding:0">
+    <div style="position:relative;height:460px;background:url('img/suite-02.jpg') center 40%/cover no-repeat #14100C">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,8,6,.6) 0%,rgba(11,8,6,.4) 26%,rgba(11,8,6,.94) 76%,#0B0806 100%)"></div>
+      <div style="position:absolute;left:0;right:0;bottom:0;padding:0 22px 26px">
+        <div style="font-size:10.5px;letter-spacing:.28em;color:var(--gold);margin-bottom:14px">UM ESPAÇO EXCLUSIVO</div>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:40px;line-height:1.06;margin:0 0 16px;text-wrap:pretty">Uma experiência<br /><em style="font-style:italic;color:var(--gold-soft)">além do convencional.</em></h1>
+        <p style="margin:0;font-size:14px;line-height:1.65;color:rgba(242,235,224,.72);font-weight:300;max-width:34ch">Ambiente sofisticado, atendimento personalizado e total discrição para você viver momentos de relaxamento, conexão e novas sensações.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px;padding:22px 22px 0">
+      <a href="#agendar" style="display:flex;align-items:center;justify-content:center;gap:10px;height:54px;border-radius:var(--r);background:linear-gradient(180deg,#E3CB9A,#C6A15B);color:#150F08;font-size:12.5px;font-weight:600;letter-spacing:.16em">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#150F08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5Z" /><path d="M8.6 9.2c0 3.3 2.7 6 6 6" /></svg>
+        AGENDAR PELO WHATSAPP
+      </a>
+      <a href="#espaco" style="display:flex;align-items:center;justify-content:center;height:52px;border-radius:var(--r);border:1px solid rgba(198,161,91,.45);color:var(--gold-soft);font-size:12.5px;font-weight:500;letter-spacing:.16em">CONHECER O ESPAÇO</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:26px 16px 30px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;padding:0 4px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /><circle cx="12" cy="15" r="1.2" /></svg>
+        <span style="font-size:9px;letter-spacing:.18em;color:var(--gold)">RESERVADO</span>
+        <span style="font-size:11px;line-height:1.5;color:rgba(242,235,224,.5);font-weight:300">Discrição do primeiro contato ao atendimento.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;padding:0 4px;border-left:1px solid rgba(198,161,91,.16);border-right:1px solid rgba(198,161,91,.16)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><path d="M12 5c2.2 2.2 2.2 5.6 0 7.8-2.2-2.2-2.2-5.6 0-7.8Z" /><path d="M12 12.8c-2.6 1-5.4.3-7-1.6 2.2-1.3 5-1 7 1.6Z" /><path d="M12 12.8c2.6 1 5.4.3 7-1.6-2.2-1.3-5-1-7 1.6Z" /><path d="M6.5 15.5c1.8 2.4 4.6 3.5 5.5 3.5s3.7-1.1 5.5-3.5" /></svg>
+        <span style="font-size:9px;letter-spacing:.18em;color:var(--gold)">CONFORTÁVEL</span>
+        <span style="font-size:11px;line-height:1.5;color:rgba(242,235,224,.5);font-weight:300">Espaços privativos e preparados para seu bem-estar.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;padding:0 4px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><circle cx="12" cy="8.5" r="3.4" /><path d="M5.5 19.5a6.5 6.5 0 0 1 13 0" /></svg>
+        <span style="font-size:9px;letter-spacing:.18em;color:var(--gold)">SELECIONADAS</span>
+        <span style="font-size:11px;line-height:1.5;color:rgba(242,235,224,.5);font-weight:300">Profissionais experientes e preparadas.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="espaco" style="padding:38px 22px 42px;background:#100C09;border-top:1px solid rgba(198,161,91,.12)">
+    <div style="font-size:10.5px;letter-spacing:.28em;color:var(--gold);margin-bottom:12px">O ESPAÇO</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px;line-height:1.14;margin:0 0 14px">Um ambiente pensado para você se desconectar.</h2>
+    <p style="margin:0 0 22px;font-size:13.5px;line-height:1.7;color:rgba(242,235,224,.6);font-weight:300">Cada detalhe do Espaço Savanna foi planejado para proporcionar conforto, privacidade e uma atmosfera acolhedora.</p>
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:8px;margin-bottom:14px">
+      <div style="height:190px;border-radius:var(--r);background:url('img/suite-01.jpg') center/cover no-repeat #14100C"></div>
+      <div style="display:grid;grid-template-rows:1fr 1fr;gap:8px">
+        <div style="border-radius:var(--r);background:url('img/recepcao.jpg') center/cover no-repeat #14100C"></div>
+        <div style="border-radius:var(--r);background:url('img/corredor.jpg') center/cover no-repeat #14100C"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px;justify-content:center;margin-bottom:22px">
+      <span style="width:16px;height:2px;background:var(--gold)"></span>
+      <span style="width:6px;height:2px;background:rgba(198,161,91,.3)"></span>
+      <span style="width:6px;height:2px;background:rgba(198,161,91,.3)"></span>
+      <span style="width:6px;height:2px;background:rgba(198,161,91,.3)"></span>
+    </div>
+    <a href="#galeria" style="display:flex;align-items:center;justify-content:center;height:50px;border-radius:var(--r);border:1px solid rgba(198,161,91,.45);color:var(--gold-soft);font-size:12px;font-weight:500;letter-spacing:.16em">CONHECER O ESPAÇO</a>
+  </section>
+
+  <section style="padding:38px 0 42px">
+    <div style="padding:0 22px">
+      <div style="font-size:10.5px;letter-spacing:.28em;color:var(--gold);margin-bottom:12px">NOSSAS TERAPEUTAS</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px;line-height:1.14;margin:0 0 20px">Encontre a experiência ideal para você.</h2>
+    </div>
+    <div class="hscroll" style="display:flex;gap:12px;overflow-x:auto;padding:0 22px 6px;scroll-snap-type:x mandatory">
+      <article style="flex:0 0 245px;scroll-snap-align:start;border:1px solid rgba(198,161,91,.2);border-radius:var(--r);overflow:hidden;background:#120E0A">
+        <div style="height:290px;background:url('img/t-04.jpg') center 18%/cover no-repeat #14100C"></div>
+        <div style="padding:16px 15px 17px">
+          <div style="font-size:12px;letter-spacing:.2em;color:var(--gold-soft);margin-bottom:11px">BABI</div>
+          <ul style="margin:0 0 16px;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px">
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Massagem Tântrica</li>
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Experiência Sensorial</li>
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Atendimento personalizado</li>
+          </ul>
+          <a href="#perfil" style="display:flex;align-items:center;justify-content:center;height:42px;border-radius:10px;border:1px solid rgba(198,161,91,.4);color:var(--gold-soft);font-size:10.5px;letter-spacing:.16em">CONHECER PERFIL</a>
+        </div>
+      </article>
+      <article style="flex:0 0 245px;scroll-snap-align:start;border:1px solid rgba(198,161,91,.2);border-radius:var(--r);overflow:hidden;background:#120E0A">
+        <div style="height:290px;background:url('img/t-05.jpg') center 15%/cover no-repeat #14100C"></div>
+        <div style="padding:16px 15px 17px">
+          <div style="font-size:12px;letter-spacing:.2em;color:var(--gold-soft);margin-bottom:11px">LUANA</div>
+          <ul style="margin:0 0 16px;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px">
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Massagem Relaxante</li>
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Técnicas Sensoriais</li>
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Atendimento exclusivo</li>
+          </ul>
+          <a href="#perfil" style="display:flex;align-items:center;justify-content:center;height:42px;border-radius:10px;border:1px solid rgba(198,161,91,.4);color:var(--gold-soft);font-size:10.5px;letter-spacing:.16em">CONHECER PERFIL</a>
+        </div>
+      </article>
+      <article style="flex:0 0 245px;scroll-snap-align:start;border:1px solid rgba(198,161,91,.2);border-radius:var(--r);overflow:hidden;background:#120E0A">
+        <div style="height:290px;background:url('img/t-01.jpg') center 18%/cover no-repeat #14100C"></div>
+        <div style="padding:16px 15px 17px">
+          <div style="font-size:12px;letter-spacing:.2em;color:var(--gold-soft);margin-bottom:11px">JÚLIA</div>
+          <ul style="margin:0 0 16px;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px">
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Massagem Tântrica</li>
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Sensualidade e conexão</li>
+            <li style="font-size:11.5px;color:rgba(242,235,224,.58);font-weight:300">· Toque marcante</li>
+          </ul>
+          <a href="#perfil" style="display:flex;align-items:center;justify-content:center;height:42px;border-radius:10px;border:1px solid rgba(198,161,91,.4);color:var(--gold-soft);font-size:10.5px;letter-spacing:.16em">CONHECER PERFIL</a>
+        </div>
+      </article>
+    </div>
+    <div style="padding:20px 22px 0">
+      <a href="#terapeutas" style="display:inline-flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.14em;color:var(--gold-soft)">VER TODAS AS TERAPEUTAS
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="#E3CB9A" stroke-width="1.2"><path d="M0 5h16M12 1l4 4-4 4" /></svg>
+      </a>
+    </div>
+  </section>
+
+  <section style="padding:38px 22px 42px;background:#100C09;border-top:1px solid rgba(198,161,91,.12);border-bottom:1px solid rgba(198,161,91,.12)">
+    <div style="font-size:10.5px;letter-spacing:.28em;color:var(--gold);margin-bottom:12px">COMO FUNCIONA</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px;line-height:1.14;margin:0 0 24px">Agendar é simples.</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:var(--r);padding:18px 14px;display:flex;flex-direction:column;gap:11px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><rect x="3.5" y="5.5" width="17" height="15" rx="2" /><path d="M3.5 10h17M8 3.5v4M16 3.5v4" /></svg>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);line-height:1">01</span>
+        <span style="font-size:12.5px;line-height:1.5;color:rgba(242,235,224,.72);font-weight:300">Escolha sua terapeuta</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:var(--r);padding:18px 14px;display:flex;flex-direction:column;gap:11px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3" stroke-linecap="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5Z" /><path d="M8.6 9.2c0 3.3 2.7 6 6 6" /></svg>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);line-height:1">02</span>
+        <span style="font-size:12.5px;line-height:1.5;color:rgba(242,235,224,.72);font-weight:300">Entre em contato pelo WhatsApp</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:var(--r);padding:18px 14px;display:flex;flex-direction:column;gap:11px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3" stroke-linecap="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 1.8" /></svg>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);line-height:1">03</span>
+        <span style="font-size:12.5px;line-height:1.5;color:rgba(242,235,224,.72);font-weight:300">Combine seu horário</span>
+      </div>
+      <div style="border:1px solid rgba(198,161,91,.18);border-radius:var(--r);padding:18px 14px;display:flex;flex-direction:column;gap:11px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><path d="M12 5c2.2 2.2 2.2 5.6 0 7.8-2.2-2.2-2.2-5.6 0-7.8Z" /><path d="M12 12.8c-2.6 1-5.4.3-7-1.6 2.2-1.3 5-1 7 1.6Z" /><path d="M12 12.8c2.6 1 5.4.3 7-1.6-2.2-1.3-5-1-7 1.6Z" /><path d="M6.5 15.5c1.8 2.4 4.6 3.5 5.5 3.5s3.7-1.1 5.5-3.5" /></svg>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);line-height:1">04</span>
+        <span style="font-size:12.5px;line-height:1.5;color:rgba(242,235,224,.72);font-weight:300">Viva sua experiência</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:38px 22px 42px">
+    <div style="font-size:10.5px;letter-spacing:.28em;color:var(--gold);margin-bottom:12px">EXPERIÊNCIAS</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px;line-height:1.14;margin:0 0 20px">Escolha seu tipo de experiência.</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="#experiencia" style="position:relative;display:block;height:150px;border-radius:var(--r);overflow:hidden;background:url('img/t-02.jpg') center 20%/cover no-repeat #14100C">
+        <span style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,8,6,.96) 0 58%,rgba(11,8,6,.62) 100%)"></span>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,8,6,.85),rgba(11,8,6,0) 70%)"></span>
+        <span style="position:absolute;left:18px;bottom:18px;right:70px;display:flex;flex-direction:column;gap:7px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><path d="M12 5c2.2 2.2 2.2 5.6 0 7.8-2.2-2.2-2.2-5.6 0-7.8Z" /><path d="M12 12.8c-2.6 1-5.4.3-7-1.6 2.2-1.3 5-1 7 1.6Z" /><path d="M12 12.8c2.6 1 5.4.3 7-1.6-2.2-1.3-5-1-7 1.6Z" /></svg>
+          <span style="font-size:12px;letter-spacing:.2em;color:var(--gold-soft)">MASSAGEM TÂNTRICA</span>
+          <span style="font-size:12px;line-height:1.5;color:rgba(242,235,224,.9);font-weight:300">Uma experiência de conexão, presença e prazer.</span>
+        </span>
+        <svg style="position:absolute;right:18px;bottom:22px" width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="#E3CB9A" stroke-width="1.2"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+      </a>
+      <a href="#experiencia" style="position:relative;display:block;height:150px;border-radius:var(--r);overflow:hidden;background:url('img/corredor.jpg') center 45%/cover no-repeat #14100C">
+        <span style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,8,6,.96) 0 58%,rgba(11,8,6,.62) 100%)"></span>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,8,6,.85),rgba(11,8,6,0) 70%)"></span>
+        <span style="position:absolute;left:18px;bottom:18px;right:70px;display:flex;flex-direction:column;gap:7px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><path d="M6.5 15.5c1.8 2.4 4.6 3.5 5.5 3.5s3.7-1.1 5.5-3.5" /><circle cx="12" cy="9" r="3.5" /></svg>
+          <span style="font-size:12px;letter-spacing:.2em;color:var(--gold-soft)">MASSAGEM RELAXANTE</span>
+          <span style="font-size:12px;line-height:1.5;color:rgba(242,235,224,.9);font-weight:300">Técnicas que promovem relaxamento profundo e bem-estar.</span>
+        </span>
+        <svg style="position:absolute;right:18px;bottom:22px" width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="#E3CB9A" stroke-width="1.2"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+      </a>
+      <a href="#experiencia" style="position:relative;display:block;height:150px;border-radius:var(--r);overflow:hidden;background:url('img/t-03.jpg') center 18%/cover no-repeat #14100C">
+        <span style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,8,6,.96) 0 58%,rgba(11,8,6,.62) 100%)"></span>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,8,6,.85),rgba(11,8,6,0) 70%)"></span>
+        <span style="position:absolute;left:18px;bottom:18px;right:70px;display:flex;flex-direction:column;gap:7px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.3"><circle cx="12" cy="12" r="3" /><path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke-linecap="round" /></svg>
+          <span style="font-size:12px;letter-spacing:.2em;color:var(--gold-soft)">EXPERIÊNCIA SENSORIAL</span>
+          <span style="font-size:12px;line-height:1.5;color:rgba(242,235,224,.9);font-weight:300">Uma jornada personalizada de sensações únicas.</span>
+        </span>
+        <svg style="position:absolute;right:18px;bottom:22px" width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="#E3CB9A" stroke-width="1.2"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+      </a>
+    </div>
+  </section>
+
+  <section style="padding:38px 22px 46px;background:#100C09;border-top:1px solid rgba(198,161,91,.12)">
+    <div style="font-size:10.5px;letter-spacing:.28em;color:var(--gold);margin-bottom:12px">DÚVIDAS</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px;line-height:1.14;margin:0 0 20px">Perguntas frequentes.</h2>
+    <details open="true" style="border-bottom:1px solid rgba(198,161,91,.16);padding:16px 0">
+      <summary style="display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:13.5px;color:#F2EBE0;font-weight:400">O atendimento é discreto?
+        <span class="chev" style="flex:0 0 auto;width:9px;height:9px;border-right:1.4px solid #C6A15B;border-bottom:1.4px solid #C6A15B;transform:rotate(-45deg);transition:transform .25s"></span>
+      </summary>
+      <p style="margin:12px 0 0;font-size:12.5px;line-height:1.7;color:rgba(242,235,224,.6);font-weight:300">Sim. Todo o contato, o agendamento e a chegada ao espaço são conduzidos com total privacidade e sigilo.</p>
+    </details>
+    <details style="border-bottom:1px solid rgba(198,161,91,.16);padding:16px 0">
+      <summary style="display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:13.5px;color:#F2EBE0;font-weight:400">Preciso agendar com antecedência?
+        <span class="chev" style="flex:0 0 auto;width:9px;height:9px;border-right:1.4px solid #C6A15B;border-bottom:1.4px solid #C6A15B;transform:rotate(-45deg);transition:transform .25s"></span>
+      </summary>
+      <p style="margin:12px 0 0;font-size:12.5px;line-height:1.7;color:rgba(242,235,224,.6);font-weight:300">Recomendamos agendar com antecedência para garantir o horário e a terapeuta de sua preferência.</p>
+    </details>
+    <details style="border-bottom:1px solid rgba(198,161,91,.16);padding:16px 0">
+      <summary style="display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:13.5px;color:#F2EBE0;font-weight:400">Quais são as formas de pagamento?
+        <span class="chev" style="flex:0 0 auto;width:9px;height:9px;border-right:1.4px solid #C6A15B;border-bottom:1.4px solid #C6A15B;transform:rotate(-45deg);transition:transform .25s"></span>
+      </summary>
+      <p style="margin:12px 0 0;font-size:12.5px;line-height:1.7;color:rgba(242,235,224,.6);font-weight:300">As formas aceitas são informadas no atendimento pelo WhatsApp, junto com todos os detalhes da reserva.</p>
+    </details>
+  </section>
+
+  <footer id="agendar" style="padding:44px 22px 120px;text-align:center">
+    <div style="display:flex;justify-content:center;margin-bottom:20px">
+      <img src="img/logo-sm.png" alt="Espaço Savanna" style="height:62px;width:auto;display:block" />
+    </div>
+    <p style="margin:0 auto 24px;max-width:30ch;font-size:12.5px;line-height:1.7;color:rgba(242,235,224,.5);font-weight:300">Atendimento com hora marcada. Ambiente exclusivo e reservado.</p>
+    <div style="display:flex;flex-direction:column;gap:9px;align-items:center;font-size:12px;color:rgba(242,235,224,.55);font-weight:300">
+      <a href="#espaco">O Espaço</a>
+      <a href="#terapeutas">Terapeutas</a>
+      <a href="#experiencia">Experiências</a>
+      <a href="#duvidas">Dúvidas</a>
+    </div>
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid rgba(198,161,91,.14);font-size:10px;letter-spacing:.1em;color:rgba(242,235,224,.32)">© 2026 ESPAÇO SAVANNA · ENTRADA PERMITIDA APENAS PARA MAIORES DE 18 ANOS</div>
+  </footer>
+
+  <sc-if value="{{ sticky }}" hint-placeholder-val="{{ true }}">
+    <div style="position:sticky;bottom:0;z-index:40;padding:12px 18px 16px;background:linear-gradient(180deg,rgba(11,8,6,0),rgba(11,8,6,.94) 40%)">
+      <a href="#agendar" style="display:flex;align-items:center;justify-content:center;gap:10px;height:54px;border-radius:var(--r);background:linear-gradient(180deg,#E3CB9A,#C6A15B);color:#150F08;font-size:12.5px;font-weight:600;letter-spacing:.16em;box-shadow:0 10px 30px rgba(0,0,0,.5)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#150F08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5Z" /><path d="M8.6 9.2c0 3.3 2.7 6 6 6" /></svg>
+        AGENDAR PELO WHATSAPP
+      </a>
+    </div>
+  </sc-if>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:430,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#C6A15B&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tema&quot;,&quot;options&quot;:[&quot;#C6A15B&quot;,&quot;#B08D57&quot;,&quot;#A8814A&quot;,&quot;#C08A6E&quot;]},&quot;accentSoft&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E3CB9A&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tema&quot;,&quot;options&quot;:[&quot;#E3CB9A&quot;,&quot;#DCC79B&quot;,&quot;#EBD9B4&quot;,&quot;#E0BFA8&quot;]},&quot;corner&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Suave&quot;,&quot;options&quot;:[&quot;Suave&quot;,&quot;Reto&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tema&quot;},&quot;stickyCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Comportamento&quot;}}">
+class Component extends DCLogic {
+  applyTheme() {
+    const r = document.documentElement.style;
+    const g = this.props.accent ?? '#C6A15B';
+    r.setProperty('--gold', g);
+    r.setProperty('--gold-soft', this.props.accentSoft ?? '#E3CB9A');
+    r.setProperty('--r', (this.props.corner ?? 'Suave') === 'Reto' ? '2px' : '14px');
+  }
+  componentDidMount() { this.applyTheme(); }
+  componentDidUpdate() { this.applyTheme(); }
+  renderVals() {
+    return { sticky: this.props.stickyCta !== false };
+  }
+}
+</script>
+</body>
+</html>
