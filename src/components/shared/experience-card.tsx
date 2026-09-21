@@ -58,10 +58,10 @@ export function ExperienceCard({
 
       <span className="absolute bottom-[1.125rem] left-[1.125rem] right-[4.375rem] flex flex-col gap-[0.4375rem] lg:inset-x-[1.625rem] lg:bottom-[1.625rem] lg:gap-[0.6875rem]">
         <Icon name={experience.icon} className="size-[1.375rem] text-gold lg:size-[1.625rem]" />
-        <span className="text-[0.75rem] uppercase leading-none tracking-label text-gold-soft lg:text-[0.8125rem]">
+        <span className="text-[0.8125rem] uppercase leading-none tracking-label text-gold-soft">
           {experience.name}
         </span>
-        <span className="text-[0.75rem] leading-[1.5] text-foreground/90 lg:text-[0.84375rem] lg:leading-[1.6] lg:text-foreground/85">
+        <span className="text-[0.875rem] leading-[1.5] text-foreground/90 lg:leading-[1.6]">
           {experience.tagline}
         </span>
       </span>

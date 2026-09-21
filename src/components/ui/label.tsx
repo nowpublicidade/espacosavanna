@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export function Label({ className, ...props }: ComponentProps<"label">) {
   return (
     <label
-      className={cn("block text-[0.6875rem] uppercase tracking-label text-gold", className)}
+      className={cn("block text-[0.75rem] uppercase tracking-label text-gold", className)}
       {...props}
     />
   );

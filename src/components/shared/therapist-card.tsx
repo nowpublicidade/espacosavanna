@@ -47,12 +47,12 @@ export function TherapistCard({
       </div>
 
       <div className="flex flex-1 flex-col px-[0.9375rem] pt-4 pb-[1.0625rem] lg:px-[1.375rem] lg:pt-6 lg:pb-[1.625rem]">
-        <h3 className="font-sans text-[0.75rem] font-normal uppercase leading-none tracking-label text-gold-soft lg:text-[0.8125rem]">
+        <h3 className="font-sans text-[0.8125rem] font-normal uppercase leading-none tracking-label text-gold-soft">
           {therapist.name}
         </h3>
         <ul className="mt-[0.6875rem] mb-4 flex flex-col gap-1.5 lg:mt-3.5 lg:mb-[1.375rem] lg:gap-2">
           {therapist.highlights.slice(0, 3).map((item) => (
-            <li key={item} className="text-[0.71875rem] leading-snug text-foreground/58 lg:text-[0.8125rem]">
+            <li key={item} className="text-[0.875rem] leading-snug text-foreground/70">
               · {item}
             </li>
           ))}

@@ -19,7 +19,7 @@ export function FeatureRow({ features, className }: FeatureRowProps) {
   return (
     <ul
       className={cn(
-        "grid grid-cols-3 gap-1.5 px-4 pt-[1.625rem] pb-[1.875rem] lg:gap-0 lg:px-0 lg:pt-[2.375rem] lg:pb-11",
+        "grid grid-cols-3 gap-2 px-3 pt-[1.625rem] pb-[1.875rem] lg:gap-0 lg:px-0 lg:pt-[2.375rem] lg:pb-11",
         className,
       )}
     >
@@ -41,12 +41,12 @@ export function FeatureRow({ features, className }: FeatureRowProps) {
             <Eyebrow
               as="span"
               size="compact"
-              className="text-[0.5625rem] tracking-[0.18em] lg:text-[0.6875rem] lg:tracking-label"
+              className="text-[0.65625rem] tracking-[0.16em] lg:text-[0.6875rem] lg:tracking-label"
             >
               <span className="lg:hidden">{feature.shortTitle ?? feature.title}</span>
               <span className="max-lg:hidden">{feature.title}</span>
             </Eyebrow>
-            <p className="mt-2 text-[0.6875rem] leading-[1.5] text-foreground/50 lg:mt-[0.5625rem] lg:text-[0.84375rem] lg:leading-[1.65] lg:text-foreground/58">
+            <p className="mt-2 text-[0.8125rem] leading-[1.5] text-foreground/66 lg:mt-[0.5625rem] lg:text-[0.875rem] lg:leading-[1.65]">
               <span className="lg:hidden">{feature.shortDescription ?? feature.description}</span>
               <span className="max-lg:hidden">{feature.description}</span>
             </p>

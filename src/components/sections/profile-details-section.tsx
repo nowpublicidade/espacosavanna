@@ -28,7 +28,7 @@ export function ProfileDetailsSection({ about, service, id = "sobre" }: ProfileD
             <Eyebrow className="mb-4">{service.eyebrow}</Eyebrow>
             <ul className="flex flex-col gap-2.5">
               {service.items.map((item) => (
-                <li key={item} className="text-body text-foreground/58">
+                <li key={item} className="text-body text-foreground/70">
                   · {item}
                 </li>
               ))}

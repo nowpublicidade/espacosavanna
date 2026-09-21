@@ -34,13 +34,13 @@ const buttonVariants = cva(
         "outline-soft":
           "rounded-inner border border-gold/40 font-normal text-gold-soft hover:border-gold/70 hover:text-gold-hover",
         ghost:
-          "h-auto! gap-2.5 px-0! font-normal text-gold-soft hover:text-gold-hover max-md:text-[0.71875rem] max-md:tracking-[0.14em] md:normal-case md:tracking-[0.12em]",
+          "h-auto! gap-2.5 px-0! font-normal text-gold-soft hover:text-gold-hover max-md:text-[0.75rem] max-md:tracking-[0.14em] md:normal-case md:tracking-[0.12em]",
       },
       size: {
         lg: "h-control-lg px-[2.125rem] text-button [&_svg]:size-4",
         md: "h-control-md px-8 text-button [&_svg]:size-4",
         sm: "h-control px-[1.625rem] text-button [&_svg]:size-4",
-        xs: "h-control-xs px-5 text-[0.65625rem] md:h-control-sm md:text-[0.6875rem] [&_svg]:size-3.5",
+        xs: "h-control-xs px-5 text-[0.6875rem] md:h-control-sm [&_svg]:size-3.5",
       },
       fullWidth: {
         true: "flex w-full",

@@ -51,7 +51,7 @@ export function Hero({ content, below, size = "default", id = "inicio", classNam
         ) : null}
       </h1>
       {text ? (
-        <p className="mt-4 max-w-[34ch] text-[0.875rem] leading-[1.65] text-fg-body lg:mt-[1.625rem] lg:max-w-[46ch] lg:text-[1.03125rem] lg:leading-[1.7]">
+        <p className="mt-4 max-w-[36ch] text-[0.9375rem] leading-[1.6] text-fg-body lg:mt-[1.625rem] lg:max-w-[46ch] lg:text-[1.03125rem] lg:leading-[1.7]">
           {text}
         </p>
       ) : null}

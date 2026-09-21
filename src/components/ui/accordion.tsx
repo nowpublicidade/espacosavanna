@@ -40,7 +40,7 @@ function AccordionTrigger({
         data-slot="accordion-trigger"
         className={cn(
           "group/trigger flex flex-1 items-center justify-between gap-3.5 text-left md:gap-5",
-          "font-sans text-[0.84375rem] font-normal leading-snug text-foreground md:text-[1.0625rem]",
+          "font-sans text-[0.96875rem] font-normal leading-snug text-foreground md:text-[1.0625rem]",
           "outline-none transition-colors hover:text-gold-soft focus-visible:text-gold-soft",
           className,
         )}
@@ -73,7 +73,7 @@ function AccordionContent({
     >
       <div
         className={cn(
-          "pt-3 text-[0.78125rem] leading-[1.7] font-light text-fg-muted md:max-w-[58ch] md:pt-4 md:text-[0.90625rem] md:leading-[1.8]",
+          "pt-3 text-[0.90625rem] leading-[1.7] font-light text-fg-muted md:max-w-[58ch] md:pt-4 md:leading-[1.8]",
           className,
         )}
       >

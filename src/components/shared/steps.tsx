@@ -37,10 +37,10 @@ export function Steps({ steps, className }: StepsProps) {
             {step.icon ? (
               <Icon name={step.icon} className="size-[1.375rem] text-gold lg:size-[2.125rem]" />
             ) : null}
-            <span className="font-heading text-[1.0625rem] leading-none text-gold lg:text-[1.1875rem]">
+            <span className="font-heading text-[1.1875rem] leading-none text-gold">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="text-[0.78125rem] leading-[1.5] text-fg-body lg:max-w-[16ch] lg:text-[0.875rem] lg:leading-[1.55]">
+            <span className="text-[0.90625rem] leading-[1.5] text-fg-body lg:max-w-[16ch] lg:text-[0.875rem] lg:leading-[1.55]">
               {step.title}
             </span>
           </Reveal>

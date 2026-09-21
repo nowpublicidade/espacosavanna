@@ -35,7 +35,7 @@ export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName
           <div className="flex flex-col items-center lg:items-start">
             <Logo size="footer-mobile" className="lg:hidden" />
             <Logo size="footer" className="max-lg:hidden" />
-            <p className="mt-5 max-w-[30ch] text-caption leading-[1.7] text-foreground/50 lg:mt-6 lg:max-w-[32ch] lg:text-[0.875rem] lg:leading-[1.75]">
+            <p className="mt-5 max-w-[30ch] text-small leading-[1.7] text-foreground/60 lg:mt-6 lg:max-w-[32ch] lg:text-[0.875rem] lg:leading-[1.75]">
               {tagline}
             </p>
           </div>
@@ -49,7 +49,7 @@ export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName
           <FooterColumn title="Contato" items={contactLinks} className="hidden lg:flex" />
         </div>
 
-        <div className="mt-7 flex flex-col items-center gap-2 border-t border-line pt-5 text-[0.625rem] uppercase tracking-[0.1em] text-foreground/32 lg:mt-0 lg:flex-row lg:justify-between lg:gap-10 lg:pt-6 lg:text-eyebrow lg:tracking-[0.12em]">
+        <div className="mt-7 flex flex-col items-center gap-2 border-t border-line pt-5 text-[0.6875rem] uppercase tracking-[0.1em] text-foreground/45 lg:mt-0 lg:flex-row lg:justify-between lg:gap-10 lg:pt-6 lg:text-eyebrow lg:tracking-[0.12em]">
           <span>© {year} {siteName}</span>
           <span className="max-lg:hidden">{ageNotice}</span>
           <span className="lg:hidden">· {ageNotice}</span>
@@ -78,7 +78,7 @@ function FooterColumn({ title, items, className }: FooterColumnProps) {
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[0.75rem] text-foreground/55 hover:text-gold-soft lg:text-[0.84375rem] lg:text-fg-muted"
+            className="text-[0.875rem] text-fg-muted hover:text-gold-soft lg:text-[0.84375rem]"
           >
             {item.label}
           </a>
@@ -86,7 +86,7 @@ function FooterColumn({ title, items, className }: FooterColumnProps) {
           <Link
             key={item.label}
             href={item.href}
-            className="text-[0.75rem] text-foreground/55 hover:text-gold-soft lg:text-[0.84375rem] lg:text-fg-muted"
+            className="text-[0.875rem] text-fg-muted hover:text-gold-soft lg:text-[0.84375rem]"
           >
             {item.label}
           </Link>

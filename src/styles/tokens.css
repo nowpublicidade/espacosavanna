@@ -26,8 +26,8 @@
   --fg-strong: var(--brand-fg);
   --fg-nav: color-mix(in srgb, var(--brand-fg) 78%, transparent);
   --fg-body: color-mix(in srgb, var(--brand-fg) 72%, transparent);
-  --fg-muted: color-mix(in srgb, var(--brand-fg) 60%, transparent);
-  --fg-faint: color-mix(in srgb, var(--brand-fg) 45%, transparent);
+  --fg-muted: color-mix(in srgb, var(--brand-fg) 68%, transparent);
+  --fg-faint: color-mix(in srgb, var(--brand-fg) 52%, transparent);
 
   /* ---------- Cor: linhas (dourado em opacidade) ---------- */
   --line-subtle: color-mix(in srgb, var(--brand-gold) 12%, transparent);  /* divisor de seções */
@@ -53,17 +53,17 @@
   --text-display: clamp(2.5rem, 1.7rem + 3.4vw, 4.75rem);       /* 40 → 76 */
   --text-h2: clamp(1.875rem, 1.525rem + 1.5vw, 2.875rem);       /* 30 → 46 */
   --text-h3: clamp(1.0625rem, 1.02rem + 0.19vw, 1.1875rem);     /* 17 → 19 */
-  --text-lead: clamp(0.875rem, 0.81rem + 0.28vw, 1.0625rem);    /* 14 → 17 */
-  --text-body: clamp(0.84375rem, 0.8rem + 0.19vw, 0.96875rem);  /* 13.5 → 15.5 */
-  --text-small: clamp(0.78125rem, 0.77rem + 0.05vw, 0.8125rem); /* 12.5 → 13 */
-  --text-caption: clamp(0.71875rem, 0.7rem + 0.094vw, 0.78125rem); /* 11.5 → 12.5 */
+  --text-lead: clamp(1rem, 0.96rem + 0.1vw, 1.0625rem);         /* 16 → 17 */
+  --text-body: clamp(0.9375rem, 0.93rem + 0.05vw, 0.96875rem);  /* 15 → 15.5 */
+  --text-small: clamp(0.84375rem, 0.84rem + 0.02vw, 0.875rem);  /* 13.5 → 14 */
+  --text-caption: 0.78125rem;                                   /* 12.5 fixo */
   --text-eyebrow: 0.65625rem;                                   /* 10.5 fixo */
   --text-button: clamp(0.71875rem, 0.7rem + 0.094vw, 0.78125rem); /* 11.5 → 12.5 */
   --text-nav: 0.8125rem;                                        /* 13 fixo */
 
   --leading-display: 1.06;
   --leading-heading: 1.15;
-  --leading-body: 1.65;
+  --leading-body: 1.6;
   --leading-relaxed: 1.8;
 
   --tracking-eyebrow: 0.28em;
