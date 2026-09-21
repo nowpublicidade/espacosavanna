@@ -72,7 +72,7 @@ for (const route of routes) {
     }
 
     // Links internos
-    const hrefs = [...new Set([...html.matchAll(/href="([^"#]+)(#[^"]*)?"/g)].map((m) => m[1]))];
+    const hrefs = [...new Set([...html.matchAll(/href="([^"#]+)(#[^"]*)?"/g)].map((m) => m[1].replace(/&amp;/g, "&")))];
     for (const href of hrefs) {
       if (href.startsWith("/") && !href.startsWith("/_next")) {
         const st = await status(BASE + href);
@@ -84,7 +84,8 @@ for (const route of routes) {
     if (!hrefs.some((h) => h.startsWith("https://wa.me/"))) fail(route, "nenhum CTA de WhatsApp");
 
     // Imagens
-    const srcs = [...new Set([...html.matchAll(/<img[^>]*\bsrc="([^"]+)"/g)].map((m) => m[1]))];
+    const unescape = (v) => v.replace(/&amp;/g, "&");
+    const srcs = [...new Set([...html.matchAll(/<img[^>]*\bsrc="([^"]+)"/g)].map((m) => unescape(m[1])))];
     for (const src of srcs) {
       const url = src.startsWith("/") ? BASE + src : src;
       const st = await status(url);
