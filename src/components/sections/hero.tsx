@@ -91,8 +91,8 @@ export function Hero({ content, below, size = "default", id = "inicio", classNam
       >
         {/* Art direction: retrato até 1023px, paisagem a partir de 1024px */}
         <picture>
-          <source media="(min-width: 64rem)" srcSet={desktop.props.srcSet} />
-          <source media="(max-width: 63.99rem)" srcSet={mobile.props.srcSet} />
+          <source media="(min-width: 64rem)" srcSet={desktop.props.srcSet ?? desktop.props.src} />
+          <source media="(max-width: 63.99rem)" srcSet={mobile.props.srcSet ?? mobile.props.src} />
           {/* eslint-disable-next-line jsx-a11y/alt-text -- alt vem de common */}
           <img
             {...desktop.props}

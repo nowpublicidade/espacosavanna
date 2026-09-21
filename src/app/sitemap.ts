@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 import { pages } from "@/content/pages";
 import { siteConfig } from "@/data/site";
 import { therapists } from "@/data/therapists";

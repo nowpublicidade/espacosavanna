@@ -46,3 +46,6 @@ next-env.d.ts
 
 # Originais das fotografias (60MB) — manter fora do repositório
 savanna img/
+
+# Export estático (GitHub Pages)
+out/
