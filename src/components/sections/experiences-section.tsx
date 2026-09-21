@@ -9,6 +9,7 @@ import type { Experience, SectionCopy } from "@/types/content";
 type ExperiencesSectionProps = {
   copy: SectionCopy;
   experiences: Experience[];
+  surface?: "base" | "alt";
   id?: string;
 };
 
@@ -17,9 +18,9 @@ type ExperiencesSectionProps = {
  * Desktop: cabeçalho com "Ver todas" à direita + grid de 3 cards-imagem.
  * Mobile: título curto e cards empilhados (gap 12), sem link.
  */
-export function ExperiencesSection({ copy, experiences, id = "experiencias" }: ExperiencesSectionProps) {
+export function ExperiencesSection({ copy, experiences, surface = "base", id = "experiencias" }: ExperiencesSectionProps) {
   return (
-    <Section id={id}>
+    <Section id={id} surface={surface}>
       <SectionHeading
         copy={copy}
         titleMaxCh={20}

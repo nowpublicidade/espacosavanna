@@ -43,6 +43,8 @@ export type Therapist = {
   /** Destaques exibidos no card (máx. 3, conforme layout). */
   highlights: string[];
   image: ImageAsset;
+  /** Fotos adicionais exibidas na página individual. */
+  photos?: ImageAsset[];
   availability?: string;
   /** Slugs de experiências oferecidas. */
   experiences: string[];

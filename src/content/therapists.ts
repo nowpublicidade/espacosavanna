@@ -1,5 +1,5 @@
 import type { Cta, ImageAsset, SectionCopy } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes } from "@/data/images";
 import { ctas } from "@/content/home";
 
 /** Conteúdo institucional da página Terapeutas (Documento 02 §8, Documento 03 §10). */
@@ -10,7 +10,8 @@ export const hero = {
   titleAccent: "nossas terapeutas.",
   text: "Cada profissional possui uma experiência e uma forma única de atendimento. Escolha com calma — nossa equipe pode auxiliar você.",
   cta: ctas.availability,
-  image: placeholderImage("hero", "Ambiente reservado do Espaço Savanna", 16 / 9, "center 40%"),
+  image: heroes.pages.landscape,
+  imageMobile: heroes.pages.portrait,
 };
 
 export const listing = {
@@ -24,7 +25,7 @@ export const finalCta = {
   title: "Em dúvida sobre qual escolher?",
   text: "Fale com a nossa equipe pelo WhatsApp. Ajudamos você a encontrar a experiência ideal.",
   cta: ctas.availability,
-  image: placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: ctaPhoto,
 } satisfies SectionCopy & { image: ImageAsset };
 
 /** Rótulos da página individual. */
@@ -33,6 +34,7 @@ export const profile = {
   serviceEyebrow: "Perfil de atendimento",
   availabilityEyebrow: "Disponibilidade",
   experiencesTitle: "Experiências oferecidas",
+  photosTitle: "Mais fotos",
   ctaLabel: "Agendar pelo WhatsApp",
   backLabel: "Todas as terapeutas",
 } as const;

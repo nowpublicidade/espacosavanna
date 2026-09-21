@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { PHOTO_QUALITY } from "@/lib/images";
 import type { Cta, Therapist } from "@/types/content";
 
 type TherapistCardProps = {
@@ -40,7 +41,8 @@ export function TherapistCard({
           alt={therapist.image.alt}
           fill
           sizes={sizes}
-          priority={priority}
+          quality={PHOTO_QUALITY}
+          preload={priority}
           className="object-cover"
           style={{ objectPosition: therapist.image.focal }}
         />

@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    // 82 para fotografias (qualidade premium); 75 para o restante.
+    qualities: [75, 82],
   },
 };
 

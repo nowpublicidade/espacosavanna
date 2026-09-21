@@ -1,5 +1,5 @@
 import type { Cta, Feature, ImageAsset, SectionCopy, Step } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes, mosaic } from "@/data/images";
 
 /**
  * Conteúdo institucional da Home.
@@ -41,8 +41,9 @@ export const hero = {
   text: "Ambiente sofisticado, atendimento personalizado e total discrição para você viver momentos de relaxamento, conexão e novas sensações.",
   cta: ctas.schedule,
   secondaryCta: ctas.space,
-  image: placeholderImage("hero", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
-} satisfies SectionCopy & { image: ReturnType<typeof placeholderImage> };
+  image: heroes.home.landscape,
+  imageMobile: heroes.home.portrait,
+} satisfies SectionCopy & { image: ImageAsset; imageMobile: ImageAsset };
 
 export const features: Feature[] = [
   {
@@ -71,11 +72,7 @@ export const space = {
   title: "Um ambiente pensado para você se desconectar.",
   text: "Cada detalhe do Espaço Savanna foi planejado para proporcionar conforto, privacidade e uma atmosfera acolhedora.",
   cta: ctas.space,
-  images: [
-    placeholderImage("space", "Sala de atendimento do Espaço Savanna", 4 / 5),
-    placeholderImage("space", "Detalhe do ambiente", 1),
-    placeholderImage("space", "Iluminação e texturas do espaço", 1),
-  ] as const,
+  images: mosaic,
 } satisfies SectionCopy & { images: readonly [ImageAsset, ImageAsset, ImageAsset] };
 
 export const therapistsSection = {
@@ -118,8 +115,8 @@ export const finalCta = {
   title: "Reserve o seu momento.",
   text: "Atendimento com hora marcada, em ambiente exclusivo e reservado.",
   cta: ctas.schedule,
-  image: placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
-} satisfies SectionCopy & { image: ReturnType<typeof placeholderImage> };
+  image: ctaPhoto,
+} satisfies SectionCopy & { image: ImageAsset };
 
 /** Texto institucional do rodapé (layout aprovado). */
 export const footer = {

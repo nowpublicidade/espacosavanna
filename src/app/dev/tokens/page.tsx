@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MessageCircle } from "lucide-react";
-import { brand, placeholderImage } from "@/data/images";
+import { brand, experiencePhotos, heroes, therapistPhotos } from "@/data/images";
 import { colorGroups, controls, radii, spacing, typeScale } from "./manifest";
 
 export const metadata: Metadata = {
@@ -18,11 +18,7 @@ export const metadata: Metadata = {
 export default function TokensPage() {
   if (process.env.NODE_ENV === "production") notFound();
 
-  const placeholders = [
-    placeholderImage("hero", "Hero", 16 / 9),
-    placeholderImage("therapist", "Terapeuta", 3 / 4),
-    placeholderImage("experience", "Experiência", 16 / 9),
-  ];
+  const placeholders = [heroes.home.landscape, therapistPhotos.babi[0], experiencePhotos["massagem-tantrica"]];
 
   return (
     <main className="mx-auto w-full max-w-narrow px-gutter pb-section">
@@ -203,7 +199,7 @@ export default function TokensPage() {
         </div>
 
         <div className="flex flex-col gap-stack-sm">
-          <h3 className="text-h3">Imagens — placeholders tipados</h3>
+          <h3 className="text-h3">Imagens — fotografias oficiais (ImageAsset)</h3>
           <ul className="grid gap-stack-sm sm:grid-cols-3">
             {placeholders.map((img) => (
               <li key={img.alt} className="flex flex-col gap-2">

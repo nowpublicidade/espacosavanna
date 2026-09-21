@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon, Icon } from "@/components/shared/icons";
 import { cn } from "@/lib/utils";
+import { PHOTO_QUALITY } from "@/lib/images";
 import type { Experience } from "@/types/content";
 
 type ExperienceCardProps = {
@@ -40,7 +41,8 @@ export function ExperienceCard({
         alt={experience.image.alt}
         fill
         sizes={sizes}
-        priority={priority}
+        quality={PHOTO_QUALITY}
+        preload={priority}
         className="object-cover transition-[filter] duration-(--duration) ease-(--ease-out) group-hover:brightness-[1.08] group-focus-visible:brightness-[1.08]"
         style={{ objectPosition: experience.image.focal }}
       />
@@ -50,10 +52,10 @@ export function ExperienceCard({
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgb(11_8_6/0.96)_0_58%,rgb(11_8_6/0.62)_100%)] lg:hidden"
       />
-      <span aria-hidden className="absolute inset-0 bg-(--overlay-card) lg:hidden" />
+      <span aria-hidden className="absolute inset-0 bg-(image:--overlay-card) lg:hidden" />
       <span
         aria-hidden
-        className="absolute inset-0 hidden bg-(--overlay-hero) transition-opacity duration-(--duration) ease-(--ease-out) group-hover:opacity-85 lg:block"
+        className="absolute inset-0 hidden bg-(image:--overlay-hero) transition-opacity duration-(--duration) ease-(--ease-out) group-hover:opacity-85 lg:block"
       />
 
       <span className="absolute bottom-[1.125rem] left-[1.125rem] right-[4.375rem] flex flex-col gap-[0.4375rem] lg:inset-x-[1.625rem] lg:bottom-[1.625rem] lg:gap-[0.6875rem]">

@@ -5,18 +5,19 @@ Onde cada item vive no código está indicado para facilitar a troca.
 
 ## Identidade
 - [x] **Logo oficial** aplicada → `public/brand/logo.png` (1024×255, lettering recortado de `design/logo-original.png`)
-- [ ] **Favicon** oficial → `public/favicon.svg` (hoje monograma "S" provisório); opcional `apple-touch-icon.png` 180×180
-- [ ] **Imagem Open Graph** com fotografia real (1200×630) → `public/og/default.png` (hoje arte tipográfica com a logo oficial)
+- [x] **Favicon** oficial aplicado → `src/app/icon.png`, `apple-icon.png`, `favicon.ico` (gerados do emblema entregue)
+- [x] **Imagem Open Graph** com fotografia real → `public/og/default.jpg` (foto entregue + logo)
 - [x] `siteConfig.placeholders.logo = false` — JSON-LD já publica `logo`
 
 ## Imagens
-- [ ] Fotografia do **hero** da Home (luz quente, ambiente) → `src/content/home.ts` (`hero.image`)
-- [ ] Heros das páginas internas → `hero.image` em `src/content/{space,therapists,experiences,how-it-works,gallery,careers,rooms,contact}.ts`
-- [ ] Mosaico "O Espaço" (3 fotos: 1 vertical + 2 horizontais) → `home.ts` (`space.images`), `space.ts` (`structure.images`), `rooms.ts` (`structure.images`)
-- [ ] **Galeria** (8+ fotos; a 1ª e a 6ª ganham destaque 2×2) → `src/data/gallery.ts`
-- [ ] Imagens das **experiências** (16:9, com ponto focal) → `src/data/experiences.ts` (`image`, `focal`)
-- [ ] Imagem do **CTA final** → `finalCta.image` nos arquivos de conteúdo
-- Placeholders atuais: `public/images/placeholders/*.svg` (podem ser removidos ao final)
+- [x] Heros (Home, O Espaço e demais páginas) em duas versões — `src/data/images.ts` (`heroes`)
+- [x] Mosaico "O Espaço" (3 fotos) — `mosaic`; reaproveitado em O Espaço e Aluguel de Salas
+- [x] Galeria (8 fotos) — `galleryPhotos`
+- [x] Experiências (3 fotos) — `experiencePhotos`
+- [x] CTA final — `ctaPhoto` (reaproveitado em todas as páginas)
+- [ ] Opcional: fotos específicas para os heros de Terapeutas/Experiências/Como Funciona/Galeria/Trabalhe Conosco/Aluguel/Contato (hoje todas usam a mesma foto "demais páginas")
+- [ ] Opcional: um segundo conjunto de mosaico para Aluguel de Salas (hoje repete o da Home)
+- Originais entregues ficam em `savanna img/` (fora do git); versões web em `public/images/`
 
 ## Dados operacionais (`src/data/site.ts`)
 - [ ] **WhatsApp oficial** → `contact.whatsappNumber` (somente dígitos com DDI) e `contact.whatsappDisplay`
@@ -28,8 +29,9 @@ Onde cada item vive no código está indicado para facilitar a troca.
 - [ ] Após preencher, virar as flags `siteConfig.placeholders.{contact,address,hours,domain}` para `false` — o JSON-LD passa a incluir telefone, endereço e horários automaticamente
 
 ## Terapeutas (`src/data/therapists.ts`)
-- [ ] Nomes definitivos (hoje: Babi, Luana, Júlia — do layout aprovado)
-- [ ] Fotos 3:4 de cada terapeuta (`image`, com `focal`)
+- [x] Nomes e fotos aplicados: Babi, Luana, Mily, Adriana, Manu, Mariah, Maya (Júlia, do layout, saiu por não ter foto)
+- [ ] Confirmar quais aparecem na Home (`featured` — hoje Babi, Luana e Mily) e a ordem da listagem
+- [ ] Confirmar a foto principal de cada card (escolhi a mais editorial; as demais vão para "Mais fotos" no perfil)
 - [ ] Apresentação curta (`summary`) e completa (`bio`)
 - [ ] Até 3 destaques por card (`highlights`)
 - [ ] Disponibilidade (`availability`)

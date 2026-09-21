@@ -1,5 +1,5 @@
 import type { Experience } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { experiencePhotos } from "@/data/images";
 
 /** Conteúdo comercial — nomes e frases do layout aprovado; descrições a revisar. */
 export const experiences: Experience[] = [
@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
     tagline: "Uma experiência de conexão, presença e prazer.",
     description:
       "Descrição completa da experiência. Texto a ser definido com a equipe do Espaço Savanna.",
-    image: placeholderImage("experience", "Massagem Tântrica", 16 / 9, "center 18%"),
+    image: experiencePhotos["massagem-tantrica"],
     featured: true,
   },
   {
@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
     tagline: "Técnicas que promovem relaxamento profundo e bem-estar.",
     description:
       "Descrição completa da experiência. Texto a ser definido com a equipe do Espaço Savanna.",
-    image: placeholderImage("experience", "Massagem Relaxante", 16 / 9, "center 45%"),
+    image: experiencePhotos["massagem-relaxante"],
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ export const experiences: Experience[] = [
     tagline: "Uma jornada personalizada de sensações únicas.",
     description:
       "Descrição completa da experiência. Texto a ser definido com a equipe do Espaço Savanna.",
-    image: placeholderImage("experience", "Experiência Sensorial", 16 / 9, "center 16%"),
+    image: experiencePhotos["experiencia-sensorial"],
     featured: true,
   },
 ];

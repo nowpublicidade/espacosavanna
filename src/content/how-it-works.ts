@@ -1,5 +1,5 @@
 import type { ImageAsset, SectionCopy } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes } from "@/data/images";
 import { ctas } from "@/content/home";
 
 /** Conteúdo institucional de Como Funciona (Documento 02 §10, Documento 03 §7 e §12). */
@@ -10,7 +10,8 @@ export const hero = {
   titleAccent: "de forma simples.",
   text: "Escolha, converse e agende. Do primeiro contato à sua chegada, tudo acontece com discrição e sem burocracia.",
   cta: ctas.schedule,
-  image: placeholderImage("hero", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: heroes.pages.landscape,
+  imageMobile: heroes.pages.portrait,
 };
 
 export const steps = {
@@ -46,5 +47,5 @@ export const finalCta = {
   title: "Pronto para conhecer o Espaço Savanna?",
   text: "Entre em contato e consulte nossa disponibilidade de horários.",
   cta: ctas.scheduleNow,
-  image: placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: ctaPhoto,
 } satisfies SectionCopy & { image: ImageAsset };

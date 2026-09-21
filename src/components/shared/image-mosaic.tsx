@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
+import { PHOTO_QUALITY } from "@/lib/images";
 import type { ImageAsset } from "@/types/content";
 
 type ImageMosaicProps = {
@@ -30,7 +31,7 @@ export function ImageMosaic({
         className,
       )}
     >
-      <MosaicImage image={main} sizes={sizes} className="row-span-2" priority />
+      <MosaicImage image={main} sizes={sizes} className="row-span-2" />
       {rest.map((image) => (
         <MosaicImage key={image.src + image.alt} image={image} sizes={sizes} />
       ))}
@@ -56,7 +57,8 @@ function MosaicImage({
         alt={image.alt}
         fill
         sizes={sizes}
-        priority={priority}
+        quality={PHOTO_QUALITY}
+        preload={priority}
         className="object-cover"
         style={{ objectPosition: image.focal }}
       />

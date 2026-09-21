@@ -1,5 +1,5 @@
 import type { Feature, ImageAsset, SectionCopy } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes, mosaic } from "@/data/images";
 import { whatsappMessages } from "@/lib/whatsapp";
 
 /** Conteúdo de Aluguel de Salas (Documento 02 §13, Documento 03 §14). */
@@ -16,7 +16,8 @@ export const hero = {
   titleAccent: "para seus atendimentos.",
   text: "Disponibilizamos ambientes estruturados para profissionais que buscam conforto, privacidade e uma localização estratégica.",
   cta: availabilityCta,
-  image: placeholderImage("hero", "Sala de atendimento do Espaço Savanna", 16 / 9, "center 40%"),
+  image: heroes.pages.landscape,
+  imageMobile: heroes.pages.portrait,
 };
 
 export const structure = {
@@ -24,11 +25,7 @@ export const structure = {
   title: "Salas privativas, prontas para receber.",
   text: "Ambientes climatizados, com área de banho, iluminação preparada e recepção discreta. Você chega e atende.",
   cta: availabilityCta,
-  images: [
-    placeholderImage("space", "Sala de atendimento", 4 / 5),
-    placeholderImage("space", "Área de banho", 1),
-    placeholderImage("space", "Recepção", 1),
-  ] as const,
+  images: mosaic,
 } satisfies SectionCopy & { images: readonly [ImageAsset, ImageAsset, ImageAsset] };
 
 export const differentials = {
@@ -70,5 +67,5 @@ export const finalCta = {
   title: "Consulte a disponibilidade das salas.",
   text: "Fale com a nossa equipe e conheça as condições para utilizar o espaço.",
   cta: availabilityCta,
-  image: placeholderImage("space", "Sala de atendimento", 16 / 9, "center 40%"),
+  image: ctaPhoto,
 } satisfies SectionCopy & { image: ImageAsset };

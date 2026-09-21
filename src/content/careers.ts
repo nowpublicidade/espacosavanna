@@ -1,5 +1,5 @@
 import type { FormField, ImageAsset, SectionCopy } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes } from "@/data/images";
 
 /** Conteúdo de Trabalhe Conosco (Documento 02 §12, Documento 03 §13). */
 
@@ -8,7 +8,8 @@ export const hero = {
   title: "Faça parte do",
   titleAccent: "Espaço Savanna.",
   text: "Buscamos profissionais comprometidas com atendimento de qualidade, responsabilidade e uma experiência diferenciada.",
-  image: placeholderImage("hero", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: heroes.pages.landscape,
+  imageMobile: heroes.pages.portrait,
 };
 
 export const form = {
@@ -36,4 +37,4 @@ export const values = {
   ],
 } satisfies SectionCopy & { paragraphs: string[] };
 
-export const image: ImageAsset = placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%");
+export const image: ImageAsset = ctaPhoto;

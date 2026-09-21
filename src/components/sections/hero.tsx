@@ -1,8 +1,9 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import type { ReactNode } from "react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { CtaLink } from "@/components/shared/cta-link";
 import { cn } from "@/lib/utils";
+import { PHOTO_QUALITY } from "@/lib/images";
 import type { Cta, ImageAsset } from "@/types/content";
 
 export type HeroContent = {
@@ -13,7 +14,10 @@ export type HeroContent = {
   text?: string;
   cta?: Cta;
   secondaryCta?: Cta;
+  /** Versão paisagem (computador). */
   image: ImageAsset;
+  /** Versão retrato (celular, abaixo de lg). Sem ela, usa `image` nos dois. */
+  imageMobile?: ImageAsset;
 };
 
 type HeroProps = {
@@ -34,7 +38,10 @@ type HeroProps = {
  * abaixo da imagem, fora dela.
  */
 export function Hero({ content, below, size = "default", id = "inicio", className }: HeroProps) {
-  const { eyebrow, title, titleAccent, text, cta, secondaryCta, image } = content;
+  const { eyebrow, title, titleAccent, text, cta, secondaryCta, image, imageMobile } = content;
+  const common = { alt: image.alt, sizes: "100vw", preload: true, quality: PHOTO_QUALITY, fill: true as const };
+  const desktop = getImageProps({ ...common, src: image.src });
+  const mobile = getImageProps({ ...common, src: (imageMobile ?? image).src });
 
   const heading = (
     <>
@@ -82,16 +89,21 @@ export function Hero({ content, below, size = "default", id = "inicio", classNam
           size === "default" ? "min-h-[28.75rem] lg:min-h-[47.5rem]" : "min-h-[23.75rem] lg:min-h-[35rem]",
         )}
       >
-        <Image
-          src={image.src}
-          alt={image.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: image.focal }}
-        />
-        <div aria-hidden className="absolute inset-0 bg-(--overlay-hero-mobile) lg:hidden" />
+        {/* Art direction: retrato até 1023px, paisagem a partir de 1024px */}
+        <picture>
+          <source media="(min-width: 64rem)" srcSet={desktop.props.srcSet} />
+          <source media="(max-width: 63.99rem)" srcSet={mobile.props.srcSet} />
+          {/* eslint-disable-next-line jsx-a11y/alt-text -- alt vem de common */}
+          <img
+            {...desktop.props}
+            className="absolute inset-0 size-full object-cover max-lg:[object-position:var(--focal-mobile)] lg:[object-position:var(--focal-desktop)]"
+            style={{
+              "--focal-desktop": image.focal ?? "center",
+              "--focal-mobile": (imageMobile ?? image).focal ?? "center",
+            } as React.CSSProperties}
+          />
+        </picture>
+        <div aria-hidden className="absolute inset-0 bg-(image:--overlay-hero-mobile) lg:hidden" />
         <div
           aria-hidden
           className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgb(11_8_6/0.95)_0%,rgb(11_8_6/0.86)_40%,rgb(11_8_6/0.4)_72%,rgb(11_8_6/0.5)_100%)] lg:block"

@@ -27,7 +27,7 @@ export function Logo({ size = "header", asLink = true, priority, className }: Lo
       alt={brand.logo.alt}
       width={brand.logo.width}
       height={brand.logo.height}
-      priority={priority}
+      preload={priority}
       sizes="(min-width: 1024px) 220px, 160px"
       className={cn("block w-auto", sizes[size], className)}
     />

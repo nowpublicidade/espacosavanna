@@ -9,12 +9,13 @@ type GallerySectionProps = {
   copy?: SectionCopy;
   images: ImageAsset[];
   layout?: "editorial" | "uniform";
+  aspect?: "landscape" | "portrait";
   surface?: "base" | "alt";
   id?: string;
 };
 
 /** Galeria com cabeçalho opcional e link "Ver galeria completa →". */
-export function GallerySection({ copy, images, layout, surface = "base", id = "galeria" }: GallerySectionProps) {
+export function GallerySection({ copy, images, layout, aspect, surface = "base", id = "galeria" }: GallerySectionProps) {
   const link = copy?.cta ? (
     <CtaLink cta={copy.cta} variant="ghost" icon={<ArrowIcon />} iconPosition="right" />
   ) : null;
@@ -29,7 +30,7 @@ export function GallerySection({ copy, images, layout, surface = "base", id = "g
           className="mb-5 lg:mb-10"
         />
       ) : null}
-      <Gallery images={images} layout={layout} />
+      <Gallery images={images} layout={layout} aspect={aspect} />
       {link ? <div className="mt-5 lg:hidden">{link}</div> : null}
     </Section>
   );

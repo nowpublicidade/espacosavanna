@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowIcon, WhatsAppIcon } from "@/components/shared/icons";
 import { Section } from "@/components/shared/section";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { PHOTO_QUALITY } from "@/lib/images";
 import type { ImageAsset } from "@/types/content";
 
 type ProfileHeroProps = {
@@ -41,8 +42,9 @@ export function ProfileHero({
             src={image.src}
             alt={image.alt}
             fill
-            priority
+            preload
             sizes="(min-width: 1024px) 45vw, 100vw"
+            quality={PHOTO_QUALITY}
             className="object-cover"
             style={{ objectPosition: image.focal }}
           />

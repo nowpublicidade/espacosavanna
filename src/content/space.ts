@@ -1,5 +1,5 @@
 import type { Feature, ImageAsset, SectionCopy } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes, mosaic } from "@/data/images";
 import { ctas } from "@/content/home";
 
 /**
@@ -13,7 +13,8 @@ export const hero = {
   titleAccent: "para experiências únicas.",
   text: "O Espaço Savanna une conforto, privacidade e uma estrutura preparada para receber cada visitante com atenção aos detalhes.",
   cta: ctas.schedule,
-  image: placeholderImage("hero", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: heroes.space.landscape,
+  imageMobile: heroes.space.portrait,
 };
 
 export const concept = {
@@ -30,11 +31,7 @@ export const structure = {
   title: "Ambientes privativos, preparados para o seu bem-estar.",
   text: "Suítes individuais, área de banho e climatização em todos os espaços. Tudo organizado para que você se sinta acolhido do início ao fim.",
   cta: { label: "Ver galeria", href: "/galeria" },
-  images: [
-    placeholderImage("space", "Suíte de atendimento", 4 / 5),
-    placeholderImage("space", "Área de banho", 1),
-    placeholderImage("space", "Detalhe do ambiente", 1),
-  ] as const,
+  images: mosaic,
 } satisfies SectionCopy & { images: readonly [ImageAsset, ImageAsset, ImageAsset] };
 
 export const differentials = {
@@ -72,5 +69,5 @@ export const finalCta = {
   title: "Venha conhecer o Espaço Savanna.",
   text: "Entre em contato e consulte nossa disponibilidade de horários.",
   cta: ctas.scheduleNow,
-  image: placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: ctaPhoto,
 } satisfies SectionCopy & { image: ImageAsset };

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ProfileHero } from "@/components/sections/profile-hero";
 import { ProfileDetailsSection } from "@/components/sections/profile-details-section";
 import { ExperiencesSection } from "@/components/sections/experiences-section";
+import { GallerySection } from "@/components/sections/gallery-section";
 import { profile } from "@/content/therapists";
 import { pages } from "@/content/pages";
 import { buildMetadata } from "@/lib/seo";
@@ -59,10 +60,20 @@ export default async function TherapistPage({ params }: PageProps<"/terapeutas/[
         about={{ eyebrow: profile.aboutEyebrow, paragraphs: [therapist.bio] }}
         service={{ eyebrow: profile.serviceEyebrow, items: therapist.highlights }}
       />
+      {therapist.photos && therapist.photos.length > 0 ? (
+        <GallerySection
+          copy={{ eyebrow: "Fotos", title: profile.photosTitle }}
+          images={therapist.photos}
+          aspect="portrait"
+          surface="base"
+          id="fotos"
+        />
+      ) : null}
       {offered.length > 0 ? (
         <ExperiencesSection
           copy={{ eyebrow: "Experiências", title: profile.experiencesTitle }}
           experiences={offered}
+          surface="alt"
           id="experiencias-oferecidas"
         />
       ) : null}

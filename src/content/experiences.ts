@@ -1,5 +1,5 @@
 import type { ImageAsset, SectionCopy } from "@/types/content";
-import { placeholderImage } from "@/data/images";
+import { ctaPhoto, heroes } from "@/data/images";
 import { ctas } from "@/content/home";
 
 /** Conteúdo institucional da página Experiências (Documento 02 §9, Documento 03 §11). */
@@ -10,7 +10,8 @@ export const hero = {
   titleAccent: "experiência personalizada.",
   text: "Cada atendimento é pensado para proporcionar uma experiência diferenciada, respeitando o momento e a preferência de cada visitante.",
   cta: ctas.availability,
-  image: placeholderImage("hero", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: heroes.pages.landscape,
+  imageMobile: heroes.pages.portrait,
 };
 
 export const listing = {
@@ -22,7 +23,7 @@ export const finalCta = {
   title: "Consulte a disponibilidade.",
   text: "Fale com a nossa equipe pelo WhatsApp e escolha o melhor horário para a sua experiência.",
   cta: ctas.availability,
-  image: placeholderImage("space", "Ambiente do Espaço Savanna", 16 / 9, "center 40%"),
+  image: ctaPhoto,
 } satisfies SectionCopy & { image: ImageAsset };
 
 /** Rótulos da página individual. */

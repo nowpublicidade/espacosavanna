@@ -3,6 +3,7 @@ import { CtaLink } from "@/components/shared/cta-link";
 import { Section } from "@/components/shared/section";
 import { Reveal } from "@/components/shared/reveal";
 import { cn } from "@/lib/utils";
+import { PHOTO_QUALITY } from "@/lib/images";
 import type { ImageAsset, SectionCopy } from "@/types/content";
 
 type FinalCtaProps = {
@@ -26,6 +27,7 @@ export function FinalCta({ copy, id = "agendar", className }: FinalCtaProps) {
             alt={copy.image.alt}
             fill
             sizes="(min-width: 1440px) 1328px, 100vw"
+            quality={PHOTO_QUALITY}
             className="object-cover"
             style={{ objectPosition: copy.image.focal }}
           />

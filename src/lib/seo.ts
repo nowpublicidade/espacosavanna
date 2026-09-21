@@ -15,7 +15,7 @@ type BuildMetadataInput = {
 };
 
 export const defaultOgImage = {
-  src: "/og/default.png",
+  src: "/og/default.jpg",
   alt: "Espaço Savanna — experiência premium em ambiente reservado",
   width: 1200,
   height: 630,

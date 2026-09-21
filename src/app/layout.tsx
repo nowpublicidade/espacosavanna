@@ -43,7 +43,6 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
   // Indexação controlada por NEXT_PUBLIC_INDEXABLE (ver data/site.ts).
   robots: siteConfig.indexable ? { index: true, follow: true } : { index: false, follow: false },
-  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
