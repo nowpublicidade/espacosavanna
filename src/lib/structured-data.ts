@@ -22,7 +22,7 @@ export function organizationJsonLd() {
     url: siteConfig.url,
     inLanguage: "pt-BR",
     // Pendentes de dados oficiais — preenchidos automaticamente ao virar a flag:
-    ...(placeholders.logo ? {} : { logo: absolute("/brand/logo.svg"), image: absolute(defaultOgImage.src) }),
+    ...(placeholders.logo ? {} : { logo: absolute("/brand/logo.png"), image: absolute(defaultOgImage.src) }),
     ...(placeholders.contact
       ? {}
       : {

@@ -19,7 +19,7 @@ type LogoProps = {
   className?: string;
 };
 
-/** Marca com proporção 4:1 preservada; a altura define a largura. */
+/** Marca com proporção original preservada; a altura define a largura. */
 export function Logo({ size = "header", asLink = true, priority, className }: LogoProps) {
   const image = (
     <Image
@@ -28,6 +28,7 @@ export function Logo({ size = "header", asLink = true, priority, className }: Lo
       width={brand.logo.width}
       height={brand.logo.height}
       priority={priority}
+      sizes="(min-width: 1024px) 220px, 160px"
       className={cn("block w-auto", sizes[size], className)}
     />
   );

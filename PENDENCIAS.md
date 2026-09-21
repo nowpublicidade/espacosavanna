@@ -4,10 +4,10 @@ Tudo o que está marcado aqui é **placeholder** e deve ser substituído antes d
 Onde cada item vive no código está indicado para facilitar a troca.
 
 ## Identidade
-- [ ] **Logo oficial** (SVG ou PNG em alta, proporção do layout 4:1) → `public/brand/logo-placeholder.svg`, referenciada em `src/data/images.ts` (`brand.logo`)
+- [x] **Logo oficial** aplicada → `public/brand/logo.png` (1024×255, lettering recortado de `design/logo-original.png`)
 - [ ] **Favicon** oficial → `public/favicon.svg` (hoje monograma "S" provisório); opcional `apple-touch-icon.png` 180×180
-- [ ] **Imagem Open Graph** com fotografia real (1200×630) → `public/og/default.png` (hoje arte com logo placeholder)
-- [ ] Ao trocar a logo, virar `siteConfig.placeholders.logo = false` para o JSON-LD publicar `logo`/`image`
+- [ ] **Imagem Open Graph** com fotografia real (1200×630) → `public/og/default.png` (hoje arte tipográfica com a logo oficial)
+- [x] `siteConfig.placeholders.logo = false` — JSON-LD já publica `logo`
 
 ## Imagens
 - [ ] Fotografia do **hero** da Home (luz quente, ambiente) → `src/content/home.ts` (`hero.image`)

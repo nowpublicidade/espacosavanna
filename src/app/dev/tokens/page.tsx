@@ -177,7 +177,7 @@ export default function TokensPage() {
       {/* Marca e imagens */}
       <Section title="Marca e placeholders" eyebrow="05">
         <div className="flex flex-col gap-stack-sm">
-          <h3 className="text-h3">Logo — placeholder 4:1 (900×225)</h3>
+          <h3 className="text-h3">Logo oficial (1024×255)</h3>
           <div className="flex flex-wrap items-center gap-stack-lg rounded-lg border border-line bg-surface-1 p-8">
             <div className="flex flex-col items-start gap-2">
               <Image

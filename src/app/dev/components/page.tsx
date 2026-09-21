@@ -158,7 +158,7 @@ export default function ComponentsPage() {
           id="logo"
           index="B2"
           title="Logo"
-          note="Proporção 4:1 preservada. header 34 · header-mobile 38 · footer 46 · footer-mobile 62."
+          note="Logo oficial, proporção 4,14:1 preservada. header 34 · header-mobile 38 · footer 46 · footer-mobile 62."
         >
           <Case label="header / header-mobile / footer / footer-mobile">
             <Logo size="header" />

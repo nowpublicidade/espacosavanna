@@ -38,7 +38,7 @@ export const siteConfig = {
     address: true,   // endereço e mapa
     hours: true,     // horários
     domain: true,    // URL oficial
-    logo: true,      // logo e imagem OG
+    logo: false,     // logo oficial aplicada; imagem OG usa fotografia placeholder
   },
 } as const;
 

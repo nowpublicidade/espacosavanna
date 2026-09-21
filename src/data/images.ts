@@ -25,12 +25,15 @@ export function placeholderImage(
 }
 
 export const brand = {
-  /** Placeholder com a proporção 4:1 da logo do layout aprovado (900×225). */
+  /**
+   * Logo oficial. Fonte: design/logo-original.png (2048×618, com margens
+   * transparentes); para a web o lettering foi recortado e exportado em
+   * 1024×255 (proporção 4,14:1 — a mesma do layout aprovado).
+   */
   logo: {
-    src: "/brand/logo-placeholder.svg",
+    src: "/brand/logo.png",
     alt: "Espaço Savanna",
-    width: 900,
-    height: 225,
-    placeholder: true,
+    width: 1024,
+    height: 255,
   } satisfies ImageAsset,
 };

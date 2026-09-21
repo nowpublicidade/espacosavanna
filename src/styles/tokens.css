@@ -93,7 +93,7 @@
 
   --logo-h: 2.125rem;        /* 34 desktop */
   --logo-h-mobile: 2.375rem; /* 38 mobile */
-  --logo-ratio: 4 / 1;       /* 900×225 */
+  --logo-ratio: 1024 / 255;  /* logo oficial recortada, 4,14:1 */
 
   /* ---------- Movimento ---------- */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
