@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.git
+.github
+.claude
+docs
+design
+savanna img
+scripts
+*.md
+.env*
+!.env.example

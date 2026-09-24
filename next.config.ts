@@ -30,7 +30,10 @@ const nextConfig: NextConfig = {
         assetPrefix: basePath || undefined,
         trailingSlash: true,
       }
-    : {}),
+    : {
+        // Servidor Node enxuto para Docker/Coolify (.next/standalone).
+        output: "standalone",
+      }),
 };
 
 export default nextConfig;
