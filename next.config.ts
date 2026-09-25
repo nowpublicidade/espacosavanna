@@ -6,8 +6,8 @@ import path from "node:path";
  * sem otimizador de imagens (loader próprio com basePath), URLs com barra
  * final e basePath do repositório. Sem a variável, build normal (Vercel etc.).
  */
-const isStaticExport = process.env.STATIC_EXPORT === "true";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const isStaticExport = process.env.STATIC_EXPORT?.trim() === "true";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim() ?? "";
 
 const nextConfig: NextConfig = {
   turbopack: {

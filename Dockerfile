@@ -14,8 +14,10 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Variáveis NEXT_PUBLIC_* são embutidas no bundle — precisam existir no build.
-ARG NEXT_PUBLIC_SITE_URL
-ARG NEXT_PUBLIC_INDEXABLE
+# Os valores padrão evitam que um ARG não informado vire string vazia; o código
+# também trata valores vazios (src/lib/env.ts).
+ARG NEXT_PUBLIC_SITE_URL="https://www.espacosavanna.com.br"
+ARG NEXT_PUBLIC_INDEXABLE="false"
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL \
     NEXT_PUBLIC_INDEXABLE=$NEXT_PUBLIC_INDEXABLE \
     NEXT_TELEMETRY_DISABLED=1

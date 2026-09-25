@@ -1,4 +1,5 @@
 import type { SiteContact } from "@/types/content";
+import { envFlag, envUrl } from "@/lib/env";
 
 /**
  * Conteúdo operacional. Nenhum outro arquivo deve conter número de
@@ -9,13 +10,14 @@ export const siteConfig = {
   legalName: "Espaço Savanna",
   shortDescription:
     "Experiência premium de bem-estar em ambiente reservado, confortável e exclusivo.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.espacosavanna.com.br", // TODO: domínio oficial
+  // Aceita variável ausente ou vazia (Docker/Coolify injetam "" quando não definida).
+  url: envUrl(process.env.NEXT_PUBLIC_SITE_URL, "https://www.espacosavanna.com.br"), // TODO: domínio oficial
   locale: "pt-BR",
   /**
    * Indexação por buscadores. Fica desligada até a publicação oficial:
    * defina NEXT_PUBLIC_INDEXABLE=true no ambiente de produção.
    */
-  indexable: process.env.NEXT_PUBLIC_INDEXABLE === "true",
+  indexable: envFlag(process.env.NEXT_PUBLIC_INDEXABLE),
   foundingYear: 2026,
   /** Aviso obrigatório no rodapé (Documento 01, item 14). */
   ageNotice: "Entrada permitida apenas para maiores de 18 anos",

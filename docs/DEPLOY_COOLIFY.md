@@ -32,6 +32,11 @@ o build (prefixo `NEXT_PUBLIC_`); se só existirem em runtime, não têm efeito.
 Não defina `PORT` nem `HOSTNAME`: já estão no Dockerfile (`3000` / `0.0.0.0`).
 Não defina `STATIC_EXPORT` — ela é exclusiva do GitHub Pages.
 
+O build funciona mesmo sem essas variáveis (cai no domínio padrão e em
+`noindex`), então um deploy nunca falha por variável ausente ou vazia. Mas
+defina `NEXT_PUBLIC_SITE_URL` antes de publicar oficialmente: é ela que
+monta canonical, Open Graph, sitemap e JSON-LD.
+
 ## O que o Coolify faz a cada push na `main`
 
 1. Clona o repositório e constrói a imagem (`npm ci` → `npm run build`).

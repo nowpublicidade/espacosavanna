@@ -6,6 +6,6 @@ import type { ImageLoaderProps } from "next/image";
  */
 export default function imageLoader({ src }: ImageLoaderProps) {
   if (src.startsWith("http")) return src;
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim() ?? "";
   return `${basePath}${src}`;
 }
