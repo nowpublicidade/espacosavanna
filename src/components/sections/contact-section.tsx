@@ -1,6 +1,7 @@
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/shared/icons";
+import { MapEmbed } from "@/components/shared/map-embed";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -99,21 +100,12 @@ export function ContactSection({ copy, contact, labels, whatsappMessage, id = "c
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-line-strong bg-surface-2 lg:aspect-auto lg:min-h-[30rem]">
-          {address.mapsEmbedUrl ? (
-            <iframe
-              src={address.mapsEmbedUrl}
-              title={labels.mapTitle}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 h-full w-full grayscale-[0.4] contrast-[0.9]"
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Eyebrow as="span" className="text-gold/45">{labels.mapPlaceholder}</Eyebrow>
-            </div>
-          )}
-        </div>
+        <MapEmbed
+          src={address.mapsEmbedUrl}
+          title={labels.mapTitle}
+          placeholder={labels.mapPlaceholder}
+          className="aspect-[4/3] lg:aspect-auto lg:min-h-[30rem]"
+        />
       </div>
     </Section>
   );

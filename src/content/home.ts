@@ -106,10 +106,19 @@ export const faqSection = {
 } satisfies SectionCopy;
 
 export const location = {
-  eyebrow: "Localização",
+  eyebrow: "Onde estamos",
   title: "Fácil de chegar, discreto ao entrar.",
-  text: "Endereço e orientações de chegada são confirmados no atendimento pelo WhatsApp.",
-} satisfies SectionCopy;
+  shortTitle: "Fácil de chegar.",
+  text: "Ambiente reservado na Vila Anglo Brasileira, a poucos minutos da Lapa e de Perdizes.",
+  labels: {
+    address: "Endereço",
+    hours: "Horários",
+    directions: "Como chegar",
+    whatsapp: "Falar pelo WhatsApp",
+    mapTitle: "Localização do Espaço Savanna",
+    mapPlaceholder: "Mapa",
+  },
+} satisfies SectionCopy & { labels: Record<string, string> };
 
 export const finalCta = {
   title: "Reserve o seu momento.",

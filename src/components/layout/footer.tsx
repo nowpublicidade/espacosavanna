@@ -38,6 +38,21 @@ export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName
             <p className="mt-5 max-w-[30ch] text-small leading-[1.7] text-foreground/60 lg:mt-6 lg:max-w-[32ch] lg:text-[0.875rem] lg:leading-[1.75]">
               {tagline}
             </p>
+            <address className="mt-5 not-italic lg:mt-6">
+              <Eyebrow as="span" size="label" className="mb-2 block">
+                Endereço
+              </Eyebrow>
+              <a
+                href={contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block max-w-[30ch] text-small leading-[1.7] text-fg-muted hover:text-gold-soft lg:max-w-[32ch] lg:text-[0.875rem]"
+              >
+                {contact.address.street}
+                <br />
+                {contact.address.neighborhood} · {contact.address.city} – {contact.address.state}
+              </a>
+            </address>
           </div>
 
           <FooterColumn title="Navegar" items={nav} className="lg:flex" />

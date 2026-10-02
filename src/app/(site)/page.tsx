@@ -6,6 +6,7 @@ import { TherapistsSection } from "@/components/sections/therapists-section";
 import { HowItWorksSection } from "@/components/sections/how-it-works-section";
 import { ExperiencesSection } from "@/components/sections/experiences-section";
 import { FaqSection } from "@/components/sections/faq-section";
+import { LocationSection } from "@/components/sections/location-section";
 import { FinalCta } from "@/components/sections/final-cta";
 import * as home from "@/content/home";
 import { pages } from "@/content/pages";
@@ -13,6 +14,8 @@ import { buildMetadata } from "@/lib/seo";
 import { featuredTherapists } from "@/data/therapists";
 import { featuredExperiences } from "@/data/experiences";
 import { homeFaq } from "@/data/faq";
+import { contact } from "@/data/site";
+import { whatsappMessages } from "@/lib/whatsapp";
 
 export const metadata: Metadata = buildMetadata(pages.home);
 
@@ -33,6 +36,12 @@ export default function HomePage() {
       <HowItWorksSection copy={home.howItWorks} steps={home.howItWorks.steps} />
       <ExperiencesSection copy={home.experiencesSection} experiences={featuredExperiences} />
       <FaqSection copy={home.faqSection} items={homeFaq} />
+      <LocationSection
+        copy={home.location}
+        contact={contact}
+        labels={home.location.labels}
+        whatsappMessage={whatsappMessages.default}
+      />
       <FinalCta copy={home.finalCta} className="max-lg:hidden" />
     </>
   );
