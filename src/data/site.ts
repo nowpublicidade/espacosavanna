@@ -37,6 +37,7 @@ export const siteConfig = {
   placeholders: {
     whatsapp: false,  // (11) 94565-3708 — oficial
     instagram: true,  // @ pendente
+    community: true,  // convite do grupo do Clube de Vantagens pendente
     address: false,   // R. Dr. Miranda de Azevedo, 360 — oficial
     hours: false,     // seg–sáb 10h–22h, dom fechado — oficial
     domain: true,     // URL oficial pendente
@@ -53,6 +54,9 @@ export const contact: SiteContact = {
   whatsappDisplay: "(11) 94565-3708",
   instagramHandle: "@espacosavanna", // TODO: confirmar o @ oficial
   instagramUrl: "https://instagram.com/espacosavanna",
+  // TODO: colar aqui o convite do grupo (https://chat.whatsapp.com/...).
+  // Vazio = os botões da Comunidade abrem a conversa direta.
+  communityUrl: "",
   address: {
     street: "R. Dr. Miranda de Azevedo, 360",
     neighborhood: "Vila Anglo Brasileira",

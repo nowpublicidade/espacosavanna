@@ -39,7 +39,7 @@ export function FinalCta({ copy, id = "agendar", className }: FinalCtaProps) {
             "bg-[linear-gradient(90deg,rgb(11_8_6/0.96)_0%,rgb(11_8_6/0.88)_44%,rgb(11_8_6/0.5)_100%)]",
           )}
         />
-        <div className="relative max-w-[38.75rem] px-[1.375rem] py-10 lg:px-14 lg:py-[3.75rem]">
+        <div className="relative min-w-0 max-w-[38.75rem] px-[1.375rem] py-10 lg:px-14 lg:py-[3.75rem]">
           <h2 className="text-h2 lg:text-[2.75rem]">{copy.title}</h2>
           {copy.text ? (
             <p className="mt-3.5 max-w-[40ch] text-body text-foreground/68 lg:mt-[1.125rem] lg:leading-[1.75]">
@@ -48,7 +48,7 @@ export function FinalCta({ copy, id = "agendar", className }: FinalCtaProps) {
           ) : null}
           {copy.cta ? (
             <div className="mt-6 lg:mt-8">
-              <CtaLink cta={copy.cta} size="lg" className="lg:px-9" />
+              <CtaLink cta={copy.cta} size="lg" className="max-lg:w-full lg:px-9" />
             </div>
           ) : null}
         </div>

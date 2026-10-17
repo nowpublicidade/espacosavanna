@@ -21,4 +21,5 @@ export const whatsappMessages = {
     `Olá! Gostaria de saber mais sobre a experiência ${name}.`,
   rooms: "Olá! Gostaria de consultar a disponibilidade de salas para atendimento.",
   careers: "Olá! Tenho interesse em fazer parte da equipe do Espaço Savanna.",
+  community: "Olá! Quero entrar no Clube de Vantagens do Espaço Savanna.",
 } as const;

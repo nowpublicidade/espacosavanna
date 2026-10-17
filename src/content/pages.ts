@@ -53,6 +53,12 @@ export const pages = {
     description:
       "Ambientes estruturados para profissionais que buscam conforto, privacidade e localização estratégica.",
   },
+  community: {
+    path: "/comunidade",
+    title: `Clube de Vantagens — ${siteConfig.name}`,
+    description:
+      "Entre para a comunidade do Espaço Savanna no WhatsApp: cupons de desconto, mimos, brindes e alertas de promoções relâmpago em primeira mão.",
+  },
   contact: {
     path: "/contato",
     title: `Contato — ${siteConfig.name}`,

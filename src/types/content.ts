@@ -64,6 +64,10 @@ export type Experience = {
 /** Ícones de linha do layout aprovado, resolvidos em components/shared/icons. */
 export type IconName =
   | "whatsapp"
+  | "tag"
+  | "gift"
+  | "bell"
+  | "heart"
   | "lock"
   | "bloom"
   | "lotus"
@@ -112,6 +116,11 @@ export type SiteContact = {
   whatsappDisplay: string;
   instagramHandle: string;
   instagramUrl: string;
+  /**
+   * Convite do grupo do Clube de Vantagens no WhatsApp. Enquanto estiver
+   * vazio, os CTAs da Comunidade abrem a conversa direta com o espaço.
+   */
+  communityUrl?: string;
   email?: string;
   address: {
     street: string;

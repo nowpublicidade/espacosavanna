@@ -26,6 +26,7 @@ const routes = [
   "/galeria",
   "/trabalhe-conosco",
   "/aluguel-de-salas",
+  "/comunidade",
   "/contato",
   "/sitemap.xml",
   "/robots.txt",

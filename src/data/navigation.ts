@@ -12,6 +12,7 @@ export const mainNav: NavItem[] = [
 
 /** Links secundários exibidos apenas no footer e no menu mobile. */
 export const secondaryNav: NavItem[] = [
+  { label: "Comunidade", href: "/comunidade" },
   { label: "Trabalhe Conosco", href: "/trabalhe-conosco" },
   { label: "Aluguel de Salas", href: "/aluguel-de-salas" },
 ];
