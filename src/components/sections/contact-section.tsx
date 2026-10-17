@@ -1,6 +1,7 @@
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/shared/icons";
+import { socialLinks } from "@/components/shared/social-links";
 import { MapEmbed } from "@/components/shared/map-embed";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -29,6 +30,8 @@ type ContactSectionProps = {
  */
 export function ContactSection({ copy, contact, labels, whatsappMessage, id = "contato" }: ContactSectionProps) {
   const { address } = contact;
+  // Mesmos ícones do rodapé, à frente do rótulo de cada canal.
+  const [whatsapp, instagram] = socialLinks(contact);
 
   return (
     <Section id={id}>
@@ -38,7 +41,12 @@ export function ContactSection({ copy, contact, labels, whatsappMessage, id = "c
 
           <dl className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:gap-8">
             <div className="flex flex-col gap-2">
-              <dt><Eyebrow as="span" size="label">{labels.whatsapp}</Eyebrow></dt>
+              <dt>
+                <Eyebrow as="span" size="label" className="inline-flex items-center gap-1.5">
+                  <whatsapp.Icon className="size-3.5 shrink-0" />
+                  {labels.whatsapp}
+                </Eyebrow>
+              </dt>
               <dd>
                 <a
                   href={buildWhatsAppUrl(whatsappMessage)}
@@ -51,7 +59,12 @@ export function ContactSection({ copy, contact, labels, whatsappMessage, id = "c
               </dd>
             </div>
             <div className="flex flex-col gap-2">
-              <dt><Eyebrow as="span" size="label">{labels.instagram}</Eyebrow></dt>
+              <dt>
+                <Eyebrow as="span" size="label" className="inline-flex items-center gap-1.5">
+                  <instagram.Icon className="size-3.5 shrink-0" />
+                  {labels.instagram}
+                </Eyebrow>
+              </dt>
               <dd>
                 <a
                   href={contact.instagramUrl}
@@ -73,6 +86,7 @@ export function ContactSection({ copy, contact, labels, whatsappMessage, id = "c
                   <br />
                   {address.zip}
                 </a>
+                <span className="mt-1.5 block text-fg-muted/80">{address.landmark}.</span>
               </dd>
             </div>
             <div className="flex flex-col gap-2">

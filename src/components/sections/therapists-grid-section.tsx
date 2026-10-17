@@ -23,7 +23,7 @@ export function TherapistsGridSection({
   return (
     <Section id={id} surface={surface}>
       {copy ? <SectionHeading copy={copy} titleMaxCh={24} className="mb-5 lg:mb-10" /> : null}
-      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 lg:[&>*:last-child:nth-child(3n+1)]:col-start-2">
         {therapists.map((therapist, index) => (
           <Reveal as="li" key={therapist.slug} delay={(index % 3) * REVEAL_STAGGER}>
             <TherapistCard therapist={therapist} cta={cardCta} className="h-full" />

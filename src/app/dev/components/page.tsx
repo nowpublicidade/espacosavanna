@@ -220,7 +220,7 @@ export default function ComponentsPage() {
             <SectionHeading copy={hero} as="h1" size="display" textMaxCh={46} />
           </Case>
           <Case label="centralizado" bleed>
-            <SectionHeading copy={{ title: "Reserve o seu momento.", text: "Atendimento com hora marcada, em ambiente exclusivo e reservado." }} align="center" />
+            <SectionHeading copy={{ title: "Reserve o seu momento.", text: "Conheça o espaço e as terapeutas sem compromisso, em ambiente exclusivo e reservado." }} align="center" />
           </Case>
         </Specimen>
 

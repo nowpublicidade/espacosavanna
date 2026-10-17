@@ -63,6 +63,7 @@ export function LocationSection({
                 <br />
                 CEP {address.zip}
               </p>
+              <p className="text-body text-fg-muted/80">{address.landmark}.</p>
             </div>
 
             <div className="flex flex-col gap-2">

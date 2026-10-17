@@ -78,7 +78,7 @@ export const space = {
 export const therapistsSection = {
   eyebrow: "Nossas terapeutas",
   title: "Encontre a experiência ideal para você.",
-  cta: { label: "Ver todas as terapeutas", href: "/terapeutas" },
+  cta: { label: "Ver perfis completos", href: "/terapeutas" },
   cardCta: { label: "Conhecer perfil" },
 } satisfies SectionCopy & { cardCta: Cta };
 
@@ -122,12 +122,12 @@ export const location = {
 
 export const finalCta = {
   title: "Reserve o seu momento.",
-  text: "Atendimento com hora marcada, em ambiente exclusivo e reservado.",
+  text: "Conheça o espaço e as terapeutas sem compromisso, em ambiente exclusivo e reservado.",
   cta: ctas.schedule,
   image: ctaPhoto,
 } satisfies SectionCopy & { image: ImageAsset };
 
 /** Texto institucional do rodapé (layout aprovado). */
 export const footer = {
-  tagline: "Atendimento com hora marcada. Ambiente exclusivo e reservado.",
+  tagline: "Conheça sem compromisso. Ambiente exclusivo e reservado.",
 } as const;

@@ -45,7 +45,7 @@ export const typeScale = [
   { cls: "text-h3 font-heading", name: "h3", size: "17 → 19px", font: "Cormorant 400", sample: "Massagem Tântrica" },
   { cls: "text-lead text-fg-body", name: "lead", size: "16 → 17px", font: "Jost 300", sample: "Ambiente sofisticado, atendimento personalizado e total discrição." },
   { cls: "text-body text-fg-body", name: "body", size: "15 → 15.5px", font: "Jost 300", sample: "Cada detalhe do Espaço Savanna foi planejado para proporcionar conforto, privacidade e uma atmosfera acolhedora." },
-  { cls: "text-small text-fg-muted", name: "small", size: "13.5 → 14px", font: "Jost 300", sample: "Atendimento com hora marcada. Ambiente exclusivo e reservado." },
+  { cls: "text-small text-fg-muted", name: "small", size: "13.5 → 14px", font: "Jost 300", sample: "Conheça sem compromisso. Ambiente exclusivo e reservado." },
   { cls: "text-caption text-fg-faint", name: "caption", size: "12.5px", font: "Jost 300", sample: "© 2026 Espaço Savanna" },
   { cls: "text-eyebrow uppercase text-gold", name: "eyebrow", size: "10.5px · .28em", font: "Jost 400", sample: "Um espaço exclusivo" },
   { cls: "text-button uppercase font-medium text-gold-soft", name: "button", size: "11.5 → 12.5px · .16em", font: "Jost 500/600", sample: "Agendar pelo WhatsApp" },

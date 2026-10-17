@@ -1,5 +1,6 @@
 import type { ReactNode, SVGProps } from "react";
 import type { IconName } from "@/types/content";
+import { InstagramIcon } from "./InstagramIcon";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 /**
@@ -99,7 +100,7 @@ export function ConnectorIcon(props: Props) {
   );
 }
 
-export { WhatsAppIcon };
+export { InstagramIcon, WhatsAppIcon };
 export type { IconName };
 export const iconNames = Object.keys(paths).concat("whatsapp") as IconName[];
 

@@ -11,7 +11,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 import * as home from "@/content/home";
 import { pages } from "@/content/pages";
 import { buildMetadata } from "@/lib/seo";
-import { featuredTherapists } from "@/data/therapists";
+import { therapists } from "@/data/therapists";
 import { featuredExperiences } from "@/data/experiences";
 import { homeFaq } from "@/data/faq";
 import { contact } from "@/data/site";
@@ -20,19 +20,20 @@ import { whatsappMessages } from "@/lib/whatsapp";
 export const metadata: Metadata = buildMetadata(pages.home);
 
 /**
- * Home — ordem das seções exatamente como no layout aprovado.
+ * Home — a vitrine de terapeutas vem logo depois do hero, com a equipe
+ * completa: é o que o visitante procura primeiro.
  * O CTA final existe apenas no desktop; no mobile o rodapé cumpre esse papel.
  */
 export default function HomePage() {
   return (
     <>
       <Hero content={home.hero} below={<FeatureRow features={home.features} />} />
-      <SpaceSection copy={home.space} images={home.space.images} />
       <TherapistsSection
         copy={home.therapistsSection}
-        therapists={featuredTherapists}
+        therapists={therapists}
         cardCta={home.therapistsSection.cardCta}
       />
+      <SpaceSection copy={home.space} images={home.space.images} />
       <HowItWorksSection copy={home.howItWorks} steps={home.howItWorks.steps} />
       <ExperiencesSection copy={home.experiencesSection} experiences={featuredExperiences} />
       <FaqSection copy={home.faqSection} items={homeFaq} />

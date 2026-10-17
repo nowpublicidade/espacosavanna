@@ -59,6 +59,7 @@ export const contact: SiteContact = {
     city: "São Paulo",
     state: "SP",
     zip: "05027-000",
+    landmark: "Estamos próximos do metrô",
     // Embed por endereço, sem chave de API. Pode ser trocado pelo embed do
     // "Compartilhar → Incorporar um mapa" do Google Maps quando houver a ficha do negócio.
     mapsEmbedUrl: `https://www.google.com/maps?q=${ADDRESS_QUERY}&output=embed&z=16&hl=pt-BR`,

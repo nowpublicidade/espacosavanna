@@ -1,7 +1,8 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Logo } from "@/components/shared/logo";
-import { buildWhatsAppUrl, whatsappMessages } from "@/lib/whatsapp";
+import { socialLinks } from "@/components/shared/social-links";
 import { cn } from "@/lib/utils";
 import type { Experience, NavItem, SiteContact } from "@/types/content";
 
@@ -23,10 +24,10 @@ type FooterProps = {
  */
 export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName, className }: FooterProps) {
   const year = new Date().getFullYear();
-  const contactLinks = [
-    { label: "WhatsApp", href: buildWhatsAppUrl(whatsappMessages.default), external: true },
-    { label: "Instagram", href: contact.instagramUrl, external: true },
-  ];
+  const contactLinks = socialLinks(contact).map(({ Icon, ...link }) => ({
+    ...link,
+    icon: <Icon className="size-4 shrink-0" />,
+  }));
 
   return (
     <footer className={cn("border-t border-line", className)}>
@@ -61,7 +62,7 @@ export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName
             items={experiences.map((e) => ({ label: e.name, href: `/experiencias/${e.slug}` }))}
             className="hidden lg:flex"
           />
-          <FooterColumn title="Contato" items={contactLinks} className="hidden lg:flex" />
+          <FooterColumn title="Contato" items={contactLinks} className="max-lg:mt-1" />
         </div>
 
         <div className="mt-7 flex flex-col items-center gap-2 border-t border-line pt-5 text-[0.6875rem] uppercase tracking-[0.1em] text-foreground/45 lg:mt-0 lg:flex-row lg:justify-between lg:gap-10 lg:pt-6 lg:text-eyebrow lg:tracking-[0.12em]">
@@ -76,7 +77,7 @@ export function Footer({ nav, experiences, contact, tagline, ageNotice, siteName
 
 type FooterColumnProps = {
   title: string;
-  items: { label: string; href: string; external?: boolean }[];
+  items: { label: string; href: string; external?: boolean; icon?: ReactNode }[];
   className?: string;
 };
 
@@ -86,27 +87,29 @@ function FooterColumn({ title, items, className }: FooterColumnProps) {
       <Eyebrow as="span" size="label" className="mb-1.5 max-lg:hidden">
         {title}
       </Eyebrow>
-      {items.map((item) =>
-        item.external ? (
+      {items.map((item) => {
+        const className = cn(
+          "text-[0.875rem] text-fg-muted hover:text-gold-soft lg:text-[0.84375rem]",
+          item.icon && "inline-flex items-center gap-2",
+        );
+        return item.external ? (
           <a
             key={item.label}
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[0.875rem] text-fg-muted hover:text-gold-soft lg:text-[0.84375rem]"
+            className={className}
           >
+            {item.icon}
             {item.label}
           </a>
         ) : (
-          <Link
-            key={item.label}
-            href={item.href}
-            className="text-[0.875rem] text-fg-muted hover:text-gold-soft lg:text-[0.84375rem]"
-          >
+          <Link key={item.label} href={item.href} className={className}>
+            {item.icon}
             {item.label}
           </Link>
-        ),
-      )}
+        );
+      })}
     </div>
   );
 }

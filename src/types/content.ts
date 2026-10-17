@@ -119,6 +119,8 @@ export type SiteContact = {
     city: string;
     state: string;
     zip: string;
+    /** Referência de chegada exibida junto ao endereço ("próximo ao metrô"). */
+    landmark: string;
     /** URL do Google Maps (embed) para a seção de localização. */
     mapsEmbedUrl: string;
     mapsUrl: string;

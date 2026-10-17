@@ -33,7 +33,7 @@ export function TherapistsSection({ copy, therapists, cardCta, id = "terapeutas"
         className="mb-5 lg:mb-10"
       />
 
-      <HorizontalScroller columns={3}>
+      <HorizontalScroller columns={3} className="lg:[&>*:last-child:nth-child(3n+1)]:col-start-2">
         {therapists.map((therapist, index) => (
           <Reveal key={therapist.slug} delay={index * REVEAL_STAGGER} className="flex">
             <TherapistCard therapist={therapist} cta={cardCta} className="w-full" />
