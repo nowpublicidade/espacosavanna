@@ -43,6 +43,17 @@ monta canonical, Open Graph, sitemap e JSON-LD.
 2. Sobe o container novo, valida o health check e só então tira o antigo do ar.
 3. O GitHub Actions publica, em paralelo, a versão de revisão no GitHub Pages.
 
+## Fontes auto-hospedadas
+
+As duas fontes ficam em `src/fonts` e são carregadas com `next/font/local`.
+Não use `next/font/google` aqui: ele baixa os arquivos da rede **durante o
+build**, e a falha dessa chamada no servidor derrubou um deploy em 17/10/2026
+com `Module not found: @vercel/turbopack-next/internal/font/google/font`.
+Com os arquivos no repositório, o build não depende mais de rede externa.
+
+Os `.woff2` são os mesmos que o Google serve no subset latin: Jost é um
+arquivo variável (300–600) e Cormorant Garamond tem normal e itálico 400.
+
 ## Por que Dockerfile (e não Nixpacks)
 
 O Nixpacks também detecta Next.js e funcionaria, mas o Dockerfile:

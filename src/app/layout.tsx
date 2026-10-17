@@ -1,29 +1,50 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import localFont from "next/font/local";
 import { siteConfig } from "@/data/site";
 import { pages } from "@/content/pages";
 import { defaultOgImage } from "@/lib/seo";
 import "./globals.css";
 
 /**
- * Títulos e frases institucionais. Apenas os pesos usados no layout aprovado:
- * 400 e itálico 400 (acento do hero mobile). Cada peso é um arquivo — e a
- * troca da fonte é o que define o LCP do h1.
+ * As fontes são auto-hospedadas (src/fonts) em vez de next/font/google: o
+ * build do Google baixa os arquivos da rede a cada compilação, e a falha
+ * dessa chamada derrubava o deploy no Coolify. Os .woff2 são os mesmos
+ * arquivos que o Google serve no subset latin — o desenho não muda.
+ *
+ * Títulos e frases institucionais. Apenas os pesos usados no layout
+ * aprovado: 400 e itálico 400 (acento do hero mobile).
  */
-const cormorant = Cormorant_Garamond({
+const cormorant = localFont({
   variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
   display: "swap",
+  adjustFontFallback: "Times New Roman",
+  src: [
+    {
+      path: "../fonts/cormorant-garamond-latin-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/cormorant-garamond-latin-400-italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
 });
 
-/** Interface: menus, botões, textos corridos, formulários. */
-const jost = Jost({
+/** Interface: menus, botões, textos corridos, formulários. Arquivo variável
+ *  único, que cobre os pesos 300 a 600 usados no site. */
+const jost = localFont({
   variable: "--font-jost",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
   display: "swap",
+  adjustFontFallback: "Arial",
+  src: [
+    {
+      path: "../fonts/jost-latin-var.woff2",
+      weight: "300 600",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
